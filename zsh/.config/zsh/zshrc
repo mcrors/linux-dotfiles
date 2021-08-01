@@ -1,0 +1,48 @@
+#!/bin/sh
+
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' menu select=2
+eval "$(dircolors -b)"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+
+# some useful options (man zshoptions)
+setopt autocd extendedglob nomatch menucomplete
+setopt interactive_comments
+stty stop undef		# Disable ctrl-s to freeze terminal.
+zle_highlight=('paste:none')
+
+# Normal files to source
+source $ZDOTDIR/exports
+source $ZDOTDIR/aliases
+source $ZDOTDIR/alien/alien.zsh
+source $ZDOTDIR/prompt
+
+# Add private keys to ssh-agent
+ssh-add ~/.ssh/id_rsa > /dev/null 2>&1
+ssh-add ~/.ssh/id_pure_root > /dev/null 2>&1l
+
+# Keybindings
+# keybindings are directly updated in /usr/share/X11/xkb/symbol/pc
+# setxkbmap -option caps:swapescape
+# xmodmap -e "keycode 78 = Menu"
+# xmodmap -e "keycode 135 = Super_R"
+
+export ALIEN_THEME="gruvbox"
+
+plugins=(git)
+plugins+=(zsh-syntax-highlighting colored-man-pages)
+
+source $ZSH/oh-my-zsh.sh
+
+neofetch
+# this is just a test comment

@@ -1,0 +1,17 @@
+export ALIEN_SECTIONS_LEFT=(
+    exit
+    battery
+    user
+    path
+    vcs_branch:async
+    vcs_status:async
+    vcs_dirty:async
+    versions:async
+    newline
+    ssh
+    venv
+    prompt
+)
+
+export ALIEN_SECTION_USER_HOST=1
+export ALIEN_USE_NERD_FONT=1

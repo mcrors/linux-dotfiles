@@ -1,0 +1,10 @@
+#!/bin/sh
+HISTFILE="$XDG_DATA_HOME"/zsh/history
+HISTSIZE=1000
+SAVEHIST=2000
+
+export PATH="$HOME/.local/bin":$PATH
+export PATH="$HOME/bin":$PATH
+export ZSH="$ZDOTDIR/.oh-my-zsh"
+export EDITOR="nvim"
+export BROWSER="firefox"
