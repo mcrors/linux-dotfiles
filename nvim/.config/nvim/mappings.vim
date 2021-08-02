@@ -5,8 +5,8 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
 " List buffers
-nnoremap <leader>b :Buffers<CR>
-nnoremap <C-p> :Files<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <C-p> :Files<CR>
 
 " Move between buffers 
 nnoremap <C-PageUp> :bp<CR>
