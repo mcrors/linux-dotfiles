@@ -25,5 +25,9 @@ nnoremap <silent> <leader>t :TagbarToggle<CR>
 
 " Toggle NERDTree
 nnoremap <silent> <leader>e :NERDTreeToggle<CR>
+
+" Close the current 
+nnoremap <silent> <leader>bd :bd<CR>
+
 " reload the init file
 nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
