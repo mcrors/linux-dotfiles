@@ -34,9 +34,7 @@ if !exists('g:vscode')
     source ~/.config/nvim/autocmds.vim
     source ~/.config/nvim/plug-config/devicons.vim
     source ~/.config/nvim/plug-config/nerdtree.vim
-    command! -bang -nargs=*  All
-  \ call fzf#run(fzf#wrap({'source': 'rg --files --hidden --no-ignore-vcs --glob "!{node_modules/*,.git/*, ../*}"', 'down': '40%', 'options': '--expect=ctrl-t,ctrl-x,ctrl-v --multi --reverse' }))
-    nnoremap <silent> <leader>o :All<cr>
+    source ~/.config/nvim/plug-config/fzf.vim
 
 else
     function! s:manageEditorSize(...)

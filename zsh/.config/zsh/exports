@@ -8,3 +8,4 @@ export PATH="$HOME/bin":$PATH
 export ZSH="$ZDOTDIR/.oh-my-zsh"
 export EDITOR="nvim"
 export BROWSER="firefox"
+export BAT_THEME="OneHalfDark"
