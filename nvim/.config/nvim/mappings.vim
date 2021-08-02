@@ -20,9 +20,6 @@ nnoremap <leader>p :!echo %:p<CR>
 " Maximize focused window
 nnoremap <C-O> <C-W>o
 
-" Toggle Nerd tree file explorer
-nnoremap <silent> <leader>e :NERDTreeToggle<CR>
-
 " Toggle tagbar
 nnoremap <silent> <leader>t :TagbarToggle<CR>
 
