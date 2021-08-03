@@ -11,6 +11,7 @@ if !exists('g:vscode')
     Plug 'preservim/tagbar'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
+    Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
     call plug#end()
 
     " set leader key
@@ -35,7 +36,7 @@ if !exists('g:vscode')
     source ~/.config/nvim/plug-config/devicons.vim
     source ~/.config/nvim/plug-config/nerdtree.vim
     source ~/.config/nvim/plug-config/fzf.vim
-
+    source ~/.config/nvim/plug-config/rnvimr.vim
 else
     function! s:manageEditorSize(...)
         let count = a:1
