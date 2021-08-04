@@ -30,7 +30,8 @@ nnoremap <silent> <leader>w :ball<CR>
 nnoremap <leader>p :!echo %:p<CR>
 
 " Maximize focused window
-nnoremap <C-O> <C-W>o
+nnoremap <leader>o <C-W>o
+
 
 " Toggle tagbar
 nnoremap <silent> <leader>t :TagbarToggle<CR>
