@@ -12,6 +12,7 @@ if !exists('g:vscode')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+    Plug 'neovim/nvim-lspconfig'
     call plug#end()
 
     " set leader key
@@ -30,6 +31,11 @@ if !exists('g:vscode')
     hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
     let g:airline_theme='base16_gruvbox_dark_soft'
 
+    " Setup neovim lsp for python
+    lua << EOF
+        require'lspconfig'.pyright.setup{}
+EOF
+    
     "source files for non vscode setup
     source ~/.config/nvim/mappings.vim
     source ~/.config/nvim/autocmds.vim
@@ -37,6 +43,8 @@ if !exists('g:vscode')
     source ~/.config/nvim/plug-config/nerdtree.vim
     source ~/.config/nvim/plug-config/fzf.vim
     source ~/.config/nvim/plug-config/rnvimr.vim
+    source ~/.config/nvim/plug-config/lsp.vim   
+
 else
     function! s:manageEditorSize(...)
         let count = a:1
