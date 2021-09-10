@@ -29,6 +29,10 @@ if !exists('g:vscode')
     let g:limelight_conceal_guifg = '#777777'
     hi! Normal ctermbg=NONE guibg=NONE 
     hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
+    hi DiffAdd      gui=none    guifg=NONE          guibg=#bada9f
+    hi DiffChange   gui=none    guifg=NONE          guibg=#e5d5ac
+    hi DiffDelete   gui=bold    guifg=#ff8080       guibg=#ffb0b0
+    hi DiffText     gui=none    guifg=NONE          guibg=#8cbee2
     let g:airline_theme='base16_gruvbox_dark_soft'
 
     " Setup neovim lsp for python
