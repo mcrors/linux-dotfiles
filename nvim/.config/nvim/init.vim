@@ -18,6 +18,7 @@ if !exists('g:vscode')
     Plug 'nvim-treesitter/completion-treesitter'
     Plug 'hrsh7th/vim-vsnip'
     Plug 'hrsh7th/vim-vsnip-integ'
+    Plug 'APZelos/blamer.nvim'
     call plug#end()
 
     " set leader key
@@ -53,6 +54,7 @@ if !exists('g:vscode')
     source ~/.config/nvim/plug-config/rnvimr.vim
     source ~/.config/nvim/plug-config/lsp.vim
     source ~/.config/nvim/plug-config/cmp.vim
+    source ~/.config/nvim/plug-config/gitblamer.vim
     source ~/.config/nvim/mappings.vim
 
 else
