@@ -15,6 +15,7 @@ if !exists('g:vscode')
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
     Plug 'neovim/nvim-lspconfig'
     Plug 'nvim-lua/completion-nvim'
+    Plug 'nvim-treesitter/completion-treesitter'
     Plug 'hrsh7th/vim-vsnip'
     Plug 'hrsh7th/vim-vsnip-integ'
     call plug#end()
