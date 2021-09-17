@@ -51,6 +51,7 @@ if !exists('g:vscode')
     source ~/.config/nvim/plug-config/fzf.vim
     source ~/.config/nvim/plug-config/rnvimr.vim
     source ~/.config/nvim/plug-config/lsp.vim
+    source ~/.config/nvim/plug-config/cmp.vim
     source ~/.config/nvim/mappings.vim
 
 else
