@@ -1,5 +1,6 @@
 if !exists('g:vscode')
     call plug#begin()
+    Plug 'nvim-treesitter/nvim-treesitter'
     Plug 'gruvbox-community/gruvbox'
     Plug 'vim-airline/vim-airline'
     Plug 'vim-airline/vim-airline-themes'
@@ -13,6 +14,9 @@ if !exists('g:vscode')
     Plug 'junegunn/fzf.vim'
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
     Plug 'neovim/nvim-lspconfig'
+    Plug 'nvim-lua/completion-nvim'
+    Plug 'hrsh7th/vim-vsnip'
+    Plug 'hrsh7th/vim-vsnip-integ'
     call plug#end()
 
     " set leader key
@@ -27,7 +31,7 @@ if !exists('g:vscode')
     set termguicolors
     let g:limelight_conceal_ctermfg = 240
     let g:limelight_conceal_guifg = '#777777'
-    hi! Normal ctermbg=NONE guibg=NONE 
+    hi! Normal ctermbg=NONE guibg=NONE
     hi! NonText ctermbg=NONE guibg=NONE guifg=NONE ctermfg=NONE
     hi DiffAdd      gui=none    guifg=NONE          guibg=#bada9f
     hi DiffChange   gui=none    guifg=NONE          guibg=#e5d5ac
@@ -36,18 +40,18 @@ if !exists('g:vscode')
     let g:airline_theme='base16_gruvbox_dark_soft'
 
     " Setup neovim lsp for python
-    lua << EOF
-        require'lspconfig'.pyright.setup{}
-EOF
-    
+  "  lua << EOF
+  "      require'lspconfig'.pyright.setup{}
+"EOF
+
     "source files for non vscode setup
-    source ~/.config/nvim/mappings.vim
     source ~/.config/nvim/autocmds.vim
     source ~/.config/nvim/plug-config/devicons.vim
     source ~/.config/nvim/plug-config/nerdtree.vim
     source ~/.config/nvim/plug-config/fzf.vim
     source ~/.config/nvim/plug-config/rnvimr.vim
-    source ~/.config/nvim/plug-config/lsp.vim   
+    source ~/.config/nvim/plug-config/lsp.vim
+    source ~/.config/nvim/mappings.vim
 
 else
     function! s:manageEditorSize(...)
@@ -171,4 +175,5 @@ set formatoptions-=cro                  " Stop newline continution of comments
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set scrolloff=8                         " Add space at the bottom
 set colorcolumn=79                      " Add a column at 90 so you don't go over that with your code.
-
+set modifiable
+set completeopt=menu
