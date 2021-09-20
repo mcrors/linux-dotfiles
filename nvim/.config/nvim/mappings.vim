@@ -21,6 +21,7 @@ nnoremap <silent> <leader>g :GitFiles?<CR>
 
 " git blame toggle
 nnoremap <silent> gb :BlamerToggle<CR>
+
 " Move between buffers
 nnoremap <C-PageUp> :bp<CR>
 nnoremap <C-PageDown> :bn<CR>

@@ -41,6 +41,9 @@ if !exists('g:vscode')
     hi DiffText     gui=none    guifg=NONE          guibg=#8cbee2
     let g:airline_theme='base16_gruvbox_dark_soft'
 
+    let g:python_host_prog = '/usr/bin/python'
+    let g:python3_host_prog = '/usr/bin/python3'
+
     " Setup neovim lsp for python
   "  lua << EOF
   "      require'lspconfig'.pyright.setup{}

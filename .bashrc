@@ -8,6 +8,11 @@ case $- in
       *) return;;
 esac
 
+# Attempt to force 256 color
+if [ -n "$DISPLAY" -a "$TERM" == "xterm" ]; then
+    export TERM=xterm-256color
+fi
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
