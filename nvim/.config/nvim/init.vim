@@ -14,8 +14,6 @@ if !exists('g:vscode')
     Plug 'junegunn/fzf.vim'
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
     Plug 'neovim/nvim-lspconfig'
-    Plug 'nvim-lua/completion-nvim'
-    Plug 'nvim-treesitter/completion-treesitter'
     Plug 'hrsh7th/vim-vsnip'
     Plug 'hrsh7th/vim-vsnip-integ'
     Plug 'APZelos/blamer.nvim'
@@ -56,7 +54,6 @@ if !exists('g:vscode')
     source ~/.config/nvim/plug-config/fzf.vim
     source ~/.config/nvim/plug-config/rnvimr.vim
     source ~/.config/nvim/plug-config/lsp.vim
-    source ~/.config/nvim/plug-config/cmp.vim
     source ~/.config/nvim/plug-config/gitblamer.vim
     source ~/.config/nvim/mappings.vim
 

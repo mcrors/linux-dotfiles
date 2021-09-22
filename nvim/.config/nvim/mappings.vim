@@ -63,8 +63,6 @@ nnoremap <silent> <leader>q :bd<CR>
 " reload the init file
 nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
 
-imap <silent> <c-p> <Plug>(completion_trigger)
-
 " Expand
 imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
 smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'

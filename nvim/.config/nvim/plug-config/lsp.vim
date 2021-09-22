@@ -34,7 +34,7 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', '<leader>ed', '<cmd>lua vim.lsp.diagnostic.enable()<CR>', opts)
   buf_set_keymap("n", 'df', "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
 
-  require('completion').on_attach()
+--  require('completion').on_attach()
 end
 
 -- Use a loop to conveniently call 'setup' on multiple servers and
