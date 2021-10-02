@@ -180,4 +180,4 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 set scrolloff=8                         " Add space at the bottom
 set colorcolumn=79                      " Add a column at 90 so you don't go over that with your code.
 set modifiable
-set completeopt=menu
+set completeopt=menu,noinsert,noselect,preview
