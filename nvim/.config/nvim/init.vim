@@ -17,6 +17,7 @@ if !exists('g:vscode')
     Plug 'hrsh7th/vim-vsnip'
     Plug 'hrsh7th/vim-vsnip-integ'
     Plug 'APZelos/blamer.nvim'
+    Plug 'mboughaba/i3config.vim'
     call plug#end()
 
     " set leader key
