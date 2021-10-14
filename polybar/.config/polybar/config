@@ -93,7 +93,7 @@ line-size = 1
 cursor-click = pointer
 cursor-scroll = ns-resize
 
-font-0 = Source Code Pro:style=Bold:size=18;6
+font-0 = Source Code Pro:style=Medium:size=12;6
 font-1 = UbuntuMono Nerd Font:style=Medium:size=18;6
 font-2 = Material Design Icons:style=Regular:size=25;7
 
@@ -115,29 +115,13 @@ module-margin-right = 2
 cursor-click = pointer
 
 [bar/bottom]
+height = 25
+font-0 = Source Code Pro:style=Medium:size=10;6
+font-1 = UbuntuMono Nerd Font:style=Medium:size=14;6
 inherit = bar/base
 bottom = true
-modules-right = wlan battery date-alt
-
-[module/xwindow]
-type = internal/xwindow
-label = %title:0:30:...%
-
-[module/xkeyboard]
-type = internal/xkeyboard
-blacklist-0 = num lock
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
-
-label-layout = %layout%
-label-layout-underline = ${colors.secondary}
-
-label-indicator-padding = 2
-label-indicator-margin = 1
-label-indicator-background = ${colors.secondary}
-label-indicator-underline = ${colors.secondary}
+modules-right = filesystem blank blank cpu blank blank memory battery date-alt
+modules-left = pulseaudio
 
 [module/filesystem]
 type = internal/fs
@@ -145,12 +129,12 @@ interval = 25
 
 mount-0 = /
 
-label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
+label-mounted = : %percentage_free%% of %total%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
 ; Separator in between workspaces
-; label-separator = |
+label-separator = |
 
 [module/i3]
 type = internal/i3
@@ -203,17 +187,15 @@ label-urgent-padding = 2
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = ""
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #f90000
 label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
 interval = 2
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = #4bffdc
 label = %percentage_used%%
 
 [module/wlan]
@@ -307,34 +289,6 @@ bar-volume-empty = ─
 bar-volume-empty-font = 2
 bar-volume-empty-foreground = ${colors.foreground-alt}
 
-[module/alsa]
-type = internal/alsa
-
-format-volume = <label-volume> <bar-volume>
-label-volume = VOL
-label-volume-foreground = ${root.foreground}
-
-format-muted-prefix = " "
-format-muted-foreground = ${colors.foreground-alt}
-label-muted = sound muted
-
-bar-volume-width = 10
-bar-volume-foreground-0 = #55aa55
-bar-volume-foreground-1 = #55aa55
-bar-volume-foreground-2 = #55aa55
-bar-volume-foreground-3 = #55aa55
-bar-volume-foreground-4 = #55aa55
-bar-volume-foreground-5 = #f5a70a
-bar-volume-foreground-6 = #ff5555
-bar-volume-gradient = false
-bar-volume-indicator = |
-bar-volume-indicator-font = 2
-bar-volume-fill = ─
-bar-volume-fill-font = 2
-bar-volume-empty = ─
-bar-volume-empty-font = 2
-bar-volume-empty-foreground = ${colors.foreground-alt}
-
 [module/battery]
 type = internal/battery
 battery = BAT0
@@ -345,29 +299,30 @@ full-at = 100
 format-discharging = <ramp-capacity><label-discharging>
 format-discharging-padding = ${layout.icon-padding}
 
-ramp-capacity-font = ${layout.icon-font}
+ramp-capacity-font = 6
+; ${layout.icon-font}
 ramp-capacity-foreground = ${color.text-fg}
 ramp-capacity-padding-right = ${layout.icon-padding}
 
-ramp-capacity-0 = %{T6}󱃍%{T-}
+ramp-capacity-0 = %{T3}󱃍%{T-}
 ramp-capacity-0-foreground = #fb4934
 
-ramp-capacity-1 = %{T6}󰁺%{T-}
+ramp-capacity-1 = %{T3}󰁺%{T-}
 ramp-capacity-1-foreground = #fb4934
 
-ramp-capacity-2 = %{T6}󰁻%{T-}
+ramp-capacity-2 = %{T3}󰁻%{T-}
 ramp-capacity-2-foreground = #fb4934
 
-ramp-capacity-3 = %{T6}󰁼%{T-}
+ramp-capacity-3 = %{T3}󰁼%{T-}
 ramp-capacity-3-foreground = #fabd2f
 
-ramp-capacity-4 = %{T6}󰁽%{T-}
-ramp-capacity-5 = %{T6}󰁾%{T-}
-ramp-capacity-6 = %{T6}󰁿%{T-}
-ramp-capacity-7 = %{T6}󰂀%{T-}
-ramp-capacity-8 = %{T6}󰂁%{T-}
-ramp-capacity-9 = %{T6}󰂂%{T-}
-ramp-capacity-10 = %{T6}󰁹%{T-}
+ramp-capacity-4 = %{T3}󰁽%{T-}
+ramp-capacity-5 = %{T3}󰁾%{T-}
+ramp-capacity-6 = %{T3}󰁿%{T-}
+ramp-capacity-7 = %{T3}󰂀%{T-}
+ramp-capacity-8 = %{T3}󰂁%{T-}
+ramp-capacity-9 = %{T3}󰂂%{T-}
+ramp-capacity-10 = %{T3}󰁹%{T-}
 
 ;label-discharging = %percentage%%
 label-discharging = %percentage%%

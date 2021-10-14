@@ -76,8 +76,8 @@ client.background       $bg-color
 ################### GAPS ###################### {{{
 
 for_window [class="^.*"] border pixel 2
-gaps inner 8
-gaps outer 8
+gaps inner 18
+gaps outer 18
 
 # }}}
 
@@ -270,7 +270,7 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+z exec --no-startup-id /home/rhoulihan/.config/rofi/powermenu/powermenu.sh
+bindsym $mod+Delete exec --no-startup-id /home/rhoulihan/.config/rofi/powermenu/powermenu.sh
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
