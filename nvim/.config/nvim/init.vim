@@ -14,9 +14,14 @@ if !exists('g:vscode')
     Plug 'junegunn/fzf.vim'
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
     Plug 'neovim/nvim-lspconfig'
+    Plug 'kabouzeid/nvim-lspinstall'
     Plug 'hrsh7th/vim-vsnip'
     Plug 'hrsh7th/vim-vsnip-integ'
     Plug 'APZelos/blamer.nvim'
+    Plug 'autozimu/LanguageClient-neovim', {
+        \ 'branch': 'next',
+        \ 'do': 'bash install.sh',
+        \ }
     Plug 'mboughaba/i3config.vim'
     call plug#end()
 
@@ -43,11 +48,6 @@ if !exists('g:vscode')
     let g:python_host_prog = '/usr/bin/python'
     let g:python3_host_prog = '/usr/bin/python3'
 
-    " Setup neovim lsp for python
-  "  lua << EOF
-  "      require'lspconfig'.pyright.setup{}
-"EOF
-
     "source files for non vscode setup
     source ~/.config/nvim/autocmds.vim
     source ~/.config/nvim/plug-config/devicons.vim
@@ -55,6 +55,7 @@ if !exists('g:vscode')
     source ~/.config/nvim/plug-config/fzf.vim
     source ~/.config/nvim/plug-config/rnvimr.vim
     source ~/.config/nvim/plug-config/lsp.vim
+    source ~/.config/nvim/plug-config/lsclient.vim
     source ~/.config/nvim/plug-config/gitblamer.vim
     source ~/.config/nvim/mappings.vim
 

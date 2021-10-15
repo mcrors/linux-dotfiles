@@ -44,9 +44,9 @@ function! DeviconsColors(config)
         for color in colors
             if color == 'normal'
                 exec 'autocmd FileType nerdtree,startify if &background == ''dark'' | '.
-                    \ 'highlight devicons_'.color.' guifg='.g:sol.gui.base01.' ctermfg='.g:sol.cterm.base01.' | '.
+                    \ 'highlight devicons_'.color.' guifg='.g:sol.gui.base03.' ctermfg='.g:sol.cterm.base03.' | '.
                     \ 'else | '.
-                    \ 'highlight devicons_'.color.' guifg='.g:sol.gui.base1.' ctermfg='.g:sol.cterm.base1.' | '.
+                    \ 'highlight devicons_'.color.' guifg='.g:sol.gui.base3.' ctermfg='.g:sol.cterm.base3.' | '.
                     \ 'endif'
             elseif color == 'emphasize'
                 exec 'autocmd FileType nerdtree,startify if &background == ''dark'' | '.

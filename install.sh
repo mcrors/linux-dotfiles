@@ -13,9 +13,16 @@ sudo apt install neovim \
                  bat \
                  tmux \
                  stow \
-                 ripgrep
-
+                 ripgrep \
+                 clangd-12
+# install node and nvm
+# install npm
+# update node to latest version
+# get dot files from github
+# stow the dot files
+# install pyrighht using npm
 # install nerd fonts
+
 mkdir -p $HOME/nerd-fonts
 git clone https://github.com/ryanoasis/nerd-fonts $HOME/nerd-fonts
 cd $HOME/nerd-fonts

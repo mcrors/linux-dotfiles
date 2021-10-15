@@ -14,3 +14,7 @@ alias vim="nvim"
 alias vi="nvim"
 
 alias dev-vm="ssh rhoulihan@dev-rhoulihan -t zsh"
+
+alias clangd="clangd-12"
+
+alias cat="batcat"
