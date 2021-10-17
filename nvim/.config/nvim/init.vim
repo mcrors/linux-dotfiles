@@ -23,6 +23,7 @@ if !exists('g:vscode')
         \ 'do': 'bash install.sh',
         \ }
     Plug 'mboughaba/i3config.vim'
+    Plug 'octol/vim-cpp-enhanced-highlight'
     call plug#end()
 
     " set leader key
@@ -166,7 +167,7 @@ set listchars                           " show spaces
 set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting se/aart
 set autoindent                          " Good auto indent
-set laststatus=0                        " Always display the status line
+set laststatus=2                        " Always display the status line
 set number                              " Line numbers
 set relativenumber                      " Add relative lines
 set cursorline                          " Enable highlighting of the current line
@@ -183,3 +184,6 @@ set scrolloff=8                         " Add space at the bottom
 set colorcolumn=79                      " Add a column at 90 so you don't go over that with your code.
 set modifiable
 set completeopt=menu,noinsert,noselect,preview
+set wildmenu
+set wildmode=list:longest,full
+set splitright

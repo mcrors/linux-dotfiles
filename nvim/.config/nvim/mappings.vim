@@ -14,10 +14,13 @@ nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <leader>l :Lines<CR>
 
 " FZF fuzzy search current buffer
-nnoremap <silent> <leader>f :BLines<CR>
+nnoremap <silent> <C-f> :BLines<CR>
 
 " FZF git status
 nnoremap <silent> <leader>g :GitFiles?<CR>
+
+"ripgrep project
+nnoremap <silent> <C-r> :Rg<CR>
 
 " git blame toggle
 nnoremap <silent> gb :BlamerToggle<CR>
@@ -29,6 +32,15 @@ nnoremap <C-PageDown> :bn<CR>
 " Open all buffers as windows
 nnoremap <silent> <leader>w :ball<CR>
 
+" Split to the right
+nnoremap <silent> <leader>vs :vsplit<CR>
+
+" Split below
+nnoremap <silent> <leader>hs :split<CR>
+
+" Close splits
+nnoremap <silent> <leader>cs :on<CR>
+
 " Print the path to the current buffer
 nnoremap <leader>p :!echo %:p<CR>
 
@@ -36,8 +48,8 @@ nnoremap <leader>p :!echo %:p<CR>
 nnoremap <leader>o <C-W>o
 
 " Resize splits
-nnoremap <silent> <A-j> :vertical resize -5<CR>
-nnoremap <silent> <A-k> :vertical resize +5<CR>
+nnoremap <silent> <A-h> :vertical resize -5<CR>
+nnoremap <silent> <A-l> :vertical resize +5<CR>
 
 " Close current tab
 nnoremap <silent> <C-w> :tabclose<CR>
@@ -82,5 +94,9 @@ inoremap jj <C-x><C-o>
 inoremap <Tab><Tab> <C-x><C-o>
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
-inoremap <expr> <C-j>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Tab>"
+
+" Move a line up or down with alt j and k
+nmap <A-j> mz:m+<CR>`z
+nmap <A-k> mz:m-2<CR>`z
