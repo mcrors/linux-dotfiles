@@ -90,13 +90,16 @@ imap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-T
 smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-Tab>'
 
 " Use Ctrl-Enter to bring up completetion suggestions
-inoremap jj <C-x><C-o>
-inoremap <Tab><Tab> <C-x><C-o>
+" inoremap jj <C-x><C-o>
+" inoremap <Tab><Tab> <C-x><C-o>
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Tab>"
+" inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Tab>"
 
 " Move a line up or down with alt j and k
 nmap <A-j> mz:m+<CR>`z
 nmap <A-k> mz:m-2<CR>`z
+
+" Surround mappings
+nnoremap <silent> <C-"> :ysiw"

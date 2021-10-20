@@ -15,7 +15,11 @@ if !exists('g:vscode')
     Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
     Plug 'neovim/nvim-lspconfig'
     Plug 'kabouzeid/nvim-lspinstall'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/nvim-cmp'
     Plug 'hrsh7th/vim-vsnip'
+    Plug 'hrsh7th/cmp-vsnip'
     Plug 'hrsh7th/vim-vsnip-integ'
     Plug 'APZelos/blamer.nvim'
     Plug 'autozimu/LanguageClient-neovim', {
@@ -24,6 +28,8 @@ if !exists('g:vscode')
         \ }
     Plug 'mboughaba/i3config.vim'
     Plug 'octol/vim-cpp-enhanced-highlight'
+    Plug 'tpope/vim-surround'
+    Plug 'sheerun/vim-polyglot'
     call plug#end()
 
     " set leader key
@@ -57,7 +63,9 @@ if !exists('g:vscode')
     source ~/.config/nvim/plug-config/rnvimr.vim
     source ~/.config/nvim/plug-config/lsp.vim
     source ~/.config/nvim/plug-config/lsclient.vim
+    source ~/.config/nvim/plug-config/cmp.vim
     source ~/.config/nvim/plug-config/gitblamer.vim
+    source ~/.config/nvim/plug-config/polyglot.vim
     source ~/.config/nvim/mappings.vim
 
 else
