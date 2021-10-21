@@ -50,13 +50,13 @@ if !exists('g:vscode')
     hi DiffChange   gui=none    guifg=NONE          guibg=#e5d5ac
     hi DiffDelete   gui=bold    guifg=#ff8080       guibg=#ffb0b0
     hi DiffText     gui=none    guifg=NONE          guibg=#8cbee2
-    let g:airline_theme='base16_gruvbox_dark_soft'
 
     let g:python_host_prog = '/usr/bin/python'
     let g:python3_host_prog = '/usr/bin/python3'
 
     "source files for non vscode setup
     source ~/.config/nvim/autocmds.vim
+    source ~/.config/nvim/plug-config/airline.vim
     source ~/.config/nvim/plug-config/devicons.vim
     source ~/.config/nvim/plug-config/nerdtree.vim
     source ~/.config/nvim/plug-config/fzf.vim

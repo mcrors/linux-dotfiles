@@ -19,6 +19,9 @@ nnoremap <silent> <C-f> :BLines<CR>
 " FZF git status
 nnoremap <silent> <leader>g :GitFiles?<CR>
 
+" Use FZF to jump around Windows
+nnoremap <silent> <C-t> :Windows<CR>
+
 "ripgrep project
 nnoremap <silent> <C-r> :Rg<CR>
 
@@ -30,7 +33,7 @@ nnoremap <C-PageUp> :bp<CR>
 nnoremap <C-PageDown> :bn<CR>
 
 " Open all buffers as windows
-nnoremap <silent> <leader>w :ball<CR>
+"nnoremap <silent> <leader>w :ball<CR>
 
 " Split to the right
 nnoremap <silent> <leader>vs :vsplit<CR>
