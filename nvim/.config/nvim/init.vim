@@ -30,6 +30,7 @@ if !exists('g:vscode')
     Plug 'octol/vim-cpp-enhanced-highlight'
     Plug 'tpope/vim-surround'
     Plug 'sheerun/vim-polyglot'
+    Plug 'machakann/vim-highlightedyank'
     call plug#end()
 
     " set leader key
@@ -67,7 +68,7 @@ if !exists('g:vscode')
     source ~/.config/nvim/plug-config/gitblamer.vim
     source ~/.config/nvim/plug-config/polyglot.vim
     source ~/.config/nvim/mappings.vim
-
+    source ~/.config/nvim/plug-config/highlightedyank.vim
 else
     function! s:manageEditorSize(...)
         let count = a:1
