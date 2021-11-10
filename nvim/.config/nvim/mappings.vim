@@ -106,3 +106,18 @@ nmap <A-k> mz:m-2<CR>`z
 
 " Surround mappings
 nnoremap <silent> <C-"> :ysiw"
+
+" Format json content
+nnoremap <silent> bj :%!jq . <CR>
+
+" Make Y do what you would expect
+nnoremap Y y$
+
+" Keep cursor centered
+nnoremap n nzzzv
+nnoremap N Nzzzv
+
+" Add relative lines jumps to the jumps List
+nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+nnoremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+
