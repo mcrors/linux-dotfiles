@@ -31,6 +31,7 @@ if !exists('g:vscode')
     Plug 'tpope/vim-surround'
     Plug 'sheerun/vim-polyglot'
     Plug 'machakann/vim-highlightedyank'
+    Plug 'tpope/vim-fugitive'
     call plug#end()
 
     " set leader key
