@@ -18,3 +18,5 @@ alias dev-vm="ssh rhoulihan@dev-rhoulihan -t zsh"
 alias clangd="clangd-12"
 
 alias cat="batcat"
+
+alias whatsmyip="host myip.opendns.com resolver1.opendns.com"
