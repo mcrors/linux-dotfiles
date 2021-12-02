@@ -76,8 +76,8 @@ client.background       $bg-color
 ################### GAPS ###################### {{{
 
 for_window [class="^.*"] border pixel 2
-gaps inner 18
-gaps outer 18
+gaps inner 10
+gaps outer 10
 
 # }}}
 
