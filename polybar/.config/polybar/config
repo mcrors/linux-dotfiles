@@ -103,7 +103,6 @@ font-2 = Material Design Icons:style=Regular:size=25;7
 inherit = bar/base
 override-redirect = false
 
-modules-left = powermenu
 modules-center = i3
 modules-right = filesystem cpu memory battery date-alt
 
@@ -371,13 +370,6 @@ ramp-0 = 
 ramp-1 = 
 ramp-2 = 
 ramp-foreground = ${colors.foreground-alt}
-
-[module/powermenu]
-type = custom/text
-content = ⏻
-format-padding = 1
-format-background = ${color.module-bg}
-click-left = $HOME/.config/rofi/powermenu/powermenu.sh
 
 [module/blank]
 type = custom/text

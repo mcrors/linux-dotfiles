@@ -1,4 +1,4 @@
-@import "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
+@import "config.rasi"
 
 * {
 scrollbar: false;
