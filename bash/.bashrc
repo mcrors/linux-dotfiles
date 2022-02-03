@@ -113,5 +113,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
+JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash

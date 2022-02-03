@@ -16,6 +16,21 @@
     "editor.cursorSurroundingLines": 8,
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
     "vscode-neovim.neovimInitVimPaths.linux": "/home/rhoulihan/.config/nvim/init.vim",
+
+    "java.configuration.runtimes": [
+      {
+        "name": "JavaSE-1.8",
+        "path": "/usr/lib/jvm/java-8-openjdk-amd64",
+        "default":  true
+      },
+      {
+        "name": "JavaSE-11",
+        "path": "/usr/lib/jvm/java-11-openjdk-amd64",
+        "sources" : "/usr/local/jdk-11.0.3/lib/src.zip",
+        "javadoc" : "https://docs.oracle.com/en/java/javase/11/docs/api"
+       }
+    ],
+
     "whichkey.sortOrder": "alphabetically",
     "whichkey.delay": 0,
     "whichkey.bindings": [
@@ -224,6 +239,18 @@
           "name": "Toggle Explorer",
           "type": "command",
           "command": "workbench.action.toggleSidebarVisibility"
+        },
+        {
+          "key": "c",
+          "name": "Connect to ssh",
+          "type": "command",
+          "command": "opensshremotes.openEmptyWindowInCurrentWindow"
+        },
+        {
+          "key": "j",
+          "name": "Go to Java Project",
+          "type": "command",
+          "command": "javaProjectExplorer.focus"
         },
         {
           "key": "f",
@@ -995,5 +1022,13 @@
   "editor.minimap.enabled": false,
   "workbench.colorTheme": "Gruvbox Dark Hard",
   "workbench.iconTheme": "vscode-icons",
-  "vsicons.dontShowNewVersionMessage": true
+  "vsicons.dontShowNewVersionMessage": true,
+  "redhat.telemetry.enabled": true,
+  "java.imports.gradle.wrapper.checksums": [
+    {
+      "sha256": "9a9afff59390e0cab2134d6113690dc6e25eb6b3b16b1288b441c4cbdfd97a09",
+      "allowed": true
+    }
+  ],
+  "java.maven.downloadSources": true
 }

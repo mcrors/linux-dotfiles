@@ -231,8 +231,31 @@
       "when": "terminalFocus"
     },
     {
+      "key": "ctrl+$",
+      "command": "workbench.action.terminal.focus",
+      "when": "activePanel == 'workbench.panel.output'"
+    },
+    {
       "key": "shift+escape",
       "command": "leaveEditorMessage",
       "when": "messageVisible"
+    },
+    {
+      "key": "ctrl+shift+s",
+      "command": "sshHosts.focus"
+    },
+    {
+      "key": "ctrl+c ctrl+s",
+      "command": "opensshremotes.openEmptyWindowInCurrentWindow"
+    },
+    {
+      "key": "ctrl+c",
+      "command": "-vscode-neovim.escape",
+      "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+      "key": "ctrl+c",
+      "command": "-vscode-neovim.escape",
+      "when": "editorTextFocus && neovim.ctrlKeysInsert && neovim.init && neovim.mode == 'insert'"
     }
   ]
