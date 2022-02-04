@@ -41,9 +41,9 @@ export ALIEN_THEME="gruvbox"
 
 #Virtualenvwrapper settings:
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_VIRTUALENV=/home/goran/.local/bin/virtualenv
-source ~/.local/bin/virtualenvwrapper.sh
+export WORKON_HOME=$HOME/.venvs
+export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
+source $HOME/.local/bin/virtualenvwrapper.sh
 
 plugins=(git)
 plugins+=(zsh-syntax-highlighting colored-man-pages)
