@@ -263,5 +263,9 @@
       "key": "ctrl+w",
       "command": "-vscode-neovim.send",
       "when": "editorTextFocus && neovim.ctrlKeysInsert && neovim.recording && neovim.mode == 'insert'"
+    },
+    {
+      "key": "ctrl+shift+e",
+      "command": "workbench.action.closeSidebar"
     }
   ]
