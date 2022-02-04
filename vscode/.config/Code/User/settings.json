@@ -1018,7 +1018,7 @@
     "**/.factorypath": true,
     "**/*.class": true
   },
-  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontFamily": "menlo",
   "editor.minimap.enabled": false,
   "workbench.colorTheme": "Gruvbox Dark Hard",
   "workbench.iconTheme": "vscode-icons",
@@ -1030,5 +1030,6 @@
       "allowed": true
     }
   ],
-  "java.maven.downloadSources": true
+  "java.maven.downloadSources": true,
+  "terminal.integrated.fontSize": 13
 }
