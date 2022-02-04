@@ -1018,10 +1018,10 @@
     "**/.factorypath": true,
     "**/*.class": true
   },
-  "terminal.integrated.fontFamily": "menlo",
+  "terminal.integrated.fontFamily": "MesloLGS NF",
   "editor.minimap.enabled": false,
   "workbench.colorTheme": "Gruvbox Dark Hard",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "vsicons.dontShowNewVersionMessage": true,
   "redhat.telemetry.enabled": true,
   "java.imports.gradle.wrapper.checksums": [
