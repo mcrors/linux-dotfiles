@@ -6,4 +6,4 @@ else
 fi
 
 feh --bg-scale /home/rhoulihan/Pictures/wallpapers/aenami-1633200656101-9566.jpg
-picom --config /home/rhoulihan/.config/picom/picom.conf
+picom --experimental-backends --config /home/rhoulihan/.config/picom/picom.conf

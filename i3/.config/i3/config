@@ -305,7 +305,7 @@ bindsym $mod+r mode "resize"
 
 ################### EXECUTE ##################### {{{
 
-exec_always --no-startup0id feh /home/rhoulihan/Pictures/wallpapers/aenami-1633200656101-9566.jpg
 exec_always --no-startup-id /home/rhoulihan/.config/i3/i3-display-setup.sh
 exec_always --no-startup-id /home/rhoulihan/.config/polybar/launch.sh
+exec_always --no-startup-id xmodmap -e "keysym Menu = Super_R"
 # }}}
