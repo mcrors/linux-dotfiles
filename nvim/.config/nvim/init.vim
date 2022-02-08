@@ -212,7 +212,7 @@ set nowritebackup                       " This is recommended by coc
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
-set clipboard+=unnamedplus               " Copy paste between vim and everything else
+set clipboard=unnamedplus               " Copy paste between vim and everything else
 set scrolloff=8                         " Add space at the bottom
 set colorcolumn=79                      " Add a column at 90 so you don't go over that with your code.
 set modifiable

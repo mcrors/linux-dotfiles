@@ -1031,5 +1031,7 @@
     }
   ],
   "java.maven.downloadSources": true,
-  "terminal.integrated.fontSize": 13
+  "terminal.integrated.fontSize": 13,
+  "bracketPairColorizer.depreciation-notice": false,
+  "editor.fontFamily": "'JetBrains Mono', 'monospace', monospace"
 }

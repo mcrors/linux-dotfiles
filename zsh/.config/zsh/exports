@@ -10,4 +10,5 @@ export EDITOR="nvim"
 export BROWSER="firefox"
 export BAT_THEME="zenburn"
 export TERMINAL="kitty"
+export PAGER="most"
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64

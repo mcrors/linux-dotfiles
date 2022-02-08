@@ -138,23 +138,24 @@ bindsym $mod+Shift+m workspace $ws10; move workspace to output eDP-1; workspace 
 assign [class="Slack"] $ws1
 exec --no-startup-id slack
 
-# Start wavebox or some email client on workspace 2
-assign [class="Mailspring"] $ws2
-exec --no-startup-id mailspring
+assign [class="Thunderbird"] $ws2
+exec --no-startup-id thunderbird
 
-exec --no-startup-id i3-msg 'workspace $ws3; exec /home/rhoulihan/.local/bin/kitty'
+assign [class="Code"] $ws3
+exec --no-startup-id code
+
+assign [class="kitty"] $ws4
 exec --no-startup-id i3-msg 'workspace $ws4; exec /home/rhoulihan/.local/bin/kitty'
 
-
-assign [class="Firefox"] $ws6
+assign [class="Firefox"] $ws5
 exec --no-startup-id firefox
 
-# Start excel on workspace 7
+assign [class="Sublime_text"] $ws6
+exec --no-startup-id sublime
 
-# Start something else on workspace 8
+assign [class="libreoffice-calc"] $ws8
 
-assign [class="spotify"] $ws9
-assign [class="zoom"] $ws10
+assign [class="zoom"] $ws9
 
 # }}}
 
@@ -306,6 +307,7 @@ bindsym $mod+r mode "resize"
 ################### EXECUTE ##################### {{{
 
 exec_always --no-startup-id /home/rhoulihan/.config/i3/i3-display-setup.sh
-exec_always --no-startup-id /home/rhoulihan/.config/polybar/launch.sh
+#exec_always --no-startup-id /home/rhoulihan/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/polybar-collection/launch.sh
 exec_always --no-startup-id xmodmap -e "keysym Menu = Super_R"
 # }}}
