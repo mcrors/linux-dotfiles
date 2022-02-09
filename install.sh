@@ -14,7 +14,8 @@ sudo apt install neovim \
                  tmux \
                  stow \
                  ripgrep \
-                 clangd-12
+                 clangd-12 \
+                 xclip
 # install node and nvm
 # install npm
 # update node to latest version
@@ -28,6 +29,8 @@ git clone https://github.com/ryanoasis/nerd-fonts $HOME/nerd-fonts
 cd $HOME/nerd-fonts
 sudo ./install.sh
 
+# install picom from https://github.com/yshui/picom
+# use the branch next
 # pip installs
 python3 -m pip install --upgrade pip
 

@@ -267,5 +267,9 @@
     {
       "key": "ctrl+shift+e",
       "command": "workbench.action.closeSidebar"
+    },
+    {
+      "key": "ctrl+shift+g a",
+      "command": "git.stageAll"
     }
   ]
