@@ -307,7 +307,7 @@ bindsym $mod+r mode "resize"
 ################### EXECUTE ##################### {{{
 
 exec_always --no-startup-id /home/rhoulihan/.config/i3/i3-display-setup.sh
-#exec_always --no-startup-id /home/rhoulihan/.config/polybar/launch.sh
-exec_always --no-startup-id $HOME/polybar-collection/launch.sh
-exec_always --no-startup-id xmodmap -e "keysym Menu = Super_R"
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/polybar-collection/launch.sh
+exec_always --no-startup-id xmodmap ~/.xmodmaprc
 # }}}
