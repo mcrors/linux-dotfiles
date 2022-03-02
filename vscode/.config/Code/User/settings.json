@@ -1041,5 +1041,16 @@
   "outline.showFields": false,
   "outline.showFiles": false,
   "outline.showFunctions": false,
-  "outline.showInterfaces": false
+  "outline.showInterfaces": false,
+  "python.testing.unittestArgs": [
+    "-vv",
+    "-s",
+    ".",
+    "-p",
+    "*test*.py"
+  ],
+  "python.testing.pytestArgs": [
+    "-vv"
+  ],
+  "workbench.startupEditor": "none"
 }

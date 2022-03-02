@@ -278,7 +278,7 @@
       "when": "textInputFocus && !editorReadonly"
     },
     {
-      "key": "ctrl+shift+k",
+      "key": "ctrl+alt+k",
       "command": "workbench.action.openGlobalKeybindings"
     },
     {
@@ -334,5 +334,48 @@
     {
       "key": "ctrl+shift+i",
       "command": "outline.focus"
+    },
+    {
+      "key": "ctrl+shift+enter",
+      "command": "acceptRenameInput",
+      "when": "editoFocus && renameInputVisible"
+    },
+    {
+      "key": "enter",
+      "command": "-acceptRenameInput",
+      "when": "editorFocus && renameInputVisible"
+    },
+    {
+      "key": "ctrl+alt+h",
+      "command": "workbench.action.moveActiveEditorGroupLeft"
+    },
+    {
+      "key": "ctrl+k left",
+      "command": "-workbench.action.moveActiveEditorGroupLeft"
+    },
+    {
+      "key": "ctrl+.",
+      "command": "-problems.action.showQuickFixes",
+      "when": "problemFocus"
+    },
+    {
+      "key": "ctrl+shift+k",
+      "command": "editor.action.quickFix",
+      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      "key": "ctrl+.",
+      "command": "-editor.action.quickFix",
+      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      "key": "ctrl+alt+k",
+      "command": "-rest-client.cancel-request",
+      "when": "editorTextFocus && editorLangId == 'http'"
+    },
+    {
+      "key": "ctrl+alt+k",
+      "command": "-rest-client.cancel-request",
+      "when": "editorTextFocus && editorLangId == 'plaintext'"
     }
   ]
