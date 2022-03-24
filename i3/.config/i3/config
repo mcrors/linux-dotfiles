@@ -147,10 +147,10 @@ exec --no-startup-id code
 assign [class="kitty"] $ws4
 exec --no-startup-id i3-msg 'workspace $ws4; exec /home/rhoulihan/.local/bin/kitty'
 
-assign [class="Firefox"] $ws5
+assign [class="firefox"] $ws5
 exec --no-startup-id firefox
 
-assign [class="Sublime_text"] $ws6
+assign [class="Sublime_text"] $ws5
 exec --no-startup-id sublime
 
 assign [class="libreoffice-calc"] $ws8
