@@ -1052,5 +1052,6 @@
   "python.testing.pytestArgs": [
     "-vv"
   ],
-  "workbench.startupEditor": "none"
+  "workbench.startupEditor": "none",
+  "window.zoomLevel": 1
 }
