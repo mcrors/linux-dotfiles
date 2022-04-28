@@ -138,8 +138,8 @@ bindsym $mod+Shift+m workspace $ws10; move workspace to output eDP-1; workspace 
 assign [class="Slack"] $ws1
 exec --no-startup-id slack
 
-assign [class="Thunderbird"] $ws2
-exec --no-startup-id thunderbird
+assign [class="firefox"] $ws2
+exec --no-startup-id firefox
 
 assign [class="Code"] $ws3
 exec --no-startup-id code
@@ -147,15 +147,12 @@ exec --no-startup-id code
 assign [class="kitty"] $ws4
 exec --no-startup-id i3-msg 'workspace $ws4; exec /home/rhoulihan/.local/bin/kitty'
 
-assign [class="firefox"] $ws5
-exec --no-startup-id firefox
-
 assign [class="Sublime_text"] $ws5
 exec --no-startup-id sublime
 
-assign [class="libreoffice-calc"] $ws8
+assign [class="libreoffice-calc"] $ws6
 
-assign [class="zoom"] $ws9
+assign [class="zoom"] $ws7
 
 # }}}
 
