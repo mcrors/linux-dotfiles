@@ -147,7 +147,13 @@ exec --no-startup-id code
 assign [class="kitty"] $ws4
 exec --no-startup-id i3-msg 'workspace $ws4; exec /home/rhoulihan/.local/bin/kitty'
 
-assign [class="Sublime_text"] $ws5
+assign [class="konsole"] $ws4
+exec --no-startup-id konsole
+
+assign [class="obsidian"] $ws5
+exec --no-startup-id obsidian
+
+assign [class="Sublime"] $ws5
 exec --no-startup-id sublime
 
 assign [class="libreoffice-calc"] $ws6
@@ -174,7 +180,6 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
-
 
 ################### KEY BINDINGS ###################### {{{
 bindsym Control+Mod1+l exec --no-startup-id $HOME/.config/i3/lock.sh
