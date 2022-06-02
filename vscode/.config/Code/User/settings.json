@@ -1055,5 +1055,6 @@
   "workbench.startupEditor": "none",
   "files.associations": {
     "*.conf": "nginx-log"
-  }
+  },
+  "security.workspace.trust.untrustedFiles": "open"
 }

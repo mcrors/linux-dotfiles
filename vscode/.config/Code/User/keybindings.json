@@ -377,5 +377,9 @@
       "key": "ctrl+alt+k",
       "command": "-rest-client.cancel-request",
       "when": "editorTextFocus && editorLangId == 'plaintext'"
+    },
+    {
+      "key": "ctrl+q",
+      "command": "-workbench.action.quit"
     }
   ]
