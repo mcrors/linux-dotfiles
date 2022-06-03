@@ -55,7 +55,7 @@ export MANPAGER='less -s -M +Gg'
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/venvs
 export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
-if [ -f ~/local/bin/virtualenvwrapper.sh ] ; then
+if [ -f ~/.local/bin/virtualenvwrapper.sh ] ; then
     source ~/.local/bin/virtualenvwrapper.sh
 fi
 
