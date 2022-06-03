@@ -50,3 +50,12 @@ export MANPAGER='less -s -M +Gg'
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+#Virtualenvwrapper settings:
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export WORKON_HOME=$HOME/venvs
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv
+if [ -f ~/local/bin/virtualenvwrapper.sh ] ; then
+    source ~/.local/bin/virtualenvwrapper.sh
+fi
+
