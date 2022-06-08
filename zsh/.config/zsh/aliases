@@ -10,9 +10,6 @@ alias rm='rm -i'
 
 alias l="ls -hal"
 
-alias vim="nvim"
-alias vi="nvim"
-
 alias dev-vm="ssh rhoulihan@dev-rhoulihan -t zsh"
 
 alias clangd="clangd-12"
