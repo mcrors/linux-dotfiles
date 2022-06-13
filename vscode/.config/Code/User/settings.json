@@ -1056,5 +1056,6 @@
   "files.associations": {
     "*.conf": "nginx-log"
   },
-  "security.workspace.trust.untrustedFiles": "open"
+  "security.workspace.trust.untrustedFiles": "open",
+  "breadcrumbs.symbolSortOrder": "type"
 }

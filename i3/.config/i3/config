@@ -145,20 +145,16 @@ assign [class="Code"] $ws3
 exec --no-startup-id code
 
 assign [class="kitty"] $ws4
-exec --no-startup-id i3-msg 'workspace $ws4; exec /home/rhoulihan/.local/bin/kitty'
-
-assign [class="konsole"] $ws4
-exec --no-startup-id konsole
+exec --no-startup-id kitty
 
 assign [class="obsidian"] $ws5
 exec --no-startup-id obsidian
 
-assign [class="Sublime"] $ws5
-exec --no-startup-id sublime
-
 assign [class="libreoffice-calc"] $ws6
+exec --no-startup-id libreoffice --calc
 
 assign [class="zoom"] $ws7
+exec --no-startup-id zoom
 
 for_window [class="xpad"] floating enable border normal
 # }}}
