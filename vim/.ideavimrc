@@ -1,0 +1,14 @@
+source ~/.vimrc
+
+nnoremap <leader>bn :action NextTab<CR>
+nnoremap <leader>s :action IdeaVim.ReloadVimRc.reload<CR>
+nnoremap <leader>q :action CloseContent<CR>
+
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-h> <c-w>h
+nnoremap <c-k> <c-w>k
+
+nnoremap <c-p> :action SearchEverywhere<CR>
+nnoremap <leader>e :action ActivateProjectToolWindow<CR>
+nnoremap <leader>b :action Switcher<CR>

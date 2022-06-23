@@ -2,11 +2,11 @@
 
 power_off="   Shut down"
 reboot="   Reboot"
-lock="     Lock"
-suspend="⏾   Sleep"
-log_out="   Leave"
+lock="   Lock"
+slp="⏾   Sleep"
+log_out="   Leave"
 
-chosen=$(printf '%s;%s;%s;%s;%s\n' "$power_off" "$reboot" "$lock" "$suspend" \
+chosen=$(printf '%s;%s;%s;%s;%s\n' "$power_off" "$reboot" "$lock" "$slp" \
                                    "$log_out" \
     | rofi -theme 'powermenu/powermenu.rasi' \
            -dmenu \
@@ -26,7 +26,7 @@ case "$chosen" in
         $HOME/.config/i3/lock.sh
         ;;
 
-    "$suspend")
+    "$slp")
         systemctl suspend
         ;;
 

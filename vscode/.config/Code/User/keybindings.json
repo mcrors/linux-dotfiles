@@ -1,0 +1,385 @@
+[
+    {
+      "key": "ctrl+e",
+      "command": "workbench.view.explorer"
+    },
+    {
+      "key": "r",
+      "command": "renameFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+      "key": "enter",
+      "command": "-renameFile",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+      "key": "j",
+      "command": "list.focusDown",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+      "key": "k",
+      "command": "list.focusUp",
+      "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+    },
+    {
+      "key": "ctrl+j",
+      "command": "selectNextSuggestion",
+      "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+      "key": "ctrl+k",
+      "command": "selectPrevSuggestion",
+      "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    },
+    {
+      "key": "ctrl+j",
+      "command": "selectNextSuggestion",
+      "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+      "key": "ctrl+k",
+      "command": "workbench.action.navigateUp",
+      "when": "inDebugRepl"
+    },
+    {
+      "key": "ctrl+h",
+      "command": "workbench.action.terminal.toggleTerminal",
+      "when": "inDebugRepl"
+    },
+    {
+      "key": "ctrl+k",
+      "command": "selectPrevSuggestion",
+      "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible && quickFixWidgetVisible"
+    },
+    {
+      "key": "ctrl+j",
+      "command": "workbench.action.quickOpenNavigateNext",
+      "when": "inQuickOpen"
+    },
+    {
+      "key": "tab",
+      "command": "selectNextSuggestion",
+      "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+      "key": "tab",
+      "command": "workbench.action.quickOpenNavigateNext",
+      "when": "inQuickOpen"
+    },
+    {
+      "key": "shift+tab",
+      "command": "selectPrevSuggestion",
+      "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+      "key": "shift+tab",
+      "command": "workbench.action.quickOpenNavigatePrevious",
+      "when": "inQuickOpen"
+    },
+    {
+      "key": "ctrl+k",
+      "command": "workbench.action.quickOpenNavigatePrevious",
+      "when": "inQuickOpen"
+    },
+    {
+      "key": "enter",
+      "command": "list.select",
+      "when": "explorerViewletVisible && filesExplorerFocus"
+    },
+    {
+      "key": "l",
+      "command": "list.select",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+      "key": "o",
+      "command": "list.toggleExpand",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+      "key": "h",
+      "command": "list.collapse",
+      "when": "explorerViewletVisible && filesExplorerFocus && !inputFocus"
+    },
+    {
+      "key": "a",
+      "command": "explorer.newFile",
+      "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+      "key": "shift+a",
+      "command": "explorer.newFolder",
+      "when": "filesExplorerFocus && !inputFocus"
+    },
+    {
+      "key": "shift+;",
+      "command": "insertPrevSuggestion",
+      "when": "hasOtherSuggestions && textInputFocus && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
+    },
+    {
+      "key": "ctrl+l",
+      "when": "sideBarFocus",
+      "command": "workbench.action.focusActiveEditorGroup"
+    },
+    {
+      "key": "ctrl+k",
+      "command": "workbench.action.focusActiveEditorGroup",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+j",
+      "command": "-editor.action.insertLineAfter",
+      "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
+    },
+    {
+      "key": "ctrl+shift+t",
+      "command": "workbench.action.togglePanel"
+    },
+    {
+      "key": "ctrl+j",
+      "command": "-workbench.action.togglePanel"
+    },
+    {
+      "key": "shift+k",
+      "command": "editor.action.showHover",
+      "when": "editorTextFocus && neovim.mode != 'insert'"
+    },
+    {
+      "key": "ctrl+k ctrl+i",
+      "command": "-editor.action.showHover",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "shift+tab",
+      "command": "-acceptAlternativeSelectedSuggestion",
+      "when": "suggestWidgetVisible && textInputFocus && textInputFocus"
+    },
+    {
+      "key": "ctrl+f",
+      "command": "-vscode-neovim.ctrl-f",
+      "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+      "key": "ctrl+b",
+      "command": "-workbench.action.toggleSidebarVisibility"
+    },
+    {
+      "key": "alt+k",
+      "command": "-keybindings.editor.recordSearchKeys",
+      "when": "inKeybindings && inKeybindingsSearch"
+    },
+    {
+      "key": "alt+k",
+      "command": "editor.action.moveLinesUpAction",
+      "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+      "key": "alt+up",
+      "command": "-editor.action.moveLinesUpAction",
+      "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+      "key": "alt+j",
+      "command": "editor.action.moveLinesDownAction",
+      "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+      "key": "alt+down",
+      "command": "-editor.action.moveLinesDownAction",
+      "when": "editorTextFocus && !editorReadonly"
+    },
+    {
+      "key": "ctrl+shift+e",
+      "command": "-workbench.action.quickOpenNavigatePreviousInFilePicker",
+      "when": "inFilesPicker && inQuickOpen"
+    },
+    {
+      "key": "ctrl+shift+e",
+      "command": "-workbench.view.explorer",
+      "when": "viewContainer.workbench.view.explorer.enabled"
+    },
+    {
+      "key": "shift+alt+down",
+      "command": "-editor.action.insertCursorBelow",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "shift+alt+up",
+      "command": "-editor.action.insertCursorAbove",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "shift+alt+i",
+      "command": "-editor.action.insertCursorAtEndOfEachLineSelected",
+      "when": "editorTextFocus"
+    },
+    {
+      "key": "ctrl+d",
+      "command": "-editor.action.addSelectionToNextFindMatch",
+      "when": "editorFocus"
+    },
+    {
+      "key": "g",
+      "command": "-betterSearch.reexecute",
+      "when": "editorTextFocus && resourceScheme == 'BetterSearch'"
+    },
+    {
+      "key": "ctrl+0",
+      "command": "workbench.action.toggleMaximizedPanel",
+      "when": "terminalFocus"
+    },
+    {
+      "key": "ctrl+$",
+      "command": "workbench.action.terminal.focus",
+      "when": "activePanel == 'workbench.panel.output'"
+    },
+    {
+      "key": "shift+escape",
+      "command": "leaveEditorMessage",
+      "when": "messageVisible"
+    },
+    {
+      "key": "ctrl+shift+s",
+      "command": "sshHosts.focus"
+    },
+    {
+      "key": "ctrl+r w",
+      "command": "-vscode-neovim.paste-register",
+      "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
+    },
+    {
+      "key": "ctrl+w",
+      "command": "-vscode-neovim.delete-word-left-cmdline",
+      "when": "neovim.mode == 'cmdline_normal'"
+    },
+    {
+      "key": "ctrl+w",
+      "command": "-vscode-neovim.send",
+      "when": "editorTextFocus && neovim.ctrlKeysNormal && neovim.init && neovim.mode != 'insert'"
+    },
+    {
+      "key": "ctrl+w",
+      "command": "-vscode-neovim.send",
+      "when": "editorTextFocus && neovim.ctrlKeysInsert && neovim.recording && neovim.mode == 'insert'"
+    },
+    {
+      "key": "ctrl+shift+e",
+      "command": "workbench.action.closeSidebar"
+    },
+    {
+      "key": "ctrl+shift+g a",
+      "command": "git.stageAll"
+    },
+    {
+      "key": "ctrl+shift+k",
+      "command": "-editor.action.deleteLines",
+      "when": "textInputFocus && !editorReadonly"
+    },
+    {
+      "key": "ctrl+alt+k",
+      "command": "workbench.action.openGlobalKeybindings"
+    },
+    {
+      "key": "ctrl+k ctrl+s",
+      "command": "-workbench.action.openGlobalKeybindings"
+    },
+    {
+      "key": "ctrl+shift+c",
+      "command": "-workbench.action.terminal.openNativeConsole",
+      "when": "!terminalFocus"
+    },
+    {
+      "key": "ctrl+shift+z",
+      "command": "-redo"
+    },
+    {
+      "key": "ctrl+shift+z",
+      "command": "terminal.focus"
+    },
+    {
+      "key": "ctrl+shift+b",
+      "command": "-workbench.action.tasks.build"
+    },
+    {
+      "key": "ctrl+shift+b",
+      "command": "workbench.panel.output.focus"
+    },
+    {
+      "key": "ctrl+shift+i",
+      "command": "-workbench.action.toggleDevTools",
+      "when": "isDevelopment"
+    },
+    {
+      "key": "ctrl+shift+i",
+      "command": "-notebook.formatCell",
+      "when": "editorHasDocumentFormattingProvider && editorTextFocus && inCompositeEditor && notebookEditable && !editorReadonly && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+      "key": "ctrl+shift+i",
+      "command": "-editor.action.formatDocument",
+      "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+      "key": "ctrl+shift+i",
+      "command": "-editor.action.formatDocument.none",
+      "when": "editorTextFocus && !editorHasDocumentFormattingProvider && !editorReadonly"
+    },
+    {
+      "key": "ctrl+shift+i",
+      "command": "-notebook.format",
+      "when": "notebookEditable && !editorTextFocus && activeEditor == 'workbench.editor.notebook'"
+    },
+    {
+      "key": "ctrl+shift+i",
+      "command": "outline.focus"
+    },
+    {
+      "key": "ctrl+shift+enter",
+      "command": "acceptRenameInput",
+      "when": "editoFocus && renameInputVisible"
+    },
+    {
+      "key": "enter",
+      "command": "-acceptRenameInput",
+      "when": "editorFocus && renameInputVisible"
+    },
+    {
+      "key": "ctrl+alt+h",
+      "command": "workbench.action.moveActiveEditorGroupLeft"
+    },
+    {
+      "key": "ctrl+k left",
+      "command": "-workbench.action.moveActiveEditorGroupLeft"
+    },
+    {
+      "key": "ctrl+.",
+      "command": "-problems.action.showQuickFixes",
+      "when": "problemFocus"
+    },
+    {
+      "key": "ctrl+shift+k",
+      "command": "editor.action.quickFix",
+      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      "key": "ctrl+.",
+      "command": "-editor.action.quickFix",
+      "when": "editorHasCodeActionsProvider && editorTextFocus && !editorReadonly"
+    },
+    {
+      "key": "ctrl+alt+k",
+      "command": "-rest-client.cancel-request",
+      "when": "editorTextFocus && editorLangId == 'http'"
+    },
+    {
+      "key": "ctrl+alt+k",
+      "command": "-rest-client.cancel-request",
+      "when": "editorTextFocus && editorLangId == 'plaintext'"
+    },
+    {
+      "key": "ctrl+q",
+      "command": "-workbench.action.quit"
+    }
+  ]

@@ -12,7 +12,7 @@ if !exists('g:vscode')
     Plug 'preservim/tagbar'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
+    Plug 'kevinhwang9copy in vscode not printing in other places1/rnvimr', {'do': 'make sync'}
     Plug 'neovim/nvim-lspconfig'
     Plug 'kabouzeid/nvim-lspinstall'
     Plug 'hrsh7th/cmp-nvim-lsp'
@@ -152,7 +152,29 @@ else
     " Simulate same TAB behavior in VSCode
     nmap <Tab> :Tabnext<CR>
     nmap <S-Tab> :Tabprev<CR>
+
+    augroup highlight_yank
+        autocmd!
+        au TextYankPost * silent! lua vim.highlight.on_yank{higroup='IncSearch', timeout=200}
+    augroup END
+
+    nnoremap <A-j> :m .+1<CR>==
+    nnoremap <A-k> :m .-2<CR>==
+    inoremap <A-j> <Esc>:m .+1<CR>==gi
+    inoremap <A-k> <Esc>:m .-2<CR>==gi
+    vnoremap <A-j> :m '>+1<CR>gv=gv
+    vnoremap <A-k> :m '<-2<CR>gv=gv
+
+    " Move lines up and down without loosing the cursor position
+    vnoremap J :<C-u>call MoveVisualDown()<CR>
+    vnoremap K :<C-u>call MoveVisualUp()<CR>
+
+    " Keep cursor centered
+    nnoremap n nzzzv
+    nnoremap N Nzzzv
+
 endif
+
 
 syntax enable                           " Enables syntax highlighing
 set hidden                              " Required to keep multiple buffers open multiple buffers

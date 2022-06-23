@@ -33,6 +33,8 @@ fi
 
 export EDITOR=nvim
 export TERMINAL="kitty"
+export BROWSER=/usr/bin/google-chrome-stable
+
 # set PATH so it includes JAVA_HOME if the jre exists
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 

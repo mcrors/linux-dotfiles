@@ -5,7 +5,13 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    alias grep='grep --color=auto'
+    if ! command -v rg &> /dev/null;
+    then
+        alias grep='grep --color=auto'
+    else
+        alias grep="rg"
+    fi
+
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
@@ -19,5 +25,4 @@ alias l='ls -hal'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-alias vim="nvim"
-alias vi="nvim"
+alias xclip="xclip -selection clipboard"

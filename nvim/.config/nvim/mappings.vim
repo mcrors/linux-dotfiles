@@ -101,8 +101,12 @@ smap <expr> <S-Tab> vsnip#jumpable(-1)  ? '<Plug>(vsnip-jump-prev)'      : '<S-T
 " inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<Tab>"
 
 " Move a line up or down with alt j and k
-nmap <A-j> mz:m+<CR>`z
-nmap <A-k> mz:m-2<CR>`z
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 " Surround mappings
 nnoremap <silent> <C-"> :ysiw"

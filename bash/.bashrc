@@ -93,10 +93,6 @@ export MANPAGER='less -s -M +Gg'
 
 
 # Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
@@ -119,3 +115,7 @@ export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 #virtualenvwrapper stuff
 export WORKON_HOME=~/venvs
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION

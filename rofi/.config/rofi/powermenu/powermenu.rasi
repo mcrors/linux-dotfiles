@@ -1,17 +1,10 @@
-@import "/usr/share/rofi/themes/gruvbox-dark-soft.rasi"
+@import "config.rasi"
 
 * {
 scrollbar: false;
 }
 
 window {
-  width:    300px;
-  border:   0;
-  background-color: #202020;
-  location: northeast;
-  x-offset: -10px;
-  y-offset: 35px;
-  padding:  10px;
   children: [ listview ];
 }
 

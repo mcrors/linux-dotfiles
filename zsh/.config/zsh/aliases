@@ -1,5 +1,10 @@
 # Colorize grep output (good for log files)
-alias grep='grep --color=auto'
+if ! command -v rg &> /dev/null;
+then
+	alias grep='grep --color=auto'
+else
+	alias grep="rg"
+fi
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 
@@ -10,13 +15,11 @@ alias rm='rm -i'
 
 alias l="ls -hal"
 
-alias vim="nvim"
-alias vi="nvim"
-
 alias dev-vm="ssh rhoulihan@dev-rhoulihan -t zsh"
 
 alias clangd="clangd-12"
 
-alias cat="batcat"
-
 alias whatsmyip="host myip.opendns.com resolver1.opendns.com"
+
+# have xclip always copy to the system clipboard
+alias xclip="xclip -selection clipboard"
