@@ -42,7 +42,7 @@ fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm-kitty|xterm-color|*-256color) color_prompt=yes;;
 esac
 
 # uncomment for a colored prompt, if the terminal has the capability; turned
@@ -77,7 +77,17 @@ xterm*|rxvt*)
     ;;
 esac
 
-
+# Have less display colours
+# from: https://wiki.archlinux.org/index.php/Color_output_in_console#man
+export LESS_TERMCAP_mb=$'\e[1;31m'     # begin bold
+export LESS_TERMCAP_md=$'\e[1;33m'     # begin blink
+export LESS_TERMCAP_so=$'\e[01;44;37m' # begin reverse video
+export LESS_TERMCAP_us=$'\e[01;37m'    # begin underline
+export LESS_TERMCAP_me=$'\e[0m'        # reset bold/blink
+export LESS_TERMCAP_se=$'\e[0m'        # reset reverse video
+export LESS_TERMCAP_ue=$'\e[0m'        # reset underline
+export GROFF_NO_SGR=1                  # for konsole and gnome-terminal
+export MANPAGER='less -s -M +Gg'
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
@@ -102,5 +112,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+#virtualenvwrapper stuff
+export WORKON_HOME=~/venvs
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh

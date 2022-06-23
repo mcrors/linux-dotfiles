@@ -34,5 +34,5 @@ fi
 export EDITOR=nvim
 export TERMINAL="kitty"
 # set PATH so it includes JAVA_HOME if the jre exists
-# export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64/bin/java"
+export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 
