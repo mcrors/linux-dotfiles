@@ -4,6 +4,10 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
+" Comment code
+nnoremap <silent> g/ :Commentary<CR>
+vnoremap <silent> g/ :Commentary<CR>
+
 " List buffers
 nnoremap <silent> <leader>b :Buffers<CR>
 
@@ -22,11 +26,17 @@ nnoremap <silent> <leader>g :GitFiles?<CR>
 " Use FZF to jump around Windows
 nnoremap <silent> <C-t> :Windows<CR>
 
-"ripgrep project
+" ripgrep project
 nnoremap <silent> <C-r> :Rg<CR>
+
+" fzf tags in the current buffer
+nnoremap <silent> bt :BTags<CR>
 
 " git blame toggle
 nnoremap <silent> gb :BlamerToggle<CR>
+
+" Open commits for the current buffer
+nnoremap <silent> gc :BCommit<CR>
 
 " Move between buffers
 nnoremap <C-PageUp> :bp<CR>
@@ -37,12 +47,12 @@ nnoremap <C-PageDown> :bn<CR>
 
 " Split to the right
 nnoremap <silent> <leader>vs :vsplit<CR>
-
 " Split below
 nnoremap <silent> <leader>hs :split<CR>
 
 " Close splits
 nnoremap <silent> <leader>cs :on<CR>
+
 
 " Print the path to the current buffer
 nnoremap <leader>p :!echo %:p<CR>

@@ -37,6 +37,7 @@ ssh-add ~/.ssh/id_pure_root > /dev/null 2>&1
 # xmodmap -e "keycode 78 = Menu"
 # xmodmap -e "keycode 135 = Super_R"
 
+
 export ALIEN_THEME="gruvbox"
 
 #Virtualenvwrapper settings:
@@ -44,6 +45,11 @@ export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
 export WORKON_HOME=$HOME/.venvs
 export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
 source $HOME/.local/bin/virtualenvwrapper.sh
+
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+PATH="$NVM_DIR:$PATH"
 
 plugins=(git)
 plugins+=(zsh-syntax-highlighting colored-man-pages)

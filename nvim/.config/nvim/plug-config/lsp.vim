@@ -30,9 +30,9 @@ local on_attach = function(client, bufnr)
   buf_set_keymap('n', 'nd', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
   buf_set_keymap('n', 'pd', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
   buf_set_keymap('n', 'ld', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-  buf_set_keymap('n', '<leader>dd', '<cmd>lua vim.lsp.diagnostic.disable()<CR>', opts)
-  buf_set_keymap('n', '<leader>ed', '<cmd>lua vim.lsp.diagnostic.enable()<CR>', opts)
-  buf_set_keymap("n", 'df', "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
+  buf_set_keymap('n', '<leader>dd', '<cmd>lua vim.diagnostic.disable()<CR>', opts)
+  buf_set_keymap('n', '<leader>ed', '<cmd>lua vim.diagnostic.enable()<CR>', opts)
+  buf_set_keymap("n", 'df', "<cmd>lua vim.lsp.buf.format()<CR>", opts)
 
 --  require('completion').on_attach()
 end

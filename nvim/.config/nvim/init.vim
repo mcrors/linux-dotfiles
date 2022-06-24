@@ -12,7 +12,8 @@ if !exists('g:vscode')
     Plug 'preservim/tagbar'
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
-    Plug 'kevinhwang9copy in vscode not printing in other places1/rnvimr', {'do': 'make sync'}
+    Plug 'kevinhwang91/nvim-bqf'
+    Plug 'kevinhwang91/rnvimr', {'do': 'make sync'}
     Plug 'neovim/nvim-lspconfig'
     Plug 'kabouzeid/nvim-lspinstall'
     Plug 'hrsh7th/cmp-nvim-lsp'
@@ -33,6 +34,7 @@ if !exists('g:vscode')
     Plug 'machakann/vim-highlightedyank'
     Plug 'tpope/vim-fugitive'
     Plug 'puremourning/vimspector'
+    Plug 'tpope/vim-commentary'
     call plug#end()
 
     " set leader key
