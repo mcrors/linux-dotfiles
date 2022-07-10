@@ -1,5 +1,6 @@
 local fn = vim.fn
 
+
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -90,6 +91,7 @@ return packer.startup(function(use)
 
     -- git stuff
     use "tpope/vim-fugitive"
+    use "braxtons12/blame_line.nvim"
 
     -- Automatically set up our configuration after cloning packer.nvim
     -- Put this at the end after all plugins

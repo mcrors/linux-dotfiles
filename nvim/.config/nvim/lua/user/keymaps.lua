@@ -76,6 +76,8 @@ keymap("n", "gr", "<cmd>lua require('telescope.builtin').lsp_references(require(
 -- Toggle class/module outline
 keymap("n", "<leader>t", ":SymbolsOutline<CR>", opts)
 
+-- Toggle git blame line
+keymap("n", "gb", ":BlameLineToggle<CR>", opts)
 ------------
 -- Insert --
 ------------
