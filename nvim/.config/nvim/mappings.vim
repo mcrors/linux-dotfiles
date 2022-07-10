@@ -4,10 +4,6 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
-" Comment code
-nnoremap <silent> g/ :Commentary<CR>
-vnoremap <silent> g/ :Commentary<CR>
-
 " List buffers
 nnoremap <silent> <leader>b :Buffers<CR>
 
@@ -55,7 +51,7 @@ nnoremap <silent> <leader>cs :on<CR>
 
 
 " Print the path to the current buffer
-nnoremap <leader>p :!echo %:p<CR>
+nnoremap <silent> <leader>p :!echo %:p<CR>
 
 " Maximize focused window
 nnoremap <leader>o <C-W>o
@@ -86,7 +82,10 @@ nnoremap <silent> <A-a> :AirlineRefresh<CR>
 nnoremap <silent> <leader>q :bd<CR>
 
 " reload the init file
-nnoremap <leader>s :source ~/.config/nvim/init.vim<CR>
+nnoremap <silent> <leader>s :source ~/.config/nvim/init.vim<CR>
+
+" open a terminal in horizontal split
+nnoremap <silent> <leader>z :new<CR>:terminal<CR>:resize 10<CR>
 
 " Expand
 imap <expr> <C-s>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-s>'
