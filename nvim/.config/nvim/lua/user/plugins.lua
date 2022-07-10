@@ -92,6 +92,10 @@ return packer.startup(function(use)
     -- git stuff
     use "tpope/vim-fugitive"
     use "braxtons12/blame_line.nvim"
+    use {
+        'lewis6991/gitsigns.nvim',
+        tag = 'release' -- To use the latest release
+    }
 
     -- Automatically set up our configuration after cloning packer.nvim
     -- Put this at the end after all plugins
