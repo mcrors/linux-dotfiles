@@ -3,6 +3,7 @@ require "user.plugins"
 require "user.colors"
 require "user.airline"
 require "user.keymaps"
+require("somethign")
 require "user.autocommands"
 require "user.nvimtree"
 require "user.cmp"
