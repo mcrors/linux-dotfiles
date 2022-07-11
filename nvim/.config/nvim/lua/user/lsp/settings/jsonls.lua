@@ -20,6 +20,13 @@ local schemas = {
     },
     url = "https://json.schemastore.org/package.json",
   },
+  {
+      description = "pyrightconfig JSON schema",
+      fileMatch = {
+        "pyrightconfig.json"
+      },
+      url="https://github.com/fannheyward/coc-pyright/blob/master/schemas/pyrightconfig.schema.json"
+  }
 }
 
 local function extend(tab1, tab2)
