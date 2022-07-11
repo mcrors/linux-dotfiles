@@ -1,4 +1,7 @@
-local blame_line = require("blame_line")
+local blame_line_status_ok, blame_line = pcall(require, "blame_line")
+if not blame_line_status_ok then
+  return
+end
 
 blame_line.setup {
     -- whether the blame line should be shown in visual modes
