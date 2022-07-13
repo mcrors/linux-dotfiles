@@ -46,7 +46,12 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
     use "gruvbox-community/gruvbox" -- colorscheme
-    use "nvim-treesitter/nvim-treesitter"
+
+    -- Treesitter
+    use {
+        "nvim-treesitter/nvim-treesitter",
+        run = ":TSUpdate",
+    }
 
     -- status line plugins and themes
     use "vim-airline/vim-airline"
@@ -96,6 +101,8 @@ return packer.startup(function(use)
         'lewis6991/gitsigns.nvim',
         tag = 'release' -- To use the latest release
     }
+
+    use "akinsho/toggleterm.nvim"
 
     -- Automatically set up our configuration after cloning packer.nvim
     -- Put this at the end after all plugins

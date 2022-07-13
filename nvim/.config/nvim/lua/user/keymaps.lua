@@ -78,6 +78,7 @@ keymap("n", "<leader>t", ":SymbolsOutline<CR>", opts)
 
 -- Toggle git blame line
 keymap("n", "gb", ":BlameLineToggle<CR>", opts)
+
 ------------
 -- Insert --
 ------------

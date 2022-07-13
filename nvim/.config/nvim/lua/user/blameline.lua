@@ -5,10 +5,10 @@ end
 
 blame_line.setup {
     -- whether the blame line should be shown in visual modes
-    show_in_visual = true,
+    show_in_visual = false,
 
     -- whether the blame line should be shown in insert mode
-    show_in_insert = true,
+    show_in_insert = false,
 
     -- the string to prefix the blame line with
     prefix = "        ",
