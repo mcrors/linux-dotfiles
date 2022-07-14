@@ -5,9 +5,15 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     callback = function() vim.highlight.on_yank() end,
 })
 
--- Don't show blame lines on file open
--- vim.api.nvim_create_augroup("disable_blameline", { clear = true })
--- vim.api.nvim_create_autocmd("BufEnter", {
---     group = "disable_blameline",
---     callback = function () require("blame_line").disable() end
--- })
+vim.api.nvim_create_augroup("vdiff_colors", { clear = true })
+vim.api.nvim_create_autocmd("BufRead", {
+    group = "vdiff_colors",
+    callback = function ()
+        if vim.api.nvim_win_get_option(0, "diff")
+            then
+            vim.g.colors_name = "default"
+        else
+            vim.g.colors_name = "gruvbox"
+        end
+    end
+})
