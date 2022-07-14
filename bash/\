@@ -93,7 +93,7 @@ export MANPAGER='less -s -M +Gg'
 
 # Check for a pure_exports file and source it if it exists
 if [ -f ~/.pure_exports ]; then
-    . ~/.pure_exports
+    . ~/pure_exports
 fi
 
 # Alias definitions.
