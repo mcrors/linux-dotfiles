@@ -104,6 +104,9 @@ return packer.startup(function(use)
 
     use "akinsho/toggleterm.nvim"
 
+    -- Some ansible highlighting
+    use "pearofducks/ansible-vim"
+
     -- Automatically set up our configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

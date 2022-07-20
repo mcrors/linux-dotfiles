@@ -9,6 +9,7 @@ if [ -x /usr/bin/dircolors ]; then
     then
         alias grep='grep --color=auto'
     else
+        alias rg='rg --hidden'
         alias grep="rg"
     fi
 

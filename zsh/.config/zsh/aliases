@@ -3,6 +3,7 @@ if ! command -v rg &> /dev/null;
 then
 	alias grep='grep --color=auto'
 else
+    alias rg="rg --hidden"
 	alias grep="rg"
 fi
 alias egrep='egrep --color=auto'
