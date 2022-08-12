@@ -15,7 +15,7 @@
     "editor.wordWrap": "off",
     "editor.cursorSurroundingLines": 8,
     "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-    "vscode-neovim.neovimInitVimPaths.linux": "/home/rhoulihan/.config/nvim/init.vim",
+    "vscode-neovim.neovimInitVimPaths.linux": "/home/rhoulihan/.config/nvim/vscode/init.vim",
 
     "editor.rulers": [80, 100, 130],
 

@@ -1,0 +1,32 @@
+[user]
+	email = rhoulihan@protonmail.com
+	name = Rory Houlihan
+[init]
+	defaultBranch = main
+[diff]
+    tool = vscode
+[merge]
+    tool = vscode
+[difftool "vscode"]
+    cmd = code --wait --diff $LOCAL $REMOTE
+[mergetool "vscode"]
+    cmd = code --wait $MERGED
+[alias]
+  # my awesome git log replacement
+  lol  = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%cr)%Creset %C(green)%cn <%ce>%Creset %s\"
+  # same as above, but ISO date
+  lold = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ci)%Creset %C(green)%cn <%ce>%Creset %s\"
+  # using build-in standards
+  lol2 = log --oneline --graph --decorate
+  # shows branches and their last commits
+  lol3 = log --all --graph --decorate --oneline --simplify-by-decoration
+
+  find = log  --pretty=\"format:%Cgreen%H %Cblue%s\" --name-status --grep
+  find-full = log --grep
+[color]
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
+[init]
+	defaultBranch = main
