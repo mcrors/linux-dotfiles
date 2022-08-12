@@ -8,5 +8,9 @@ else
    xrandr --output HDMI-1 --right-of eDP-1
 fi
 
-feh --bg-scale /home/rhoulihan/Pictures/wallpapers/aenami-1633200656101-9566.jpg
+WALLPAPERS_DIR=/home/rhoulihan/Pictures/wallpapers
+WALLPAPER_FILE=$(ls -t $WALLPAPERS_DIR | sort -R | tail -1)
+WALLPAPER=$WALLPAPERS_DIR/$WALLPAPER_FILE
+feh --bg-scale $WALLPAPER
+
 picom --experimental-backends --config /home/rhoulihan/.config/picom/picom.conf
