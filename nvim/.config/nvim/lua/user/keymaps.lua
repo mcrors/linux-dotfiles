@@ -43,7 +43,7 @@ keymap("n", "<A-l>", ":vertical resize +5<CR>", opts)
 -- Close the current tab
 keymap("n", "<C-w>", ":bd<CR>", opts)
 
--- Open a ternimal at the bottom, 
+-- Open a ternimal at the bottom,
 keymap("n", "<leader>z", ":new<CR>:terminal<CR>:resize 10<CR> :insert<CR>", opts)
 
 -- Move a line up or down with alt j and k
@@ -78,7 +78,7 @@ keymap("n", "gr", "<cmd>lua require('telescope.builtin').lsp_references(require(
 keymap("n", "<leader>t", ":SymbolsOutline<CR>", opts)
 
 -- Toggle git blame line
-keymap("n", "gb", ":BlameLineToggle<CR>", opts)
+keymap("n", "gb", ":GitBlameToggle<CR>", opts)
 
 ------------
 -- Insert --
