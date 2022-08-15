@@ -53,12 +53,15 @@ set $color7   #a89984
 set $color15  #ebdbb2
 # Border
 set $color16 #404040
+# Orange
+set $orange #BF4D30
 
 # set $borderInactive #928374
+# old color #403a37 #504945 #bdae93
 set $borderActive #504945
-set $borderInactive  #403a37
+set $borderInactive #403a37
 set $backgroundInActive #504945
-set $backgroundActive #bdae93
+set $backgroundActive #BF4D30
 set $textInactive #504945
 set $textActive #bdae93
 
