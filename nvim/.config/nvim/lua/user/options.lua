@@ -1,6 +1,6 @@
 -- for help with options enter :help options
 vim.opt.syntax = "enable"
-vim.opt.hidden = true            					-- Required to keep multiple buffers open multiple buffers            
+vim.opt.hidden = true            					-- Required to keep multiple buffers open multiple buffers
 vim.opt.swapfile = false 	 						-- Open new buffers without creating a swap file for it
 vim.opt.wrap = false 		 						-- Display long lines as just one line
 vim.opt.encoding = "utf-8"	 						-- The encoding displayed
@@ -27,8 +27,8 @@ vim.opt.laststatus = 2								-- Always display the status line
 vim.opt.number = true								-- line numbers
 vim.opt.relativenumber = true						-- add relative lines
 vim.opt.cursorline = true                           -- Enable highlighting of the current line
-vim.opt.showtabline = 4                             -- Always show tabs   
-vim.opt.showmode = false                            -- We don't need to see things like -- INSERT -- anymore 
+vim.opt.showtabline = 4                             -- Always show tabs
+vim.opt.showmode = false                            -- We don't need to see things like -- INSERT -- anymore
 vim.opt.backup = false
 vim.opt.writebackup = false
 vim.opt.updatetime = 300                            -- Faster completion
