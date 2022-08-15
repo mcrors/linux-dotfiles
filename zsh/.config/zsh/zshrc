@@ -42,7 +42,7 @@ export ALIEN_THEME="gruvbox"
 
 #Virtualenvwrapper settings:
 export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export WORKON_HOME=$HOME/.venvs
+export WORKON_HOME=$HOME/venvs
 export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
 source $HOME/.local/bin/virtualenvwrapper.sh
 
@@ -52,6 +52,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 PATH="$NVM_DIR:$PATH"
 
 plugins=(git)
-plugins+=(zsh-syntax-highlighting colored-man-pages)
+plugins+=(colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
