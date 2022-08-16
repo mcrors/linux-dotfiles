@@ -2,3 +2,5 @@ zsh/.config/zsh/.oh-my-zsh/
 zsh/.config/zsh/.zcompdump
 zsh/.config/zsh/.zcompdump-lenovo-yoga-5.8
 zsh/.config/zsh/alien
+vscode/.config/Code
+! vscode/.config/Code/User
