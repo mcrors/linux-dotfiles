@@ -141,8 +141,8 @@ bindsym $mod+Shift+m workspace $ws10; move workspace to output eDP-1; workspace 
 assign [class="Slack"] $ws1
 exec --no-startup-id slack
 
-assign [class="firefox"] $ws2
-exec --no-startup-id firefox
+assign [class="Chromium"] $ws2
+exec --no-startup-id chromium
 
 assign [class="Code"] $ws3
 exec --no-startup-id code
