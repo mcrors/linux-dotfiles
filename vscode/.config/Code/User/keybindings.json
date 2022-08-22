@@ -295,7 +295,7 @@
       "command": "-redo"
     },
     {
-      "key": "ctrl+shift+z",
+      "key": "ctrl+\\",
       "command": "terminal.focus"
     },
     {
@@ -381,5 +381,56 @@
     {
       "key": "ctrl+q",
       "command": "-workbench.action.quit"
+    },
+    {
+      "key": "ctrl+\\",
+      "command": "-workbench.action.splitEditor"
+    },
+    {
+      "key": "ctrl+g ctrl+b",
+      "command": "gitlens.toggleLineBlame",
+      "when": "editorTextFocus && neovim.init && neovim.mode == 'normal'"
+    },
+    {
+      "key": "shift+escape",
+      "command": "workbench.action.maximizeEditor"
+    },
+    {
+      "key": "f12",
+      "command": "editor.action.revealDefinition",
+      "when": "editorHasDefinitionProvider && editorTextFocus && neovim.mode == 'normal'"
+    },
+    {
+      "key": "f12",
+      "command": "-editor.action.revealDefinition",
+      "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    },
+    {
+      "key": "alt+h",
+      "command": "-gitlens.showQuickFileHistory",
+      "when": "!gitlens:disabled && config.gitlens.keymap == 'alternate'"
+    },
+    {
+      "key": "alt+h",
+      "command": "-testing.toggleTestingPeekHistory",
+      "when": "testing.isPeekVisible"
+    },
+    {
+      "key": "alt+h",
+      "command": "workbench.action.decreaseViewSize"
+    },
+    {
+      "key": "alt+l",
+      "command": "-toggleSearchEditorContextLines",
+      "when": "inSearchEditor"
+    },
+    {
+      "key": "alt+l",
+      "command": "-toggleFindInSelection",
+      "when": "editorFocus"
+    },
+    {
+      "key": "alt+l",
+      "command": "workbench.action.increaseViewSize"
     }
   ]
