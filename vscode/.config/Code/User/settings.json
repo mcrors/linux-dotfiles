@@ -747,5 +747,6 @@
   "outline.showFields": false,
   "outline.showFiles": false,
   "outline.showFunctions": false,
-  "outline.showInterfaces": false
+  "outline.showInterfaces": false,
+  "window.zoomLevel": 1
 }

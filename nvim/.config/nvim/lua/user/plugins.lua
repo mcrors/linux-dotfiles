@@ -48,10 +48,10 @@ return packer.startup(function(use)
     use "gruvbox-community/gruvbox" -- colorscheme
 
     -- Treesitter
-    use {
-        "nvim-treesitter/nvim-treesitter",
-        run = ":TSUpdate",
-    }
+      use {
+          "nvim-treesitter/nvim-treesitter",
+          run = ":TSUpdate",
+      }
 
     -- status line plugins and themes
     use "vim-airline/vim-airline"

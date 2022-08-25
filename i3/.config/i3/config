@@ -147,19 +147,15 @@ exec --no-startup-id chromium
 assign [class="Code"] $ws3
 exec --no-startup-id code
 
-assign [class="kitty"] $ws4
-exec --no-startup-id kitty
+exec --no-startup-id i3-msg 'workspace $ws4; exec kitty; workspace 1'
 
 assign [class="obsidian"] $ws5
-exec --no-startup-id obsidian
-
-assign [class="libreoffice-calc"] $ws6
-exec --no-startup-id libreoffice --calc
 
 assign [class="zoom"] $ws7
 exec --no-startup-id zoom
 
-for_window [class="xpad"] floating enable border normal
+assign [class="Cider"] $ws8
+
 # }}}
 
 # font for window titles. will also be used by the bar unless a different font
@@ -202,7 +198,7 @@ bindsym Control+Mod1+t exec $HOME/.local/bin/kitty
 bindsym $mod+Shift+q kill
 bindsym Control+Shift+q kill
 
-# start dmenu (a program launcher)
+# start rofi (a program launcher)
 bindsym $mod+Return exec --no-startup-id ~/.config/rofi/launchers/type-3/launcher.sh
 bindsym $mod+b exec --no-startup-id ~/.config/rofi/launchers/type-2/launcher.sh
 bindsym $mod+x exec --no-startup-id ~/.config/rofi/launchers/type-5/launcher.sh
@@ -252,27 +248,13 @@ bindsym $mod+Shift+space floating toggle
 # change focus between tiling / floating windows
 bindsym $mod+space focus mode_toggle
 
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-#bindsym $mod+d focus child
-
-# reload the configuration file
-bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
-# exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
         bindsym j resize shrink width 10 px or 10 ppt
         bindsym k resize grow height 10 px or 10 ppt
         bindsym l resize shrink height 10 px or 10 ppt
@@ -294,16 +276,9 @@ bindsym $mod+r mode "resize"
 
 # }}}
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#        status_command i3status
-#}
-
 ################### EXECUTE ##################### {{{
 
 exec_always --no-startup-id /home/rhoulihan/.config/i3/i3-display-setup.sh
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-# exec_always --no-startup-id $HOME/polybar-collection/launch.sh
 exec_always --no-startup-id xmodmap ~/.xmodmaprc
 # }}}
