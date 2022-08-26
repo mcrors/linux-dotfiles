@@ -54,8 +54,8 @@ return packer.startup(function(use)
       }
 
     -- status line plugins and themes
-    use "vim-airline/vim-airline"
-    use "vim-airline/vim-airline-themes"
+     use "vim-airline/vim-airline"
+     use "vim-airline/vim-airline-themes"
 
     use "jiangmiao/auto-pairs" -- Does what it says, auto-pairs
 
@@ -97,16 +97,18 @@ return packer.startup(function(use)
     -- git stuff
     use "tpope/vim-fugitive"
     use "f-person/git-blame.nvim"
-    use {
-        'lewis6991/gitsigns.nvim',
-        tag = 'release' -- To use the latest release
-    }
+    --use {
+        --'lewis6991/gitsigns.nvim',
+        --tag = 'release' -- To use the latest release
+    --}
 
     use "akinsho/toggleterm.nvim"
 
     -- Some ansible highlighting
     use "pearofducks/ansible-vim"
 
+    -- vim wiki
+    use "vimwiki/vimwiki"
     -- Automatically set up our configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
