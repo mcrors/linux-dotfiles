@@ -50,8 +50,8 @@ return packer.startup(function(use)
     -- Treesitter
       use {
           "nvim-treesitter/nvim-treesitter",
-          run = ":TSUpdate",
-      }
+        --   run = ":TSUpdate",
+     }
 
     -- status line plugins and themes
      use "vim-airline/vim-airline"
@@ -62,7 +62,7 @@ return packer.startup(function(use)
     -- Add a directory tree
     use {
         "kyazdani42/nvim-tree.lua",
-        requires = {
+         requires = {
             "kyazdani42/nvim-web-devicons", -- optional, for file icons
         },
         tag = "nightly" -- optional, updated every week. (see issue #1193)
