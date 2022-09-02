@@ -136,6 +136,7 @@ telescope.setup {
         find_files = {
             theme = "dropdown",
             previewer = false,
+            file_ignore_patterns = { "__pycache__" },
             additional_args = function(opts)
                 return { "--hidden" }
             end

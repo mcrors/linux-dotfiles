@@ -98,8 +98,8 @@ nvim_tree.setup {
         relativenumber = false,
     },
     filters = {
-        custom = { ".git" },
-        exclude = { ".gitignore", "**/__pycache__" }
+        custom = { ".git", ".gitignore", "__pycache__"},
+        exclude = {}
     },
     actions = {
         open_file = {
