@@ -35,7 +35,7 @@ vim.opt.updatetime = 300                            -- Faster completion
 vim.opt.timeoutlen = 500                            -- By default timeoutlen is 1000 ms
 vim.opt.clipboard = "unnamedplus"                   -- Copy paste between vim and everything else
 vim.opt.scrolloff = 8                               -- Add space at the bottom
-vim.opt.colorcolumn = {"79"}                        -- Add a column at 79 so you don't go over that with your code.
+vim.opt.colorcolumn = {"88"}                        -- Add a column at 79 so you don't go over that with your code.
 vim.opt.modifiable = true
 vim.opt.completeopt = {
     "menu", "noinsert", "noselect", "preview"
