@@ -1,5 +1,5 @@
 [user]
-	email = rhoulihan@protonmail.com
+	email = rhoulihan@purestorage.com
 	name = Rory Houlihan
 [init]
 	defaultBranch = main
@@ -11,6 +11,21 @@
     cmd = code --wait --diff $LOCAL $REMOTE
 [mergetool "vscode"]
     cmd = code --wait $MERGED
+[push]
+	default = simple
+[core]
+	editor = nvim
+[color]
+	ui = auto
+[log]
+	date = local
+	decorate = short
+[commit]
+	template = /home/rhoulihan/.git_commit_template
+[diff]
+  external = git_diff_wrapper
+[pager]
+  diff =
 [alias]
   # my awesome git log replacement
   lol  = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%cr)%Creset %C(green)%cn <%ce>%Creset %s\"
@@ -28,5 +43,3 @@
   diff = auto
   interactive = auto
   status = auto
-[init]
-	defaultBranch = main

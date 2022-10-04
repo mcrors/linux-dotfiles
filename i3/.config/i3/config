@@ -131,8 +131,27 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 ################### WORKSPACE-OUTPUT KEY BINDINGS ###################### {{{
 
-bindsym $mod+m workspace $ws1; move workspace to output eDP-1; workspace $ws10; move workspace to output HDMI-1; workspace $ws3; move workspace to output HDMI-1; workspace $ws4; move workspace to output HDMI-1; workspace $ws5; move workspace to output HDMI-1; workspace $ws6; move workspace to output HDMI-1; workspace $ws7; move workspace to output HDMI-1; workspace $ws8; move workspace to output HDMI-1;workspace $ws9; move workspace to output HDMI-1; workspace $ws2; move workspace to output HDMI-1;
-bindsym $mod+Shift+m workspace $ws10; move workspace to output eDP-1; workspace $ws2; move workspace to output eDP-1; workspace $ws3; move workspace to output eDP-1; workspace $ws4; move workspace to output eDP-1; workspace $ws5; move workspace to output eDP-1; workspace $ws6; move workspace to output eDP-1; workspace $ws7; move workspace to output eDP-1; workspace $ws8; move workspace to output eDP-1;workspace $ws9; move workspace to output eDP-1; workspace $ws1; move workspace to output eDP-1;
+bindsym $mod+m workspace $ws1; move workspace to output eDP-1; \
+               workspace $ws2; move workspace to output DP-2; \
+               workspace $ws3; move workspace to output HDMI-1; \
+               workspace $ws4; move workspace to output HDMI-1; \
+               workspace $ws5; move workspace to output DP-2; \
+               workspace $ws6; move workspace to output DP-2; \
+               workspace $ws7; move workspace to output DP-2; \
+               workspace $ws8; move workspace to output DP-2; \
+               workspace $ws9; move workspace to output DP-2; \
+               workspace $ws10; move workspace to output HDMI-1;
+
+bindsym $mod+Shift+m workspace $ws10; move workspace to output eDP-1; \
+            workspace $ws2; move workspace to output eDP-1; \
+            workspace $ws3; move workspace to output eDP-1; \
+            workspace $ws4; move workspace to output eDP-1; \
+            workspace $ws5; move workspace to output eDP-1; \
+            workspace $ws6; move workspace to output eDP-1; \
+            workspace $ws7; move workspace to output eDP-1; \
+            workspace $ws8; move workspace to output eDP-1; \
+            workspace $ws9; move workspace to output eDP-1; \
+            workspace $ws1; move workspace to output eDP-1;
 
 # }}}
 
@@ -141,20 +160,13 @@ bindsym $mod+Shift+m workspace $ws10; move workspace to output eDP-1; workspace 
 assign [class="Slack"] $ws1
 exec --no-startup-id slack
 
-assign [class="Chromium"] $ws2
+exec --no-startup-id i3-msg 'workspace $ws2; exec kitty; workspace 1'
+
+assign [class="Chromium"] $ws3
 exec --no-startup-id chromium
 
-assign [class="Code"] $ws3
-exec --no-startup-id code
-
-exec --no-startup-id i3-msg 'workspace $ws4; exec kitty; workspace 1'
-
-assign [class="obsidian"] $ws5
-
-assign [class="zoom"] $ws7
+assign [class="zoom"] $ws4
 exec --no-startup-id zoom
-
-assign [class="Cider"] $ws8
 
 # }}}
 
@@ -162,12 +174,6 @@ assign [class="Cider"] $ws8
 # is used in the bar {} block below.
 font pango:monospace 11
 
-# this font is widely installed, provides lots of unicode glyphs, right-to-left
-# text rendering and scalability on retina/hidpi displays (thanks to pango).
-#font pango:dejavu sans mono 8
-
-# the combination of xss-lock, nm-applet and pactl is a popular choice, so
-# they are included here as an example. Modify as you see fit.
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -256,13 +262,6 @@ exec --no-startup-id kitty --class scratchpad -e nvim $HOME/obsidian/work/index.
 for_window [instance="scratchpad"] move window to scratchpad
 #, resize set 1900 1000
 bindsym $mod+w [class="scratchpad"] scratchpad show; move position center
-
-# Add a pomodoro scratchpad and start it up on login
-exec --no-startup-id gnome-pomodoro
-for_window [class="Gnome-pomodoro"] move window to scratchpad
-#, resize set 1900 1000
-bindsym $mod+p [class="Gnome-pomodoro"] scratchpad show; move position center
-
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
