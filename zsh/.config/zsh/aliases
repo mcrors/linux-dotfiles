@@ -15,7 +15,7 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 alias bat='batcat'
-alias l="ls -hal"
+alias l='ls -lah --group-directories-first'
 
 alias dev-vm="ssh rhoulihan@dev-rhoulihan -t zsh"
 
