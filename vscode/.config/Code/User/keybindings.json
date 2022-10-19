@@ -432,5 +432,10 @@
     {
       "key": "alt+l",
       "command": "workbench.action.increaseViewSize"
+    },
+    {
+      "key": "ctrl+\\",
+      "command": "workbench.action.terminal.toggleTerminal",
+      "when": "terminal.active"
     }
   ]
