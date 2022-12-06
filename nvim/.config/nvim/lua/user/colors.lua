@@ -1,4 +1,4 @@
--- vim.g.colors_name = "gruvbox"
+vim.g.colors_name = "gruvbox"
 vim.opt.background = "dark"
 vim.opt.termguicolors = true
 vim.g.limelight_conceal_ctermfg = 240
