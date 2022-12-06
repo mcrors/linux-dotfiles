@@ -48,16 +48,22 @@ return packer.startup(function(use)
     use "gruvbox-community/gruvbox" -- colorscheme
 
     -- Treesitter
-      use {
-          "nvim-treesitter/nvim-treesitter",
-        --   run = ":TSUpdate",
-     }
+    use {
+        "nvim-treesitter/nvim-treesitter",
+         run = ":TSUpdate",
+    }
 
     -- status line plugins and themes
      use "vim-airline/vim-airline"
      use "vim-airline/vim-airline-themes"
 
     use "jiangmiao/auto-pairs" -- Does what it says, auto-pairs
+
+    -- go stuff
+    use {
+        "fatih/vim-go",
+        run = ":GoUpdateBinaries"
+    }
 
     -- Add a directory tree
     use {
