@@ -57,7 +57,6 @@ vim.api.nvim_set_keymap("n", "<F6>", "<cmd>lua Delta_git_bcommits()<CR>", defaul
 
 telescope.setup {
     defaults = {
-
         prompt_prefix = " ",
         selection_caret = " ",
         path_display = { "smart" },
@@ -116,8 +115,7 @@ telescope.setup {
                 ["gg"] = actions.move_to_top,
                 ["G"] = actions.move_to_bottom,
 
-                ["<C-u>"] = actions.preview_scrolling_up,
-                ["<C-d>"] = actions.preview_scrolling_down,
+                ["<C-u>"] = false, -- use Ctrl-c to clear the prompt
 
                 ["<PageUp>"] = actions.results_scrolling_up,
                 ["<PageDown>"] = actions.results_scrolling_down,
@@ -134,12 +132,18 @@ telescope.setup {
         -- Now the picker_config_key will be applied every time you call this
         -- builtin picker
         find_files = {
+            find_command = {"rg", "--files", "--hidden", "--glob", "!**/.git/*"},
             theme = "dropdown",
             previewer = false,
-            file_ignore_patterns = { "__pycache__", "node_modules", "%.pyc"},
-            additional_args = function(opts)
-                return { "--hidden" }
-            end
+            file_ignore_patterns = {
+                "__pycache__",
+                "node_modules",
+                "%.pyc",
+                ".git"
+            },
+            --additional_args = function(opts)
+                --return {"hidden=true"}
+            --end
         },
         git_files = {
             theme = "dropdown",

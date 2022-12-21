@@ -3,14 +3,12 @@
 	name = Rory Houlihan
 [init]
 	defaultBranch = main
+[difftool]
+    prompt = false
 [diff]
-    tool = vscode
-[merge]
-    tool = vscode
-[difftool "vscode"]
-    cmd = code --wait --diff $LOCAL $REMOTE
-[mergetool "vscode"]
-    cmd = code --wait $MERGED
+    tool = vimdiff
+[difftool "nvimdiff"]
+    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
 [push]
 	default = simple
 [core]
@@ -22,8 +20,6 @@
 	decorate = short
 [commit]
 	template = /home/rhoulihan/.git_commit_template
-[diff]
-  external = git_diff_wrapper
 [pager]
   diff =
 [alias]
