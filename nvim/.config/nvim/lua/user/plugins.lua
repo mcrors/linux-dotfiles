@@ -115,6 +115,10 @@ return packer.startup(function(use)
 
     -- vim wiki
     use "vimwiki/vimwiki"
+
+    -- ripgrep in vim
+    use "jremmen/vim-ripgrep"
+
     -- Automatically set up our configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
