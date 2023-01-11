@@ -1,7 +1,9 @@
 #! /bin/bash
 if [ $(xrandr | grep DP-2 | awk '{ print $2 }') = "connected" ]; then
     # work setup
-    xrandr --output eDP-1 --mode 1920x1080 --pos 0x1080 --rotate normal --output DP-1 --off --output HDMI-1 --mode 3840x2160 --pos 5760x0 --rotate normal --output DP-2 --primary --mode 3840x2160 --pos 1920x0 --rotate normal
+    xrandr --output eDP-1 --mode 1920x1080 --pos 0x1720 --rotate normal \
+           --output DP-1 --off --output HDMI-1 --mode 3840x2160 --pos 5760x0 --rotate left \
+           --output DP-2 --primary --mode 3840x2160 --pos 1920x640 --rotate normal
 else
     if [ $(xrandr | grep HDMI-1 | awk '{ print $2 }') = "connected" ]; then
         # home setup
@@ -13,8 +15,11 @@ else
 fi
 
 WALLPAPERS_DIR=/home/rhoulihan/Pictures/wallpapers
-WALLPAPER_FILE=$(ls -t $WALLPAPERS_DIR | sort -R | tail -1)
+# below is for random wallpapers. Not sure if I like that.
+# WALLPAPER_FILE=$(ls -t $WALLPAPERS_DIR | sort -R | tail -1)
+WALLPAPER_FILE=catalina.jpg
 WALLPAPER=$WALLPAPERS_DIR/$WALLPAPER_FILE
-feh --bg-scale $WALLPAPER
+# feh --bg-scale $WALLPAPER
+feh --bg-fill $WALLPAPER
 
 picom --experimental-backends --config /home/rhoulihan/.config/picom/picom.conf
