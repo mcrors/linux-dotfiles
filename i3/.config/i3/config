@@ -133,16 +133,16 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 
 ################### WORKSPACE-OUTPUT KEY BINDINGS ###################### {{{
 
-bindsym $mod+m workspace $ws1; move workspace to output eDP-1; \
-               workspace $ws2; move workspace to output DP-2; \
-               workspace $ws3; move workspace to output HDMI-1; \
+bindsym $mod+m workspace $ws10; move workspace to output HDMI-1;\
                workspace $ws4; move workspace to output HDMI-1; \
                workspace $ws5; move workspace to output DP-2; \
                workspace $ws6; move workspace to output DP-2; \
                workspace $ws7; move workspace to output DP-2; \
                workspace $ws8; move workspace to output DP-2; \
                workspace $ws9; move workspace to output DP-2; \
-               workspace $ws10; move workspace to output HDMI-1;
+               workspace $ws1; move workspace to output eDP-1; \
+               workspace $ws2; move workspace to output DP-2; \
+               workspace $ws3; move workspace to output HDMI-1;
 
 bindsym $mod+Shift+m workspace $ws10; move workspace to output eDP-1; \
             workspace $ws2; move workspace to output eDP-1; \
@@ -159,15 +159,17 @@ bindsym $mod+Shift+m workspace $ws10; move workspace to output eDP-1; \
 
 ################### APPLICATION STARTUP ###################### {{{
 
-assign [class="Slack"] $ws1
+assign [class="Slack"] $ws3
 exec --no-startup-id slack
 
 exec --no-startup-id i3-msg 'workspace $ws2; exec kitty; workspace 1'
+exec --no-startup-id kitty --class notes -e nvim $HOME/Documents/notes
+assign [class="notes"] $ws1
 
 assign [class="Chromium"] $ws3
 exec --no-startup-id chromium
 
-assign [class="zoom"] $ws4
+assign [class="zoom"] $ws10
 exec --no-startup-id zoom
 
 # }}}
@@ -260,10 +262,10 @@ bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+r restart
 
 # Add a vimwiki scratchpad and start it up on login
-exec --no-startup-id kitty --class scratchpad -e nvim $HOME/Documents/notes
-for_window [instance="scratchpad"] move window to scratchpad
+# exec --no-startup-id kitty --class scratchpad -e nvim $HOME/Documents/notes
+# for_window [instance="scratchpad"] move window to scratchpad
 #, resize set 1900 1000
-bindsym $mod+w [class="scratchpad"] scratchpad show; move position center
+# bindsym $mod+w [class="scratchpad"] scratchpad show; move position center
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
