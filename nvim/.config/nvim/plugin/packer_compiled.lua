@@ -184,6 +184,11 @@ _G.packer_plugins = {
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
   },
+  ["rest.nvim"] = {
+    loaded = true,
+    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/rest.nvim",
+    url = "https://github.com/rest-nvim/rest.nvim"
+  },
   ["symbols-outline.nvim"] = {
     loaded = true,
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",

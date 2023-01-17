@@ -119,6 +119,14 @@ return packer.startup(function(use)
     -- ripgrep in vim
     use "jremmen/vim-ripgrep"
 
+    -- http client
+    use {
+        "rest-nvim/rest.nvim",
+        requires = {
+            "nvim-lua/plenary.nvim",
+        }
+    }
+
     -- Automatically set up our configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

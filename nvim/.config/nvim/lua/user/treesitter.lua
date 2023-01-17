@@ -20,7 +20,8 @@ configs.setup({
         "markdown",
         "ninja",
         "make",
-        "yaml"
+        "yaml",
+        "http"
     }, -- one of "all" or a list of languages
     ignore_install = { "" }, -- List of parsers to ignore installing
     highlight = {
