@@ -234,6 +234,11 @@ _G.packer_plugins = {
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/vim-ripgrep",
     url = "https://github.com/jremmen/vim-ripgrep"
   },
+  ["vim-table-mode"] = {
+    loaded = true,
+    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/vim-table-mode",
+    url = "https://github.com/dhruvasagar/vim-table-mode"
+  },
   vimwiki = {
     loaded = true,
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/vimwiki",
