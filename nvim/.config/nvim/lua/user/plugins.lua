@@ -127,6 +127,11 @@ return packer.startup(function(use)
         }
     }
 
+    -- draw simple diagrams in neovim
+    use {
+        "jbyuki/venn.nvim"
+    }
+
     -- Automatically set up our configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
