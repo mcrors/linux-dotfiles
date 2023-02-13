@@ -159,17 +159,15 @@ bindsym $mod+Shift+m workspace $ws10; move workspace to output eDP-1; \
 
 ################### APPLICATION STARTUP ###################### {{{
 
-assign [class="Slack"] $ws3
+assign [class="Slack"] $ws1
 exec --no-startup-id slack
 
 exec --no-startup-id i3-msg 'workspace $ws2; exec kitty; workspace 1'
-exec --no-startup-id kitty --class notes -e nvim $HOME/Documents/notes
-assign [class="notes"] $ws1
 
 assign [class="Chromium"] $ws3
 exec --no-startup-id chromium
 
-assign [class="zoom"] $ws10
+assign [class="zoom"] $ws4
 exec --no-startup-id zoom
 
 # }}}
