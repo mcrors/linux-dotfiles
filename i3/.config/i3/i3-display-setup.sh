@@ -17,7 +17,7 @@ fi
 WALLPAPERS_DIR=/home/rhoulihan/Pictures/wallpapers
 # below is for random wallpapers. Not sure if I like that.
 # WALLPAPER_FILE=$(ls -t $WALLPAPERS_DIR | sort -R | tail -1)
-WALLPAPER_FILE=catalina.jpg
+WALLPAPER_FILE=Jammy-Jellyfish_WP_1920x1080.jpg
 WALLPAPER=$WALLPAPERS_DIR/$WALLPAPER_FILE
 # feh --bg-scale $WALLPAPER
 feh --bg-fill $WALLPAPER

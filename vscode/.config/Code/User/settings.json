@@ -748,5 +748,12 @@
   "outline.showFiles": false,
   "outline.showFunctions": false,
   "outline.showInterfaces": false,
-  "window.zoomLevel": 2
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "window.zoomLevel": 1,
+  "git.openRepositoryInParentFolders": "never",
+  "codesnap.target": "window",
+  "codesnap.containerPadding": "0em",
+  "codesnap.showWindowControls": false
 }
