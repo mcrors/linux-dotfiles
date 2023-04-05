@@ -29,7 +29,7 @@ fi
 # go 1.18 or greater is required for harbormaster, but ISS puppet keeps replacing
 # with go 1.14 using puppet
 if [ -d "/opt/go/bin" ] ; then
-    PATH=export PATH=`echo $PATH | tr ":" "\n" | grep -v "/usr/local/go/bin" | tr "\n" ":"`
+    PATH=`echo $PATH | tr ":" "\n" | grep -v "/usr/local/go/bin" | tr "\n" ":"`
 	PATH="/opt/go/bin:$PATH"
 fi
 
