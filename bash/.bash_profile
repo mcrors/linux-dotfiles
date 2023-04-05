@@ -33,6 +33,11 @@ if [ -d "/opt/go/bin" ] ; then
 	PATH="/opt/go/bin:$PATH"
 fi
 
+# Add go binaries to PATH
+if [ -d "$HOME/go/bin" ] ; then
+	PATH="$HOME/go/bin:$PATH"
+fi
+
 # set VIMRUNTIME to the neovim runtime directory
 if [ -d "/usr/share/nvim/runtime" ] ; then
 	export VIMRUNTIME="/usr/share/nvim/runtime"
