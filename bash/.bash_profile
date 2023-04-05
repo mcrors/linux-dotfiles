@@ -24,6 +24,15 @@ if [ -d "$HOME/.local/bin" ] ; then
 	PATH="$HOME/.local/bin:$PATH"
 fi
 
+# if there is a go binary in the opt directory, then add it to PATH,
+# and remove the go binary from /usr/local/ from PATH
+# go 1.18 or greater is required for harbormaster, but ISS puppet keeps replacing
+# with go 1.14 using puppet
+if [ -d "/opt/go/bin" ] ; then
+    PATH=export PATH=`echo $PATH | tr ":" "\n" | grep -v "/usr/local/go/bin" | tr "\n" ":"`
+	PATH="/opt/go/bin:$PATH"
+fi
+
 # set VIMRUNTIME to the neovim runtime directory
 if [ -d "/usr/share/nvim/runtime" ] ; then
 	export VIMRUNTIME="/usr/share/nvim/runtime"
