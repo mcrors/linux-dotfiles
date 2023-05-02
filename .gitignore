@@ -7,3 +7,4 @@ vscode/.config/Code
 zsh/.config/zsh/.zcompdump-lenovo-yoga-5.8.1
 zsh/.config/zsh/.zcompdump-lenovo-yoga-5.8.1
 nvim/.config/nvim/node_modules
+nvim/.config/nvim/plugged/
