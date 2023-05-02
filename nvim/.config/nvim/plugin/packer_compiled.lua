@@ -144,6 +144,11 @@ _G.packer_plugins = {
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/nvim-comment",
     url = "https://github.com/terrortylor/nvim-comment"
   },
+  ["nvim-dap"] = {
+    loaded = true,
+    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/nvim-dap",
+    url = "https://github.com/mfussenegger/nvim-dap"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
