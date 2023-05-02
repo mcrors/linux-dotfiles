@@ -74,6 +74,13 @@ keymap("n", "<C-f>", "<cmd>lua require('telescope.builtin').live_grep()<CR>", op
 keymap("n", "<leader>to", "<cmd>lua require('telescope.builtin').treesitter(require('telescope.themes').get_dropdown())<CR>", opts)
 keymap("n", "gr", "<cmd>lua require('telescope.builtin').lsp_references(require('telescope.themes').get_ivy())<CR>", opts)
 
+-- Debugger mappings
+keymap("n", "<F5>", "<cmd>lua require('dap').continue()<CR>", opts)
+keymap("n", "<F10>", "<cmd>lua require('dap').step_over()<CR>", opts)
+keymap("n", "<F11>", "<cmd>lua require('dap').step_into()<CR>", opts)
+keymap("n", "<F12>", "<cmd>lua require('dap').step_out()<CR>", opts)
+keymap("n", "<leader>tb", "<cmd>lua require('dap').toggle_breakpoint()<CR>", opts)
+
 -- Toggle class/module outline
 keymap("n", "<leader>t", ":SymbolsOutline<CR>", opts)
 
@@ -82,7 +89,7 @@ keymap("n", "gb", ":GitBlameToggle<CR>", opts)
 
 
 -- http client rest-nvim keymaps
-keymap("n", "<leader>r", "<cmd>lua require('rest-nvim').run()<CR>", opts) 
+keymap("n", "<leader>r", "<cmd>lua require('rest-nvim').run()<CR>", opts)
 ------------
 -- Insert --
 ------------

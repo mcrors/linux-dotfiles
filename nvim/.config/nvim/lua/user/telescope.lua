@@ -52,7 +52,7 @@ end
 
 
 local default_opts = { noremap = true, silent = true }
-vim.api.nvim_set_keymap("n", "<F5>", "<cmd>lua Delta_git_commits()<CR>", default_opts)
+vim.api.nvim_set_keymap("n", "<leader>gc", "<cmd>lua Delta_git_commits()<CR>", default_opts)
 vim.api.nvim_set_keymap("n", "<F6>", "<cmd>lua Delta_git_bcommits()<CR>", default_opts)
 
 telescope.setup {
