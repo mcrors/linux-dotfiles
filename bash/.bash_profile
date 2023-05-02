@@ -50,6 +50,12 @@ export BROWSER=/usr/bin/google-chrome-stable
 # set PATH so it includes JAVA_HOME if the jre exists
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 
+# set some go env variables
+export GOBIN="/opt/go/bin"
+export GOPATH="/u/rhoulihan/go"
+export GOROOT="/opt/go"
+
+
 # Have less display colours
 # from: https://wiki.archlinux.org/index.php/Color_output_in_console#man
 export LESS_TERMCAP_mb=$'\e[1;31m'     # begin bold
