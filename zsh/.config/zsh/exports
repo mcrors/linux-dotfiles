@@ -5,7 +5,6 @@ SAVEHIST=2000000
 
 export PATH="$HOME/.local/bin":$PATH
 export PATH="$HOME/bin":$PATH
-export PATH=$PATH:"/usr/local/go/bin"
 export ZSH="$ZDOTDIR/.oh-my-zsh"
 export EDITOR="nvim"
 export BROWSER="chromium"
@@ -14,6 +13,9 @@ export TERMINAL="kitty"
 export PAGER="less"
 export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 export GOPATH="$HOME/go"
+export GOBIN="/usr/local/go/bin"
+export PATH=$PATH:$GOBIN
+export PATH=$PATH:$GOPATH/bin
 
 
 export LESS_TERMCAP_mb=$'\e[1;31m'     # begin bold
