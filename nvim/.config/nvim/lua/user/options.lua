@@ -49,3 +49,6 @@ vim.opt.shortmess:append "c"
 -- don't continue comments automatically on new lines
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")
 vim.cmd("autocmd BufEnter * setlocal formatoptions-=cro")
+
+-- set some options that were causing warnings in checkhealth
+vim.g.loaded_ruby_provider = 0
