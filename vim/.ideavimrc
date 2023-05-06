@@ -12,3 +12,4 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-p> :action SearchEverywhere<CR>
 nnoremap <leader>e :action ActivateProjectToolWindow<CR>
 nnoremap <leader>b :action Switcher<CR>
+
