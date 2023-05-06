@@ -93,6 +93,7 @@ return packer.startup(function(use)
 
     -- DAP debugger stuff
     use "mfussenegger/nvim-dap"  -- neovim DAP client
+    use 'leoluz/nvim-dap-go'
 
     -- Telescope
     use "nvim-telescope/telescope.nvim"

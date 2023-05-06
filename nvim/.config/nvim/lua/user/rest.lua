@@ -1,6 +1,5 @@
 local status_ok, config = pcall(require, "rest-nvim")
 if not status_ok then
-    print("hello world")
     return
 end
 
