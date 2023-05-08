@@ -94,6 +94,7 @@ return packer.startup(function(use)
     -- DAP debugger stuff
     use "mfussenegger/nvim-dap"  -- neovim DAP client
     use 'leoluz/nvim-dap-go'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
 
     -- Telescope
     use "nvim-telescope/telescope.nvim"

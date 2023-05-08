@@ -29,8 +29,8 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Move between buffers
-keymap("n", "<C-PageUp>", ":bprevious<CR>", opts)
-keymap("n", "<C-PageDown>", ":bnext<CR>", opts)
+-- keymap("n", "<C-PageUp>", ":bprevious<CR>", opts)
+-- keymap("n", "<C-PageDown>", ":bnext<CR>", opts)
 
 -- Managed splits
 keymap("n", "<leader>vs", ":vsplit<CR>", opts)
@@ -84,16 +84,19 @@ keymap("n", "<leader>t", ":SymbolsOutline<CR>", opts)
 -- Toggle git blame line
 keymap("n", "gb", ":GitBlameToggle<CR>", opts)
 
-
 -- http client rest-nvim keymaps
 keymap("n", "<leader>r", "<cmd>lua require('rest-nvim').run()<CR>", opts)
+
+-- Change from markdown and vimwiki syntax
+keymap("n", "<leader>md", ":set filetype=markdown<CR>", opts)
+keymap("n", "<leader>vd", ":set filetype=vimwiki<CR>", opts)
+
 ------------
 -- Insert --
 ------------
 -- Move a line up or down with alt j and k
 keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
 keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
-
 
 ------------
 -- Visual --
@@ -102,7 +105,6 @@ keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
 
-
 -- Terminal --
 -- Better terminal navigation
 keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
@@ -110,6 +112,3 @@ keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
--- Change from markdown and vimwiki syntax
-keymap("n", "<leader>md", ":set filetype=markdown<CR>", opts)
-keymap("n", "<leader>vd", ":set filetype=vimwiki<CR>", opts)
