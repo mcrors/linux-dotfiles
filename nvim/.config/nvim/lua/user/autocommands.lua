@@ -5,9 +5,11 @@ vim.api.nvim_create_autocmd("TextYankPost", {
     callback = function() vim.highlight.on_yank() end,
 })
 
+-- remove whitespace
 vim.api.nvim_create_augroup("remove_whitespace", { clear = true })
 vim.api.nvim_create_autocmd("BufWritePre", {
     group = "remove_whitespace",
     pattern = "*",
     command = [[:keepjumps keeppatterns %s/\s\+$//e]]
 })
+

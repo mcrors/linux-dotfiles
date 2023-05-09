@@ -119,7 +119,7 @@ return packer.startup(function(use)
     use "pearofducks/ansible-vim"
 
     -- vim wiki
-    use "vimwiki/vimwiki"
+    use  "vimwiki/vimwiki"
 
     -- ripgrep in vim
     use "jremmen/vim-ripgrep"
@@ -137,9 +137,11 @@ return packer.startup(function(use)
         "jbyuki/venn.nvim"
     }
 
-    use {
-        "dhruvasagar/vim-table-mode"
-    }
+    -- markdown stuff
+    use "dhruvasagar/vim-table-mode"
+    use "godlygeek/tabular"
+    use "preservim/vim-markdown"
+
     -- Automatically set up our configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
