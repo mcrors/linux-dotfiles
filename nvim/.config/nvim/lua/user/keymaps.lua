@@ -88,8 +88,7 @@ keymap("n", "gb", ":GitBlameToggle<CR>", opts)
 keymap("n", "<leader>r", "<cmd>lua require('rest-nvim').run()<CR>", opts)
 
 -- Change from markdown and vimwiki syntax
-keymap("n", "<leader>md", ":set filetype=markdown<CR>", opts)
-keymap("n", "<leader>vd", ":set filetype=vimwiki<CR>", opts)
+keymap("n", "<leader>vt", ":VimwikiTOC<CR>", opts)
 
 ------------
 -- Insert --
