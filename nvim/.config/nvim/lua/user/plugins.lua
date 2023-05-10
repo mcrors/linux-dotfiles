@@ -137,11 +137,6 @@ return packer.startup(function(use)
         "jbyuki/venn.nvim"
     }
 
-    -- markdown stuff
-    use "dhruvasagar/vim-table-mode"
-    use "godlygeek/tabular"
-    use "preservim/vim-markdown"
-
     -- Automatically set up our configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

@@ -17,7 +17,6 @@ configs.setup({
         "java",
         "javascript",
         "json",
-        "markdown",
         "ninja",
         "make",
         "yaml",
