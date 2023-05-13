@@ -249,6 +249,11 @@ _G.packer_plugins = {
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/vim-go",
     url = "https://github.com/fatih/vim-go"
   },
+  ["vim-nightfly-guicolors"] = {
+    loaded = true,
+    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
+    url = "https://github.com/bluz71/vim-nightfly-guicolors"
+  },
   ["vim-ripgrep"] = {
     loaded = true,
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/vim-ripgrep",

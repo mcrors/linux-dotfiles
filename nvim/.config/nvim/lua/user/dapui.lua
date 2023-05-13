@@ -1,8 +1,8 @@
-config =
+local config =
   {
     controls = {
-        element = "repl",
-        enabled = false,
+        element = "breakpoints",
+        enabled = true
     },
     layouts = { {
         elements = { {
@@ -27,6 +27,7 @@ config =
         size = 15
       } }
   }
+
 
 require('dapui').setup(config)
 
