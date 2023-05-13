@@ -1,18 +1,23 @@
 local config =
   {
     controls = {
-        element = "breakpoints",
+        element = "repl",
         enabled = true
     },
     layouts = { {
         elements = { {
             id = "scopes",
-            size = 0.5
+            size = 0.4
           },
           {
             id = "watches",
-            size = 0.5
-          } },
+            size = 0.4
+          },
+          {
+            id = "breakpoints",
+            size = 0.2
+          }
+        } ,
         position = "left",
         size = 40
       }, {
@@ -20,7 +25,7 @@ local config =
             id = "stacks",
             size = 0.5
           }, {
-            id = "breakpoints",
+            id = "repl",
             size = 0.5
           } },
         position = "bottom",

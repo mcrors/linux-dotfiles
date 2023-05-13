@@ -74,16 +74,18 @@ keymap("n", "<F5>", "<cmd>lua require('dap').continue()<CR>", opts)
 keymap("n", "<F10>", "<cmd>lua require('dap').step_over()<CR>", opts)
 keymap("n", "<F11>", "<cmd>lua require('dap').step_into()<CR>", opts)
 keymap("n", "<F12>", "<cmd>lua require('dap').step_out()<CR>", opts)
-keymap("n", "<leader>tb", "<cmd>lua require('dap').toggle_breakpoint()<CR>", opts)
+keymap("n", "<leader>db", "<cmd>lua require('dap').toggle_breakpoint()<CR>", opts)
+keymap("n", "<leader>dc", "<cmd>lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", opts)
+keymap("n", "<leader>dt", "<cmd>lua require('dap').terminate()<CR>", opts)
+keymap("n", "<leader>dd", "<cmd>lua require('dap').disconnect()<CR>", opts)
+keymap("n", "<leader>dl", "<cmd>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", opts)
+keymap("n", "<leader>du", "<cmd>lua require('dapui').toggle()<CR>", opts)
 
 -- Toggle git blame line
 keymap("n", "gb", ":GitBlameToggle<CR>", opts)
 
 -- http client rest-nvim keymaps
 keymap("n", "<leader>r", "<cmd>lua require('rest-nvim').run()<CR>", opts)
-
--- Change from markdown and vimwiki syntax
-keymap("n", "<leader>vt", ":VimwikiTOC<CR>", opts)
 
 ------------
 -- Insert --
