@@ -52,6 +52,10 @@ keymap("n", "Y", "y$", opts)
 keymap("n", "n", "nzzzv", opts)
 keymap("n", "N", "Nzzzv", opts)
 
+-- Next and previous buffer but faster
+keymap("n", "<leader>n", ":bn<CR>", opts)
+keymap("n", "<leader>p", ":bp<CR>", opts)
+
 -- Add relative lines jumps to the jumps List
 -- TODO: figure our how to do the exp thing below
 -- nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
@@ -64,7 +68,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 keymap("n", "<leader>b", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
 keymap("n", "<leader>gg", "<cmd>lua require('telescope.builtin').git_status()<CR>", opts)
 keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
-keymap("n", "<leader>pp", "<cmd>lua require('telescope.builtin').git_files()<CR>", opts)
+keymap("n", "<leader>gf", "<cmd>lua require('telescope.builtin').git_files()<CR>", opts)
 keymap("n", "<C-f>", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
 keymap("n", "<leader>to", "<cmd>lua require('telescope.builtin').treesitter(require('telescope.themes').get_dropdown())<CR>", opts)
 keymap("n", "gr", "<cmd>lua require('telescope.builtin').lsp_references(require('telescope.themes').get_ivy())<CR>", opts)

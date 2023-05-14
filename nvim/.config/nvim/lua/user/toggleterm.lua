@@ -5,7 +5,7 @@ end
 
 toggleterm.setup({
 	size = 20,
-	open_mapping = [[<c-\>]],
+	open_mapping = '<leader>tt',
 	hide_numbers = true,
 	shade_filetypes = {},
 	shade_terminals = true,
@@ -69,5 +69,5 @@ function _PYTHON_TOGGLE()
 end
 
 local opts = { noremap = true, silent = true }
-vim.api.nvim_set_keymap("n", "<leader>p", "<cmd>lua _PYTHON_TOGGLE()<CR>", opts )
+vim.api.nvim_set_keymap("n", "<leader>tp", "<cmd>lua _PYTHON_TOGGLE()<CR>", opts )
 
