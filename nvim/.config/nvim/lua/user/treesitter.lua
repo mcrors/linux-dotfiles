@@ -5,22 +5,23 @@ end
 
 configs.setup({
     ensure_installed = {
-        "python",
-        "lua",
         "bash",
-        "c_sharp",
         "cmake",
         "cpp",
+        "c_sharp",
         "dockerfile",
         "go",
         "html",
+        "http",
         "java",
         "javascript",
         "json",
-        "ninja",
+        "lua",
         "make",
-        "yaml",
-        "http"
+        "ninja",
+        "python",
+        "terraform",
+        "yaml"
     }, -- one of "all" or a list of languages
     ignore_install = { "" }, -- List of parsers to ignore installing
     highlight = {
