@@ -114,6 +114,11 @@ return packer.startup(function(use)
         tag = 'release' -- To use the latest release
     }
 
+    use {
+        'ldelossa/gh.nvim',
+        requires = { { 'ldelossa/litee.nvim' } }
+      }
+
     use "akinsho/toggleterm.nvim"
 
     -- Some ansible highlighting
