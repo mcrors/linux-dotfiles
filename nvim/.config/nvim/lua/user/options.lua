@@ -44,6 +44,7 @@ vim.opt.wildmenu = true
 vim.opt.splitright = true                           -- force all vertical splits to go to the right of current window
 vim.opt.splitbelow = true                          -- force all horizontal splits to go below current window
 vim.opt.signcolumn = "yes"                         -- always show the sign column, otherwise it would shift the text each time
+vim.opt.nofoldenable = true                         -- I hate folding
 vim.opt.shortmess:append "c"
 
 -- don't continue comments automatically on new lines
