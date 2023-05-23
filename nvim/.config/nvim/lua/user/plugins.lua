@@ -46,7 +46,6 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
     use "gruvbox-community/gruvbox" -- colorscheme
-    use "bluz71/vim-nightfly-guicolors" -- anothr colorscheme
 
     -- Treesitter
     use {
@@ -114,13 +113,6 @@ return packer.startup(function(use)
         tag = 'release' -- To use the latest release
     }
 
-    use {
-        'ldelossa/gh.nvim',
-        requires = { { 'ldelossa/litee.nvim' } }
-      }
-
-    use "akinsho/toggleterm.nvim"
-
     -- Some ansible highlighting
     use "pearofducks/ansible-vim"
 
@@ -136,11 +128,6 @@ return packer.startup(function(use)
         requires = {
             "nvim-lua/plenary.nvim",
         }
-    }
-
-    -- draw simple diagrams in neovim
-    use {
-        "jbyuki/venn.nvim"
     }
 
     -- Automatically set up our configuration after cloning packer.nvim
