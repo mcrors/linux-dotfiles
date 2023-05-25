@@ -112,6 +112,7 @@ return packer.startup(function(use)
         'lewis6991/gitsigns.nvim',
         tag = 'release' -- To use the latest release
     }
+    use { 'ldelossa/gh.nvim', requires = { { 'ldelossa/litee.nvim' } } }
 
     -- Some ansible highlighting
     use "pearofducks/ansible-vim"
