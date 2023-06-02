@@ -120,6 +120,9 @@ return packer.startup(function(use)
     -- vim wiki
     use  "vimwiki/vimwiki"
 
+    -- Draw some simple ascii diagrams in vim
+    use "jbyuki/venn.nvim"
+
     -- ripgrep in vim
     use "jremmen/vim-ripgrep"
 
