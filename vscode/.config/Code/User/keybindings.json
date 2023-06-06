@@ -439,9 +439,9 @@
       "when": "terminal.active"
     },
     {
-      "key": "n d",
+      "key": "ctrl+n ctrl+d",
       "command": "editor.action.marker.next",
-      "when": "editorFocus"
+      "when": "editorFocus && neovim.mode == 'normal'"
     },
     {
       "key": "alt+f8",
@@ -449,13 +449,13 @@
       "when": "editorFocus"
     },
     {
-      "key": "p d",
-      "command": "editor.action.marker.prev",
-      "when": "editorFocus"
-    },
-    {
       "key": "shift+alt+f8",
       "command": "-editor.action.marker.prev",
       "when": "editorFocus"
+    },
+    {
+      "key": "ctrl+l ctrl+d",
+      "command": "editor.action.marker.prev"
+      "when": "editorFocus && neovim.mode == 'normal'"
     }
   ]

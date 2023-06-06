@@ -755,5 +755,6 @@
   "git.openRepositoryInParentFolders": "never",
   "codesnap.target": "window",
   "codesnap.containerPadding": "0em",
-  "codesnap.showWindowControls": false
+  "codesnap.showWindowControls": false,
+  "go.toolsManagement.autoUpdate": true
 }
