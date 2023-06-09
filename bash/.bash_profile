@@ -20,21 +20,12 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-	PATH="$HOME/.local/bin:$PATH"
-fi
-
-# if there is a go binary in the opt directory, then add it to PATH,
-# and remove the go binary from /usr/local/ from PATH
-# go 1.18 or greater is required for harbormaster, but ISS puppet keeps replacing
-# with go 1.14 using puppet
-if [ -d "/opt/go/bin" ] ; then
-    PATH=`echo $PATH | tr ":" "\n" | grep -v "/usr/local/go/bin" | tr "\n" ":"`
-	PATH="/opt/go/bin:$PATH"
+if [ -d "$HOME/.local/bin" ] && [[ ":$PATH:" != *"$HOME/.local/bin"* ]]; then
+    PATH="$HOME/.local/bin:$PATH"
 fi
 
 # Add go binaries to PATH
-if [ -d "$HOME/go/bin" ] ; then
+if [ -d "$HOME/go/bin" ] && [[ ":$PATH:" != *"$HOME/go/bin"* ]]; then
 	PATH="$HOME/go/bin:$PATH"
 fi
 
@@ -51,9 +42,9 @@ export BROWSER=/usr/bin/google-chrome-stable
 export JAVA_HOME="/usr/lib/jvm/java-8-openjdk-amd64"
 
 # set some go env variables
-export GOBIN="/opt/go/bin"
-export GOPATH="/u/rhoulihan/go"
-export GOROOT="/opt/go"
+export GOBIN="$HOME/go/bin"
+export GOPATH="$HOME/go"
+export GOROOT="/usr/local/go"
 
 
 # Have less display colours
