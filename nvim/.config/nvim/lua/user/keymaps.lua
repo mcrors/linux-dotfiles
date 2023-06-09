@@ -76,7 +76,6 @@ keymap("n", "<leader>gk", "<cmd> lua require('telescope.builtin').keymaps()<CR>"
 keymap("n", "<leader>gw", "<cmd> lua require('telescope.builtin').git_branches()<CR>", opts)
 
 -- Debugger mappings
-keymap("n", "<F4>", "<cmd>lua require('telescope').extensions.dap.attach()<CR>", opts)
 keymap("n", "<F5>", "<cmd>lua require('dap').continue()<CR>", opts)
 keymap("n", "<F10>", "<cmd>lua require('dap').step_over()<CR>", opts)
 keymap("n", "<F11>", "<cmd>lua require('dap').step_into()<CR>", opts)

@@ -91,14 +91,14 @@ return packer.startup(function(use)
     use "williamboman/nvim-lsp-installer" -- simple to use language server installer
     use "kevinhwang91/nvim-bqf" -- This makes the go-to-references window better
 
+    -- Telescope
+    use "nvim-telescope/telescope.nvim"
+
     -- DAP debugger stuff
     use "mfussenegger/nvim-dap"  -- neovim DAP client
     use 'leoluz/nvim-dap-go'
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
     use {'nvim-telescope/telescope-dap.nvim'}
-
-    -- Telescope
-    use "nvim-telescope/telescope.nvim"
 
     -- Comment code
     use "terrortylor/nvim-comment"
