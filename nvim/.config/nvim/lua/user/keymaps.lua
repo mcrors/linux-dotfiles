@@ -56,6 +56,9 @@ keymap("n", "N", "Nzzzv", opts)
 keymap("n", "<leader>n", ":bn<CR>", opts)
 keymap("n", "<leader>p", ":bp<CR>", opts)
 
+-- toggle highlight search
+keymap('n', '<leader>s', ':set hlsearch!<CR>', opts)
+
 -- Add relative lines jumps to the jumps List
 -- TODO: figure our how to do the exp thing below
 -- nnoremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
