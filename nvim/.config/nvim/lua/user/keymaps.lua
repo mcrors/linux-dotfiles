@@ -4,7 +4,7 @@ local term_opts = { silent = true }
 
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
-local unmap = vim.api.nvim_del_keymap
+local keep_unmap = vim.api.nvim_del_keymap
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -57,7 +57,10 @@ keymap("n", "<leader>n", ":bn<CR>", opts)
 keymap("n", "<leader>p", ":bp<CR>", opts)
 
 -- toggle highlight search
-keymap('n', '<leader>s', ':set hlsearch!<CR>', opts)
+keymap("n", "<leader>s", ":set hlsearch!<CR>", opts)
+
+-- open Git console
+keymap("n", "<leader>gs", ":Git<CR>", opts)
 
 -- Add relative lines jumps to the jumps List
 -- TODO: figure our how to do the exp thing below
