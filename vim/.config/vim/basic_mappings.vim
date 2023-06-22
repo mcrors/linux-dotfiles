@@ -5,8 +5,8 @@ nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
 " Move between buffers
-nnoremap <C-PageUp> :bp<CR>
-nnoremap <C-PageDown> :bn<CR>
+nnoremap <C-PageUp> :bn<CR>
+nnoremap <C-PageDown> :bp<CR>
 
 " Split to the right
 nnoremap <silent> <leader>vs :vsplit<CR>
