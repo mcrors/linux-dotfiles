@@ -1,7 +1,6 @@
 require "user.options"
 require "user.plugins"
 require "user.keymaps"
-require "user.colors"
 require "user.airline"
 require "user.nvimtree"
 require "user.cmp"
@@ -20,4 +19,4 @@ require "user.vimwiki"
 require "user.githubpr"
 require "user.vennvim"
 require "user.autocommands"
-
+require "user.colors"

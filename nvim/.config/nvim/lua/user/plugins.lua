@@ -135,6 +135,13 @@ return packer.startup(function(use)
         }
     }
 
+    -- rsync
+    use {'kenn7/vim-arsync',
+        requires = {
+            {'prabirshrestha/async.vim'}
+        }
+    }
+
     -- surround
     use "tpope/vim-surround"
 

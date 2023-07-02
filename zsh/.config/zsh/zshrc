@@ -24,8 +24,9 @@ zle_highlight=('paste:none')
 # Normal files to source
 source $ZDOTDIR/exports
 source $ZDOTDIR/aliases
-source $ZDOTDIR/alien/alien.zsh
-source $ZDOTDIR/prompt
+ZSH_THEME="powerlevel10k/powerlevel10k"
+# source $ZDOTDIR/alien/alien.zsh
+# source $ZDOTDIR/prompt
 
 # Add private keys to ssh-agent
 #eval $(ssh-agent -s) &
