@@ -17,6 +17,7 @@ export GOBIN="/usr/local/go/bin"
 export PATH=$PATH:$GOBIN
 export PATH=$PATH:$GOPATH/bin
 export PATH="$HOME/.local/bin/lua-language-server/bin":$PATH
+export REVIEW_BASE=master
 
 
 export LESS_TERMCAP_mb=$'\e[1;31m'     # begin bold

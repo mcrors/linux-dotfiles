@@ -13,7 +13,7 @@
 	default = simple
 [core]
 	editor = nvim
-	pager = 
+	pager =
 [color]
 	ui = auto
 [log]
@@ -22,21 +22,36 @@
 [commit]
 	template = /home/rhoulihan/.git_commit_template
 [pager]
-  diff =
+    diff =
 [alias]
-  # my awesome git log replacement
-  lol  = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ar)%Creset %C(green)%an <%ae>%Creset %s\"
-  # same as above, but ISO date
-  lold = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ai)%Creset %C(green)%an <%ae>%Creset %s\"
-  # using build-in standards
-  lol2 = log --oneline --graph --decorate
-  # shows branches and their last commits
-  lol3 = log --all --graph --decorate --oneline --simplify-by-decoration
+    # my awesome git log replacement
+    lol  = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ar)%Creset %C(green)%an <%ae>%Creset %s\"
+    # same as above, but ISO date
+    lold = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ai)%Creset %C(green)%an <%ae>%Creset %s\"
+    # using build-in standards
+    lol2 = log --oneline --graph --decorate
+    # shows branches and their last commits
+    lol3 = log --all --graph --decorate --oneline --simplify-by-decoration
 
-  find = log  --pretty=\"format:%Cgreen%H %Cblue%s\" --name-status --grep
-  find-full = log --grep
+    find = log  --pretty=\"format:%Cgreen%H %Cblue%s\" --name-status --grep
+    find-full = log --grep
+
+    # list files that have changes since REVIEW_BASE
+    # REVIEW_BASE defaults to master in my bashrc and zshrc
+    files = !git diff --name-only $(git merge-base HEAD \"$REVIEW_BASE\")
+
+    # Same as files, but with a diff stat instead of just names
+    stat = !git diff --stat $(git merge-base HEAD \"$REVIEW_BASE\")
+
+    # Open all files changed since REVIEW_BASE in nvim tabs
+    # then run fugitives :Gdiff in each tab, and finally
+    # tell vim-gitgutter to show +/- for changes since REVIEW_BASE
+    review = !nvim -p $(git files) -c \"tabdo execute 'Gvdiffsplit $REVIEW_BASE'\"
+
 [color]
-  branch = auto
-  diff = auto
-  interactive = auto
-  status = auto
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+[safe]
+	directory = /home/rhoulihan/work/dev-rhoulihan2/purity
