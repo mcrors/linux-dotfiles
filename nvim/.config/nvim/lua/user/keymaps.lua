@@ -99,6 +99,8 @@ keymap("n", "gb", ":GitBlameToggle<CR>", opts)
 -- http client rest-nvim keymaps
 keymap("n", "<leader>r", "<cmd>lua require('rest-nvim').run()<CR>", opts)
 
+-- Run ArsyncUp
+keymap("n", "<leader>su", ":ARsyncUp<CR>", opts)
 ------------
 -- Insert --
 ------------

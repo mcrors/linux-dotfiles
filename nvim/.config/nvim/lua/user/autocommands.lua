@@ -13,7 +13,6 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     command = [[:keepjumps keeppatterns %s/\s\+$//e]]
 })
 
-
 -- format terraform
 vim.api.nvim_create_augroup("format_terraform", { clear = true })
 vim.api.nvim_create_autocmd({"BufWritePre"}, {
@@ -52,12 +51,17 @@ local function execute_command(command)
     end
     local output = file:read("*a")
     file:close()
-    return output
+    return string.gsub(output, "\n", "/")
 end
 
 local function file_exists(name)
-   local f = io.open(name, "r")
-   return f ~= nil and io.close(f)
+   local f, err = io.open(name, "r")
+   if f~=nil then
+        io.close(f)
+        return true
+    else
+        return false
+    end
 end
 
 -- Define the custom command to be executed on buffer save
@@ -67,8 +71,10 @@ local function run_arsync_up()
     if not git_folder then
         return false
     end
-    local vim_arsync_file = git_folder .. ".vim-arsync"
-    if  file_exists(vim_arsync_file) then
+    local vim_arsync_file = string.format("%s.vim-arsync", git_folder)
+    print(vim_arsync_file)
+    if file_exists(vim_arsync_file) then
+        print("Syncing")
         vim.cmd("ARsyncUp")
     end
 end
@@ -77,5 +83,6 @@ end
 vim.api.nvim_create_augroup("rsync_files", { clear = true })
 vim.api.nvim_create_autocmd({"BufWritePost"}, {
     group = "rsync_files",
+    pattern = "*",
     callback = run_arsync_up
 })
