@@ -60,10 +60,10 @@ return packer.startup(function(use)
     use "jiangmiao/auto-pairs" -- Does what it says, auto-pairs
 
     -- go stuff
-    use {
-        "fatih/vim-go",
-        run = ":GoUpdateBinaries"
-    }
+    -- use {
+        -- "fatih/vim-go",
+        -- run = ":GoUpdateBinaries"
+    -- }
 
     -- Add a directory tree
     use {
@@ -110,7 +110,6 @@ return packer.startup(function(use)
     use "tpope/vim-fugitive"
     use "f-person/git-blame.nvim"
     use "airblade/vim-gitgutter"
-    use { 'ldelossa/gh.nvim', requires = { { 'ldelossa/litee.nvim' } } }
 
     -- Some ansible highlighting
     use "pearofducks/ansible-vim"

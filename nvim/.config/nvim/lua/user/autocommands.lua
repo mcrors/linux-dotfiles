@@ -17,10 +17,31 @@ vim.api.nvim_create_autocmd("BufWritePre", {
 -- format terraform
 vim.api.nvim_create_augroup("format_terraform", { clear = true })
 vim.api.nvim_create_autocmd({"BufWritePre"}, {
+  group = "format_terraform",
   pattern = {"*.tf", "*.tfvars"},
   callback = function() vim.lsp.buf.format() end,
 })
 
+-- format go using goformat
+local function go_format()
+  local current_file = vim.fn.expand('%:p') -- Get the full path of the current file
+  local command = string.format('goformat -w %s', current_file)
+  local job_id = vim.fn.jobstart(command, {
+    on_exit = function(_, code)
+      if code == 0 then
+        vim.cmd('edit') -- Reload the buffer to reflect the changes
+      end
+    end
+  })
+  vim.fn.jobwait({ job_id }, -1) -- Wait for the job to finish
+end
+
+vim.api.nvim_create_augroup("format_go", { clear = true })
+vim.api.nvim_create_autocmd({"BufWritePost"}, {
+    group = "format_go",
+    pattern = {"*.go"},
+    callback = go_format
+})
 
 -- Rsync files that have .vim-arsync at the root of a git repo
 -- Define a function to check if the current directory is a Git repository
@@ -34,12 +55,6 @@ local function execute_command(command)
     return output
 end
 
-local function is_git_repo(handle)
-    local result = handle:read('*all')
-    handle:close()
-    return result ~= nil and result:match('^true')
-end
-
 local function file_exists(name)
    local f = io.open(name, "r")
    return f ~= nil and io.close(f)
@@ -47,7 +62,7 @@ end
 
 -- Define the custom command to be executed on buffer save
 local function run_arsync_up()
-    local git_toplevel_cmd = "git rev-parse --show-toplevel"
+    local git_toplevel_cmd = "git rev-parse --show-toplevel 2>/dev/null"
     local git_folder = execute_command(git_toplevel_cmd)
     if not git_folder then
         return false
@@ -61,5 +76,6 @@ end
 -- Auto-execute the custom command on buffer save
 vim.api.nvim_create_augroup("rsync_files", { clear = true })
 vim.api.nvim_create_autocmd({"BufWritePost"}, {
+    group = "rsync_files",
     callback = run_arsync_up
 })

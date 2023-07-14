@@ -124,11 +124,6 @@ _G.packer_plugins = {
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
-  ["gh.nvim"] = {
-    loaded = true,
-    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/gh.nvim",
-    url = "https://github.com/ldelossa/gh.nvim"
-  },
   ["git-blame.nvim"] = {
     loaded = true,
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
@@ -138,11 +133,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/gruvbox-community/gruvbox"
-  },
-  ["litee.nvim"] = {
-    loaded = true,
-    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/litee.nvim",
-    url = "https://github.com/ldelossa/litee.nvim"
   },
   ["nvim-bqf"] = {
     loaded = true,
@@ -263,11 +253,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
-  },
-  ["vim-go"] = {
-    loaded = true,
-    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/vim-go",
-    url = "https://github.com/fatih/vim-go"
   },
   ["vim-ripgrep"] = {
     loaded = true,
