@@ -55,7 +55,7 @@ local function execute_command(command)
 end
 
 local function file_exists(name)
-   local f, err = io.open(name, "r")
+   local f = io.open(name, "r")
    if f~=nil then
         io.close(f)
         return true
