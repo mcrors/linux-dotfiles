@@ -111,6 +111,9 @@ return packer.startup(function(use)
     use "f-person/git-blame.nvim"
     use "airblade/vim-gitgutter"
 
+    -- View git diffs better
+    use "sindrets/diffview.nvim"
+
     -- Some ansible highlighting
     use "pearofducks/ansible-vim"
 
