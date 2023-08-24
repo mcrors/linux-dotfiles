@@ -25,9 +25,9 @@
     diff =
 [alias]
     # my awesome git log replacement
-    lol  = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ar)%Creset %C(green)%an <%ae>%Creset %s\"
+    lol  = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%cr)%Creset %C(green)%an <%ae>%Creset %s\"
     # same as above, but ISO date
-    lold = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ai)%Creset %C(green)%an <%ae>%Creset %s\"
+    lold = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ci)%Creset %C(green)%an <%ae>%Creset %s\"
     # using build-in standards
     lol2 = log --oneline --graph --decorate
     # shows branches and their last commits
