@@ -60,10 +60,7 @@ return packer.startup(function(use)
     use "jiangmiao/auto-pairs" -- Does what it says, auto-pairs
 
     -- go stuff
-    -- use {
-        -- "fatih/vim-go",
-        -- run = ":GoUpdateBinaries"
-    -- }
+    use "ray-x/go.nvim"
 
     -- Add a directory tree
     use {
