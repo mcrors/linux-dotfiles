@@ -61,6 +61,7 @@ return packer.startup(function(use)
 
     -- go stuff
     use "ray-x/go.nvim"
+    use 'ray-x/guihua.lua'
 
     -- Add a directory tree
     use {
