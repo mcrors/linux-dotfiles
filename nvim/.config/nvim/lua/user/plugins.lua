@@ -61,6 +61,8 @@ return packer.startup(function(use)
     use "jiangmiao/auto-pairs" -- Does what it says, auto-pairs
 
     -- go stuff
+    -- This was commented out as it wasn't working with neovim go dap
+    -- TODO: see if you can get this working with go dap
     -- use "ray-x/go.nvim"
     -- use 'ray-x/guihua.lua'
 
@@ -143,6 +145,13 @@ return packer.startup(function(use)
     -- surround
     use "tpope/vim-surround"
 
+    -- highlighting in log files
+    use {
+        'fei6409/log-highlight.nvim',
+        config = function()
+            require('log-highlight').setup {}
+        end,
+    }
     -- Automatically set up our configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then
