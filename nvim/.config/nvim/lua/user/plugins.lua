@@ -46,6 +46,7 @@ return packer.startup(function(use)
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
     use "gruvbox-community/gruvbox" -- colorscheme
+    use "savq/melange-nvim" -- colorscheme
 
     -- Treesitter
     use {
@@ -60,8 +61,8 @@ return packer.startup(function(use)
     use "jiangmiao/auto-pairs" -- Does what it says, auto-pairs
 
     -- go stuff
-    use "ray-x/go.nvim"
-    use 'ray-x/guihua.lua'
+    -- use "ray-x/go.nvim"
+    -- use 'ray-x/guihua.lua'
 
     -- Add a directory tree
     use {

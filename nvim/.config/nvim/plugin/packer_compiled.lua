@@ -134,20 +134,15 @@ _G.packer_plugins = {
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/git-blame.nvim",
     url = "https://github.com/f-person/git-blame.nvim"
   },
-  ["go.nvim"] = {
-    loaded = true,
-    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/go.nvim",
-    url = "https://github.com/ray-x/go.nvim"
-  },
   gruvbox = {
     loaded = true,
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/gruvbox-community/gruvbox"
   },
-  ["guihua.lua"] = {
+  ["melange-nvim"] = {
     loaded = true,
-    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/guihua.lua",
-    url = "https://github.com/ray-x/guihua.lua"
+    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/melange-nvim",
+    url = "https://github.com/savq/melange-nvim"
   },
   ["nvim-bqf"] = {
     loaded = true,

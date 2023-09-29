@@ -757,5 +757,6 @@
   "codesnap.containerPadding": "0em",
   "codesnap.showWindowControls": false,
   "go.toolsManagement.autoUpdate": true,
-  "git.autofetch": true
+  "git.autofetch": true,
+  "editor.fontSize": 12
 }

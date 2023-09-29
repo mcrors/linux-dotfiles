@@ -21,7 +21,8 @@ configs.setup({
         "ninja",
         "python",
         "terraform",
-        "yaml"
+        "yaml",
+        "bash"
     }, -- one of "all" or a list of languages
     ignore_install = { "" }, -- List of parsers to ignore installing
     highlight = {
@@ -33,3 +34,4 @@ configs.setup({
     },
     indent = { enable = true, disable = { "css" } },
 })
+

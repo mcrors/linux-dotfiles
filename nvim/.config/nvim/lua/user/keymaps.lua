@@ -39,7 +39,7 @@ keymap("n", "<A-Down>", ":horizontal resize -5<CR>", opts)
 keymap("n", "<A-Up>", ":horizontal resize +5<CR>", opts)
 
 -- Close the current tab
-keymap("n", "<leader>w", ":bd<CR>", opts)
+keymap("n", "<leader>w", ":bp|bd#<CR>", opts)
 
 -- Move a line up or down with alt j and k
 keymap("n", "<A-j>", ":m .+1<CR>==", opts)
@@ -73,7 +73,7 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 -- Telescope mappings
 keymap("n", "<leader>b", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
 keymap("n", "<leader>gg", "<cmd>lua require('telescope.builtin').git_status()<CR>", opts)
-keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files()<CR>", opts)
+keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files( {path_display = { 'smart' }})<CR>", opts)
 keymap("n", "<leader>gf", "<cmd>lua require('telescope.builtin').git_files()<CR>", opts)
 keymap("n", "<C-f>", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
 keymap("n", "<leader>to", "<cmd>lua require('telescope.builtin').treesitter(require('telescope.themes').get_dropdown())<CR>", opts)
