@@ -113,19 +113,6 @@ return packer.startup(function(use)
     -- View git diffs better
     use "sindrets/diffview.nvim"
 
-    -- View events and comments from pull requests
-    use {
-      'pwntester/octo.nvim',
-      requires = {
-        'nvim-lua/plenary.nvim',
-        'nvim-telescope/telescope.nvim',
-        'nvim-tree/nvim-web-devicons',
-      },
-      config = function ()
-        require"octo".setup()
-      end
-    }
-
     -- Some ansible highlighting
     use "pearofducks/ansible-vim"
 
