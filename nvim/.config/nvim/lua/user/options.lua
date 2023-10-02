@@ -46,6 +46,7 @@ vim.opt.splitbelow = true                          -- force all horizontal split
 vim.opt.signcolumn = "yes"                         -- always show the sign column, otherwise it would shift the text each time
 vim.opt.foldenable = false                         -- I hate folding
 vim.opt.shortmess:append "c"
+vim.g.indentLine_char =  '⦙'
 
 -- don't continue comments automatically on new lines
 vim.cmd("autocmd BufEnter * set formatoptions-=cro")

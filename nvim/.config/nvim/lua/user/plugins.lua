@@ -152,6 +152,10 @@ return packer.startup(function(use)
             require('log-highlight').setup {}
         end,
     }
+
+    -- having a line for tab spaces
+    use "Yggdroot/indentLine"
+
     -- Automatically set up our configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

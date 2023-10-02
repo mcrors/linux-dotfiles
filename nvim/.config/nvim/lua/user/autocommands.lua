@@ -42,6 +42,14 @@ vim.api.nvim_create_autocmd({"BufWritePost"}, {
     callback = go_format
 })
 
+-- 2 space tabs for YAML files
+vim.api.nvim_create_augroup("yaml_tab_settings", { clear = true })
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "yaml",
+    group = "yaml_tab_settings",
+    command = "setlocal ts=2 sts=2 sw=2 expandtab"
+})
+
 -- Rsync files that have .vim-arsync at the root of a git repo
 -- Define a function to check if the current directory is a Git repository
 local function execute_command(command)
