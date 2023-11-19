@@ -35,12 +35,12 @@ local function go_format()
   vim.fn.jobwait({ job_id }, -1) -- Wait for the job to finish
 end
 
-vim.api.nvim_create_augroup("format_go", { clear = true })
-vim.api.nvim_create_autocmd({"BufWritePost"}, {
-    group = "format_go",
-    pattern = {"*.go"},
-    callback = go_format
-})
+-- vim.api.nvim_create_augroup("format_go", { clear = true })
+-- vim.api.nvim_create_autocmd({"BufWritePost"}, {
+    -- group = "format_go",
+    -- pattern = {"*.go"},
+    -- callback = go_format
+-- })
 
 -- 2 space tabs for YAML files
 vim.api.nvim_create_augroup("yaml_tab_settings", { clear = true })
