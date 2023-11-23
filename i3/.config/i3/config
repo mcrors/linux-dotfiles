@@ -86,13 +86,7 @@ smart_gaps on
 smart_borders on
 # }}}
 
-################### WORKSPACE MOVEMENTS ###################### {{{
-
-# PageUp & PageDown
-bindsym $mod+Prior workspace prev
-bindsym $mod+i workspace prev
-bindsym $mod+Next workspace next
-bindsym $mod+o workspace next
+################### WORKSPACE VARIABLES ###################### {{{
 
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
@@ -106,6 +100,29 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
+
+# }}}
+
+################### INITIAL WORKSPACE LAYOUT ###################### {{{
+
+# Check if DP-2 is connected
+exec --no-startup-id xrandr | grep "DP-2 connected" && workspace $ws2 output DP-2
+
+# Check if HDMI-1 is connected
+exec --no-startup-id xrandr | grep "HDMI-1 connected" && workspace $ws3 output HDMI-1 && workspace $ws3 output HDMI-1
+
+# Set default workspace for your laptop
+workspace $ws1 output eDP-1
+
+# }}}
+
+################### WORKSPACE MOVEMENTS ###################### {{{
+
+# PageUp & PageDown
+bindsym $mod+Prior workspace prev
+bindsym $mod+i workspace prev
+bindsym $mod+Next workspace next
+bindsym $mod+o workspace next
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -164,9 +181,10 @@ bindsym $mod+Shift+m workspace $ws10; move workspace to output eDP-1; \
 assign [class="Slack"] $ws1
 exec --no-startup-id slack
 
-exec --no-startup-id i3-msg 'workspace $ws2; exec kitty; workspace 1'
+exec --no-startup-id i3-msg 'workspace $ws2; exec kitty;'
 
-exec --no-startup-id i3-msg 'workspace $ws3; exec kitty; workspace 1'
+assign [class="Code"] $ws3
+exec --no-startup-id code
 
 assign [class="Chromium"] $ws4
 exec --no-startup-id chromium
@@ -259,6 +277,11 @@ bindsym $mod+space focus mode_toggle
 
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
+# Make some windows floating only
+for_window [class="Gnome-calculator"] floating enable
+for_window [class="Org.gnome.Nautilus"] floating enable
+for_window [class="Imager"] floating enable
 
 # Add a vimwiki scratchpad and start it up on login
 # exec --no-startup-id kitty --class scratchpad -e nvim $HOME/Documents/notes

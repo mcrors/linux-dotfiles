@@ -751,7 +751,6 @@
   "[python]": {
     "editor.formatOnType": true
   },
-  "window.zoomLevel": 1,
   "git.openRepositoryInParentFolders": "never",
   "codesnap.target": "window",
   "codesnap.containerPadding": "0em",
@@ -761,5 +760,9 @@
   "editor.fontSize": 12,
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
+  },
+  "redhat.telemetry.enabled": false,
+  "vs-kubernetes": {
+    "vscode-kubernetes.minikube-path-linux": "/home/rhoulihan/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
   }
 }
