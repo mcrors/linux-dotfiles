@@ -63,8 +63,8 @@ return packer.startup(function(use)
     -- go stuff
     -- This was commented out as it wasn't working with neovim go dap
     -- TODO: see if you can get this working with go dap
-    -- use "ray-x/go.nvim"
-    -- use 'ray-x/guihua.lua'
+    use "ray-x/go.nvim"
+    use 'ray-x/guihua.lua'
 
     -- Add a directory tree
     use {
