@@ -21,19 +21,21 @@ vim.api.nvim_create_autocmd({"BufWritePre"}, {
   callback = function() vim.lsp.buf.format() end,
 })
 
+
+-- OLD WAY TO FORMAT GO, MAY USE IT AGAIN IN THE FUTURE
 -- format go using goformat
-local function go_format()
-  local current_file = vim.fn.expand('%:p') -- Get the full path of the current file
-  local command = string.format('goformat -w %s', current_file)
-  local job_id = vim.fn.jobstart(command, {
-    on_exit = function(_, code)
-      if code == 0 then
-        vim.cmd('edit') -- Reload the buffer to reflect the changes
-      end
-    end
-  })
-  vim.fn.jobwait({ job_id }, -1) -- Wait for the job to finish
-end
+-- local function go_format()
+  -- local current_file = vim.fn.expand('%:p') -- Get the full path of the current file
+  -- local command = string.format('goformat -w %s', current_file)
+  -- local job_id = vim.fn.jobstart(command, {
+    -- on_exit = function(_, code)
+      -- if code == 0 then
+        -- vim.cmd('edit') -- Reload the buffer to reflect the changes
+      -- end
+    -- end
+  -- })
+  -- vim.fn.jobwait({ job_id }, -1) -- Wait for the job to finish
+-- end
 
 -- vim.api.nvim_create_augroup("format_go", { clear = true })
 -- vim.api.nvim_create_autocmd({"BufWritePost"}, {
@@ -41,6 +43,8 @@ end
     -- pattern = {"*.go"},
     -- callback = go_format
 -- })
+
+
 local format_sync_grp = vim.api.nvim_create_augroup("GoFormat", {})
 vim.api.nvim_create_autocmd("BufWritePre", {
   pattern = "*.go",

@@ -59,6 +59,9 @@ keymap("n", "<leader>p", ":bp<CR>", opts)
 -- toggle highlight search
 keymap("n", "<leader>s", ":set hlsearch!<CR>", opts)
 
+-- toggle indent lines
+keymap("n", "<leader>it", ":IndentLinesToggle<CR>", opts)
+
 -- open Git console
 keymap("n", "<leader>gs", ":Git<CR>", opts)
 

@@ -25,7 +25,7 @@
 	default = simple
 [core]
 	editor = nvim
-	pager =
+	pager = bat
 [color]
 	ui = auto
 [log]
