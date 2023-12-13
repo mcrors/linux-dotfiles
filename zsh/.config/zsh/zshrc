@@ -16,10 +16,10 @@
 # zstyle ':completion:*' verbose true
 
 # some useful options (man zshoptions)
-setopt autocd extendedglob nomatch menucomplete
-setopt interactive_comments
+# setopt autocd extendedglob nomatch menucomplete
+# setopt interactive_comments
 #stty stop undef		# Disable ctrl-s to freeze terminal.
-zle_highlight=('paste:none')
+# zle_highlight=('paste:none')
 
 # Normal files to source
 source $ZDOTDIR/exports
@@ -41,7 +41,6 @@ function start_agent {
 }
 
 # Source SSH settings, if applicable
-
 if [ -f "${SSH_ENV}" ]; then
     . "${SSH_ENV}" > /dev/null
     #ps ${SSH_AGENT_PID} doesn't work under cywgin

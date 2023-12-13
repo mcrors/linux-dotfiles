@@ -7,7 +7,6 @@ fi
 
 source $ZDOTDIR/zshrc
 
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
