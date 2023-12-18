@@ -1,4 +1,7 @@
 vim.g.colors_name = "melange"
+-- why did this change ffs
+vim.cmd('colorscheme melange')
+
 vim.opt.background = "dark"
 vim.opt.termguicolors = true
 vim.g.limelight_conceal_ctermfg = 240
