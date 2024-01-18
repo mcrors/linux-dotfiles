@@ -98,7 +98,7 @@ nvim_tree.setup {
     },
     filters = {
         custom = { ".git$", "__pycache__", "node_modules", "*.pyc", ".pytest_cache"},
-        exclude = { ".github", ".vscode" }
+        exclude = { ".github", ".vscode", ".env", ".gitignore" }
     },
     actions = {
         open_file = {
