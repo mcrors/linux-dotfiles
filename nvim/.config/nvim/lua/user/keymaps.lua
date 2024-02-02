@@ -79,7 +79,7 @@ keymap("n", "<leader>gg", "<cmd>lua require('telescope.builtin').git_status()<CR
 keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files( {path_display = { 'smart' }})<CR>", opts)
 keymap("n", "<leader>gf", "<cmd>lua require('telescope.builtin').git_files()<CR>", opts)
 keymap("n", "<C-f>", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
-keymap("n", "<leader>to", "<cmd>lua require('telescope.builtin').treesitter(require('telescope.themes').get_dropdown())<CR>", opts)
+keymap("n", "<leader>to", "<cmd>lua require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_dropdown())<CR>", opts)
 keymap("n", "gr", "<cmd>lua require('telescope.builtin').lsp_references(require('telescope.themes').get_ivy())<CR>", opts)
 keymap("n", "<leader>gk", "<cmd> lua require('telescope.builtin').keymaps()<CR>", opts)
 keymap("n", "<leader>gw", "<cmd> lua require('telescope.builtin').git_branches()<CR>", opts)
