@@ -98,7 +98,7 @@ return packer.startup(function(use)
     -- DAP debugger stuff
     use "mfussenegger/nvim-dap"  -- neovim DAP client
     use 'leoluz/nvim-dap-go'
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
     use {'nvim-telescope/telescope-dap.nvim'}
 
     -- Comment code
@@ -158,9 +158,6 @@ return packer.startup(function(use)
 
     -- helm template syntax highlighting
     use "towolf/vim-helm"
-
-    -- github copilt
-    use "github/copilot.vim"
 
     -- Automatically set up our configuration after cloning packer.nvim
     -- Put this at the end after all plugins
