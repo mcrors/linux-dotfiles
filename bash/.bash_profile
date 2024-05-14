@@ -43,8 +43,6 @@ export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
 
 # set some go env variables
 export GOBIN="$HOME/go/bin"
-export GOPATH="$HOME/go"
-export GOROOT="/usr/local/go"
 
 
 # Have less display colours
