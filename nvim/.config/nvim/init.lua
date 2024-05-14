@@ -23,3 +23,4 @@ require "user.vennvim"
 require "user.vimwiki"
 
 require "user.comment"
+require "user.copilot"

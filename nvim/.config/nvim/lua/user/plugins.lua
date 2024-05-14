@@ -112,6 +112,9 @@ return packer.startup(function(use)
     use "f-person/git-blame.nvim"
     use "airblade/vim-gitgutter"
 
+    -- github co-pilot
+    use "github/copilot.vim"
+
     -- View git diffs better
     use "sindrets/diffview.nvim"
 
