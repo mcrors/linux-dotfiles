@@ -279,6 +279,7 @@ bindsym $mod+Shift+r restart
 for_window [class="Gnome-calculator"] floating enable
 for_window [class="Org.gnome.Nautilus"] floating enable
 for_window [class="Imager"] floating enable
+for_window [class="zoom"] floating enable
 
 # Add a vimwiki scratchpad and start it up on login
 # exec --no-startup-id kitty --class scratchpad -e nvim $HOME/Documents/notes
