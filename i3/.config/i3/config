@@ -182,6 +182,7 @@ assign [class="Slack"] $ws1
 exec --no-startup-id slack
 
 exec --no-startup-id i3-msg 'workspace $ws2; exec kitty;'
+exec --no-startup-id i3-msg 'workspace $ws2; exec alacritty;'
 
 assign [class="Chromium"] $ws3
 exec --no-startup-id chromium
