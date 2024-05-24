@@ -1,7 +1,5 @@
 local opts = { noremap = true, silent = true }
 
-local term_opts = { silent = true }
-
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 local keep_unmap = vim.api.nvim_del_keymap
@@ -102,8 +100,12 @@ keymap("n", "gb", ":GitBlameToggle<CR>", opts)
 -- http client rest-nvim keymaps
 keymap("n", "<leader>r", "<cmd>lua require('rest-nvim').run()<CR>", opts)
 
--- Run ArsyncUp
-keymap("n", "<leader>su", ":ARsyncUp<CR>", opts)
+-- set conceal level to 0
+keymap("n", "<leader>co", ":set conceallevel=0<CR>", opts)
+
+-- set conceal level to 3
+keymap("n", "<leader>ct", ":set conceallevel=3<CR>", opts)
+
 ------------
 -- Insert --
 ------------
@@ -117,11 +119,3 @@ keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
 -- Move a line up or down with alt j and k
 keymap("v", "<A-j>", ":m '>+1<CR>gv=gv", opts)
 keymap("v", "<A-k>", ":m '<-2<CR>gv=gv", opts)
-
--- Terminal --
--- Better terminal navigation
-keymap("t", "<C-h>", "<C-\\><C-N><C-w>h", term_opts)
-keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
-keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
-keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
-

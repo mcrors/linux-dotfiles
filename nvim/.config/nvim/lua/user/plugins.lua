@@ -122,9 +122,6 @@ return packer.startup(function(use)
     -- Some ansible highlighting
     use "pearofducks/ansible-vim"
 
-    -- vim wiki
-    use  "vimwiki/vimwiki"
-
     -- Draw some simple ascii diagrams in vim
     use "jbyuki/venn.nvim"
 
@@ -132,13 +129,9 @@ return packer.startup(function(use)
     use "jremmen/vim-ripgrep"
 
     -- http client
-    -- use "rest-nvim/rest.nvim"
-
-    -- rsync
-    use {'kenn7/vim-arsync',
-        requires = {
-            {'prabirshrestha/async.vim'}
-        }
+    use {
+        "rest-nvim/rest.nvim",
+        tag = "v1.2.1",
     }
 
     -- surround
