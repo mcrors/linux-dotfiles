@@ -165,6 +165,16 @@ _G.packer_plugins = {
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/log-highlight.nvim",
     url = "https://github.com/fei6409/log-highlight.nvim"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   ["melange-nvim"] = {
     loaded = true,
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/melange-nvim",
@@ -199,11 +209,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/nvim-dap-ui",
     url = "https://github.com/rcarriga/nvim-dap-ui"
-  },
-  ["nvim-lsp-installer"] = {
-    loaded = true,
-    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
-    url = "https://github.com/williamboman/nvim-lsp-installer"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
@@ -244,11 +249,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
-  },
-  ["rest.nvim"] = {
-    loaded = true,
-    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/rest.nvim",
-    url = "https://github.com/rest-nvim/rest.nvim"
   },
   ["symbols-outline.nvim"] = {
     loaded = true,

@@ -89,7 +89,8 @@ return packer.startup(function(use)
 
     -- LSP
     use "neovim/nvim-lspconfig" -- enable LSP
-    use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+    use "williamboman/mason.nvim"
+    use "williamboman/mason-lspconfig.nvim"
     use "kevinhwang91/nvim-bqf" -- This makes the go-to-references window better
 
     -- Telescope
@@ -131,12 +132,7 @@ return packer.startup(function(use)
     use "jremmen/vim-ripgrep"
 
     -- http client
-    use {
-        "rest-nvim/rest.nvim",
-        requires = {
-            "nvim-lua/plenary.nvim",
-        }
-    }
+    -- use "rest-nvim/rest.nvim"
 
     -- rsync
     use {'kenn7/vim-arsync',
