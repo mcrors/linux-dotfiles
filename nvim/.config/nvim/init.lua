@@ -20,7 +20,6 @@ require "user.gitblame"
 require "user.gitsigns"
 require "user.rest"
 require "user.vennvim"
-require "user.vimwiki"
 
 require "user.comment"
 require "user.copilot"

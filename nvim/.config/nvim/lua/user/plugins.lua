@@ -55,8 +55,8 @@ return packer.startup(function(use)
     }
 
     -- status line plugins and themes
-     use "vim-airline/vim-airline"
-     use "vim-airline/vim-airline-themes"
+    use "vim-airline/vim-airline"
+    use "vim-airline/vim-airline-themes"
 
     use "jiangmiao/auto-pairs" -- Does what it says, auto-pairs
 

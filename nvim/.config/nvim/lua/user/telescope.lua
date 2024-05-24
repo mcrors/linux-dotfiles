@@ -138,7 +138,7 @@ telescope.setup {
                 "__pycache__",
                 "node_modules",
                 "%.pyc",
-                ".git"
+                "/.git"
             },
             --additional_args = function(opts)
                 --return {"hidden=true"}
