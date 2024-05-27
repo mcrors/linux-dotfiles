@@ -19,6 +19,7 @@ configs.setup({
         "lua",
         "make",
         "ninja",
+        "proto",
         "python",
         "terraform",
         "yaml",
