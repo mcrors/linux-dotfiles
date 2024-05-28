@@ -40,6 +40,7 @@ Delta_git_commits = function(opts)
 	builtin.git_commits(opts)
 end
 
+
 Delta_git_bcommits = function(opts)
 	opts = opts or {}
 	opts.previewer = {
@@ -47,7 +48,10 @@ Delta_git_bcommits = function(opts)
 		previewers.git_commit_message.new(opts),
 		previewers.git_commit_diff_as_was.new(opts),
 	}
-	builtin.git_bcommits(opts)
+	local status = pcall(builtin.git_bcommits, opts)
+    if not status then
+        print("no history to show")
+    end
 end
 
 

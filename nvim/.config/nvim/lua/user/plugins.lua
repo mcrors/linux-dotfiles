@@ -81,8 +81,10 @@ return packer.startup(function(use)
     use "hrsh7th/cmp-path" -- path completions
     use "hrsh7th/cmp-cmdline" -- cmdline completions
     use "hrsh7th/cmp-nvim-lsp"
+    use { 'saadparwaiz1/cmp_luasnip' }
 
     -- snippets stuff
+    use { 'L3MON4D3/LuaSnip' }
     use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
 
     -- LSP
