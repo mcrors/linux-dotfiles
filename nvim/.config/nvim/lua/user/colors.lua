@@ -1,6 +1,6 @@
-vim.g.colors_name = "melange"
+vim.g.colors_name = "gruvbox"
 -- why did this change ffs
-vim.cmd('colorscheme melange')
+vim.cmd('colorscheme gruvbox')
 
 vim.opt.background = "dark"
 vim.opt.termguicolors = true
