@@ -87,9 +87,19 @@ source <(kubectl completion zsh)
 
 # add back in some default key bindings which were broken
 bindkey '^A' beginning-of-line
+bindkey '^[[H' beginning-of-line
 bindkey '^E' end-of-line
+bindkey '^[[F' end-of-line
 bindkey '^[[1;5C' forward-word
 bindkey '^[[1;5D' backward-word
+bindkey '^[[3~' delete-char
 
 eval "$(dircolors)"
 
+# cache gpg passphrase
+eval $(keychain --eval --agents gpg 0D136B9C 2>/dev/null)
+
+# refresh the cache (only if needed)
+if ! gpg --list-secret-keys > /dev/null 2>&1; then
+    gpg --use-agent --decrypt /dev/null
+fi
