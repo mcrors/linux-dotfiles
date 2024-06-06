@@ -18,7 +18,7 @@ fi
 WALLPAPERS_DIR=/home/rhoulihan/Pictures
 # below is for random wallpapers. Not sure if I like that.
 # WALLPAPER_FILE=$(ls -t $WALLPAPERS_DIR | sort -R | tail -1)
-WALLPAPER_FILE=pxfuel.jpg
+WALLPAPER_FILE=wallpapers/snaw-1.jpg
 WALLPAPER=$WALLPAPERS_DIR/$WALLPAPER_FILE
 # feh --bg-scale $WALLPAPER
 feh --bg-fill $WALLPAPER
