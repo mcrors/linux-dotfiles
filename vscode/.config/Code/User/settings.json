@@ -53,7 +53,7 @@
 
   "breadcrumbs.symbolSortOrder": "type",
 
-  "terminal.integrated.fontFamily": "Monofur Nerd Font Mono",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.fontSize": 15,
   "terminal.external.linuxExec": "zsh",
 

@@ -1,7 +1,9 @@
 local util = require 'lspconfig/util'
 
 return {
-  cmd = {'./java-lsp.sh'},
+  cmd = {
+        'jdtls',
+    },
   filetypes = {'java'},
   root_dir = function(fname)
     return util.root_pattern('pom.xml', 'build.gradle', '.git')(fname) or vim.fn.getcwd()
@@ -14,6 +16,13 @@ return {
           profile = 'GoogleStyle'
         }
       }
+    },
+    jdt = {
+        ls = {
+            lombok = {
+                enabled = false
+            }
+        }
     }
   },
   init_options = {

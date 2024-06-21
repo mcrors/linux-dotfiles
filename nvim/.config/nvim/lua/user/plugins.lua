@@ -89,7 +89,19 @@ return packer.startup(function(use)
 
     -- LSP
     use "neovim/nvim-lspconfig" -- enable LSP
-    use "williamboman/mason.nvim"
+
+    use {
+        "williamboman/mason.nvim",
+        opts = {
+            ui = {
+                icons = {
+                    package_installed = '✓',
+                    package_pending = '➜',
+                    package_uninstalled = '✗',
+                },
+            },
+        },
+    }
     use "williamboman/mason-lspconfig.nvim"
     use "kevinhwang91/nvim-bqf" -- This makes the go-to-references window better
 
