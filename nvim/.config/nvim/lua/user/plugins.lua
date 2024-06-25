@@ -164,6 +164,13 @@ return packer.startup(function(use)
     -- helm template syntax highlighting
     use "towolf/vim-helm"
 
+    -- rsync
+    use {'kenn7/vim-arsync',
+        requires = {
+            {'prabirshrestha/async.vim'}
+        }
+    }
+
     -- Automatically set up our configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if PACKER_BOOTSTRAP then

@@ -94,7 +94,7 @@ local function run_arsync_up()
     local vim_arsync_file = string.format("%s.vim-arsync", git_folder)
     if file_exists(vim_arsync_file) then
         print("Syncing")
-        vim.cmd("ARsyncUp")
+        -- vim.cmd("ARsyncUp")
     end
 end
 

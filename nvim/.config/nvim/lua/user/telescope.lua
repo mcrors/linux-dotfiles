@@ -142,7 +142,9 @@ telescope.setup {
                 "__pycache__",
                 "node_modules",
                 "%.pyc",
-                "/.git"
+                "/.git",
+                "middleware/target",
+                "%.class"
             },
             --additional_args = function(opts)
                 --return {"hidden=true"}

@@ -84,6 +84,11 @@ _G.packer_plugins = {
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/ansible-vim",
     url = "https://github.com/pearofducks/ansible-vim"
   },
+  ["async.vim"] = {
+    loaded = true,
+    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/async.vim",
+    url = "https://github.com/prabirshrestha/async.vim"
+  },
   ["auto-pairs"] = {
     loaded = true,
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/auto-pairs",
@@ -284,6 +289,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/vim-airline-themes",
     url = "https://github.com/vim-airline/vim-airline-themes"
+  },
+  ["vim-arsync"] = {
+    loaded = true,
+    path = "/home/rhoulihan/.local/share/nvim/site/pack/packer/start/vim-arsync",
+    url = "https://github.com/kenn7/vim-arsync"
   },
   ["vim-fugitive"] = {
     loaded = true,
