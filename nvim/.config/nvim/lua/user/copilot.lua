@@ -17,3 +17,4 @@ vim.api.nvim_set_keymap('n', '<leader>cps', ':lua ()<CR>', { noremap = true, sil
 
 vim.keymap.set('i', '<C-L>', '<Plug>(copilot-next)')
 
+vim.g.copilot_enabled = false
