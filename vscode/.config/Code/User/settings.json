@@ -757,7 +757,6 @@
   "codesnap.showWindowControls": false,
   "go.toolsManagement.autoUpdate": true,
   "git.autofetch": true,
-  "editor.fontSize": 12,
   "extensions.experimental.affinity": {
     "asvetliakov.vscode-neovim": 1
   },
@@ -765,5 +764,7 @@
   "vs-kubernetes": {
     "vscode-kubernetes.minikube-path-linux": "/home/rhoulihan/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
   },
-  "workbench.activityBar.location": "hidden"
+  "workbench.activityBar.location": "hidden",
+  "window.zoomLevel": 1,
+  "editor.fontSize": 12
 }
