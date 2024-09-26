@@ -764,7 +764,7 @@
   "vs-kubernetes": {
     "vscode-kubernetes.minikube-path-linux": "/home/rhoulihan/.local/state/vs-kubernetes/tools/minikube/linux-amd64/minikube"
   },
-  "workbench.activityBar.location": "hidden",
   "window.zoomLevel": 1,
-  "editor.fontSize": 12
+  "editor.fontSize": 12,
+  "workbench.activityBar.location": "hidden"
 }

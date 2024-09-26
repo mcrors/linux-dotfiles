@@ -34,6 +34,12 @@ if [ -d "/usr/share/nvim/runtime" ] ; then
 	export VIMRUNTIME="/usr/share/nvim/runtime"
 fi
 
+# or if nvim is located in opt, then do that here, and add /opt/nvim to PATH
+if [ -d "/opt/nvim" ] ; then
+    export VIMRUNTIME="/opt/nvim/share/nvim/runtime"
+    PATH="/opt/nvim/bin:$PATH"
+fi
+
 export EDITOR=nvim
 export TERMINAL="kitty"
 export BROWSER=/usr/bin/google-chrome-stable
