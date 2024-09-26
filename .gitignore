@@ -7,5 +7,5 @@ vscode/.config/Code
 zsh/.config/zsh/.zcompdump-lenovo-yoga-5.8.1
 zsh/.config/zsh/.zcompdump-lenovo-yoga-5.8.1
 nvim/.config/nvim/node_modules
-nvim/.config/nvim/plugged/
-nvim/.config/nvim/plugged/packer_compiled.lua
+nvim/.config/nvim/plugin/*
+nvim/.config/nvim/plugin/packer_compiled.lua
