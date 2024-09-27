@@ -6,7 +6,6 @@ end
 configs.setup({
     ensure_installed = {
         "bash",
-        "cmake",
         "cpp",
         "c_sharp",
         "dockerfile",
@@ -23,7 +22,6 @@ configs.setup({
         "python",
         "terraform",
         "yaml",
-        "bash",
         "xml",
     }, -- one of "all" or a list of languages
     ignore_install = { "" }, -- List of parsers to ignore installing

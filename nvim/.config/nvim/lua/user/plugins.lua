@@ -49,9 +49,9 @@ return packer.startup(function(use)
     use "savq/melange-nvim" -- colorscheme
 
     -- Treesitter
-    use {
+     use {
         "nvim-treesitter/nvim-treesitter",
-         run = ":TSUpdate",
+        run = ":TSUpdate",
     }
 
     -- status line plugins and themes
@@ -68,11 +68,10 @@ return packer.startup(function(use)
 
     -- Add a directory tree
     use {
-        "kyazdani42/nvim-tree.lua",
-         requires = {
-            "kyazdani42/nvim-web-devicons", -- optional, for file icons
-        },
-        tag = "nightly" -- optional, updated every week. (see issue #1193)
+      'nvim-tree/nvim-tree.lua',
+      requires = {
+        'nvim-tree/nvim-web-devicons', -- optional
+      },
     }
 
     -- Completion stuff
