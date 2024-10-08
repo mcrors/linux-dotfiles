@@ -29,6 +29,11 @@ if [ -d "$HOME/go/bin" ] && [[ ":$PATH:" != *"$HOME/go/bin"* ]]; then
 	PATH="$HOME/go/bin:$PATH"
 fi
 
+# Add cargo binaries
+if [ -d "$HOME/.cargo/bin" ] && [[ ":$PATH:" != *"$HOME/.cargo/bin"* ]]; then
+    PATH="$HOME/.cargo/bin:$PATH"
+fi
+
 # set VIMRUNTIME to the neovim runtime directory
 if [ -d "/usr/share/nvim/runtime" ] ; then
 	export VIMRUNTIME="/usr/share/nvim/runtime"
