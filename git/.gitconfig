@@ -1,45 +1,64 @@
 [user]
 	email = rhoulihan@purestorage.com
 	name = Rory Houlihan
+
 [init]
 	defaultBranch = main
 
-# define command which will be used when "nvim" is set as a merge tool
-[mergetool "nvim"]
-  cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
-# set "nvim" as tool for merging
+[core]
+	pager = delta
+    editor = nvim
+
+[interactive]
+    diffFilter = delta --color-only --features=interactive
+
+[delta]
+    navigate = true
+    side-by-side = true
+    features = decorations
+
+[delta "decorations"]
+    commit-decoration-style = blue ol
+    commit-style = raw
+    file-style = omit
+    hunk-header-decoration-style = blue box
+    hunk-header-file-style = red
+    hunk-header-line-number-style = "#067a00"
+    hunk-header-style = file line-number syntax
+
 [merge]
-  tool = nvim
+    conflictstyle = diff3
+
 # automatically launch merge tool without displaying a prompt
 [mergetool]
-  prompt = false
+    prompt = false
 
 [difftool]
     prompt = false
+
 [diff]
-    tool = nvimdiff
-[difftool "nvimdiff"]
-    cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+    colorMoved = default
 
 [push]
 	default = simple
-[core]
-	editor = nvim
-	pager = batcat -p
+
 [color]
 	ui = auto
+
 [log]
 	date = local
 	decorate = short
+
 [commit]
 	template = /home/rhoulihan/.git_commit_template
-[pager]
-    diff =
+
 [alias]
     # my awesome git log replacement
     lol  = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%cr)%Creset %C(green)%an <%ae>%Creset %s\"
     # same as above, but ISO date
     lold = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ci)%Creset %C(green)%an <%ae>%Creset %s\"
+    # use the author not the commiter
+    lola  = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ar)%Creset %C(green)%an <%ae>%Creset %s\"
     # using build-in standards
     lol2 = log --oneline --graph --decorate
     # shows branches and their last commits
@@ -65,5 +84,12 @@
     diff = auto
     interactive = auto
     status = auto
+
 [safe]
-	directory = /home/rhoulihan/work/dev-rhoulihan2/purity
+	directory = /work/purity
+
+[reviewboard]
+	url = https://codereviews.purestorage.com
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/

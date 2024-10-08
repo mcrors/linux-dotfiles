@@ -73,11 +73,11 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope mappings
 keymap("n", "<leader>b", "<cmd>lua require('telescope.builtin').buffers()<CR>", opts)
-keymap("n", "<leader>gg", "<cmd>lua require('telescope.builtin').git_status()<CR>", opts)
 keymap("n", "<C-p>", "<cmd>lua require('telescope.builtin').find_files( {path_display = { 'smart' }})<CR>", opts)
 keymap("n", "<leader>gf", "<cmd>lua require('telescope.builtin').git_files()<CR>", opts)
 keymap("n", "<C-f>", "<cmd>lua require('telescope.builtin').live_grep()<CR>", opts)
-keymap("n", "<leader>to", "<cmd>lua require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_dropdown())<CR>", opts)
+keymap("n", "<leader>to",
+    "<cmd>lua require('telescope.builtin').lsp_document_symbols(require('telescope.themes').get_dropdown())<CR>", opts)
 keymap("n", "gr", "<cmd>lua require('telescope.builtin').lsp_references(require('telescope.themes').get_ivy())<CR>", opts)
 keymap("n", "<leader>gk", "<cmd> lua require('telescope.builtin').keymaps()<CR>", opts)
 keymap("n", "<leader>gw", "<cmd> lua require('telescope.builtin').git_branches()<CR>", opts)
@@ -91,7 +91,8 @@ keymap("n", "<leader>db", "<cmd>lua require('dap').toggle_breakpoint()<CR>", opt
 keymap("n", "<leader>dc", "<cmd>lua require('dap').set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require('dap').terminate()<CR>", opts)
 keymap("n", "<leader>dd", "<cmd>lua require('dap').disconnect()<CR>", opts)
-keymap("n", "<leader>dl", "<cmd>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>", opts)
+keymap("n", "<leader>dl", "<cmd>lua require('dap').set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>",
+    opts)
 keymap("n", "<leader>du", "<cmd>lua require('dapui').toggle()<CR>", opts)
 
 -- Toggle git blame line
