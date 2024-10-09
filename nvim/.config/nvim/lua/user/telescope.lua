@@ -60,12 +60,20 @@ local delta = previewers.new_termopen_previewer({
     end,
 })
 
+
 local delta_status = previewers.new_termopen_previewer({
     get_command = function(entry)
+        -- Find the root of the Git repository
+        local git_root_cmd = { "git", "rev-parse", "--show-toplevel" }
+        local git_root_handle = io.popen(table.concat(git_root_cmd, " "))
+        local git_root = git_root_handle:read("*all"):gsub("\n", "")
+        git_root_handle:close()
         if entry.status.indexed then
-            return { "git", "-c", "core.pager=delta", "-c", "delta.side-by-side=true", "diff", "--cached", entry.value }
+            return { "bash", "-c", "cd " ..
+            git_root .. " && git -c core.pager=delta -c delta.side-by-side=true diff --cached " .. entry.value }
         else
-            return { "git", "-c", "core.pager=delta", "-c", "delta.side-by-side=true", "diff", entry.value }
+            return { "bash", "-c", "cd " ..
+            git_root .. " && git -c core.pager=delta -c delta.side-by-side=true diff " .. entry.value }
         end
     end
 })
@@ -239,7 +247,7 @@ telescope.setup {
                 preview_width = 0.75,
             },
             sorting_strategy = "ascending",
-            additional_args = function(opts)
+            additional_args = function(_)
                 return { "--hidden" }
             end
         },
