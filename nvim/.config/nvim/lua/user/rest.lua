@@ -23,6 +23,5 @@ vim.api.nvim_create_autocmd("FileType", {
     callback = function(_)
         vim.bo.formatexpr = ""
         vim.bo.formatprg = "jq"
-        print("It's a json file")
     end,
 })
