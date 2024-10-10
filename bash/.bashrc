@@ -142,6 +142,3 @@ eval "$(pyenv init -)"
 
 #  cargo env
 . "$HOME/.cargo/env"
-
-# don't close tmux windows
-unset TMOUT
