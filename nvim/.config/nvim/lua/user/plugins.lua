@@ -42,14 +42,14 @@ packer.init {
 -- Install your plugins here
 return packer.startup(function(use)
     -- My plugins here
-    use "wbthomason/packer.nvim" -- Have packer manage itself
-    use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
-    use "nvim-lua/plenary.nvim" -- Useful lua functions used by lots of plugins
+    use "wbthomason/packer.nvim"    -- Have packer manage itself
+    use "nvim-lua/popup.nvim"       -- An implementation of the Popup API from vim in Neovim
+    use "nvim-lua/plenary.nvim"     -- Useful lua functions used by lots of plugins
     use "gruvbox-community/gruvbox" -- colorscheme
-    use "savq/melange-nvim" -- colorscheme
+    use "savq/melange-nvim"         -- colorscheme
 
     -- Treesitter
-     use {
+    use {
         "nvim-treesitter/nvim-treesitter",
         run = ":TSUpdate",
     }
@@ -68,16 +68,16 @@ return packer.startup(function(use)
 
     -- Add a directory tree
     use {
-      'nvim-tree/nvim-tree.lua',
-      requires = {
-        'nvim-tree/nvim-web-devicons', -- optional
-      },
+        'nvim-tree/nvim-tree.lua',
+        requires = {
+            'nvim-tree/nvim-web-devicons', -- optional
+        },
     }
 
     -- Completion stuff
-    use "hrsh7th/nvim-cmp" -- The completion plugin
-    use "hrsh7th/cmp-buffer" -- buffer completions
-    use "hrsh7th/cmp-path" -- path completions
+    use "hrsh7th/nvim-cmp"    -- The completion plugin
+    use "hrsh7th/cmp-buffer"  -- buffer completions
+    use "hrsh7th/cmp-path"    -- path completions
     use "hrsh7th/cmp-cmdline" -- cmdline completions
     use "hrsh7th/cmp-nvim-lsp"
     use { 'saadparwaiz1/cmp_luasnip' }
@@ -108,11 +108,11 @@ return packer.startup(function(use)
     use "nvim-telescope/telescope.nvim"
 
     -- DAP debugger stuff
-    use "mfussenegger/nvim-dap"  -- neovim DAP client
+    use "mfussenegger/nvim-dap" -- neovim DAP client
     use 'leoluz/nvim-dap-go'
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} }
-    use {'nvim-telescope/telescope-dap.nvim'}
-    use {'theHamsta/nvim-dap-virtual-text'}
+    use { "rcarriga/nvim-dap-ui", requires = { "mfussenegger/nvim-dap", "nvim-neotest/nvim-nio" } }
+    use { 'nvim-telescope/telescope-dap.nvim' }
+    use { 'theHamsta/nvim-dap-virtual-text' }
 
     -- Comment code
     use "terrortylor/nvim-comment"
@@ -143,8 +143,9 @@ return packer.startup(function(use)
     -- http client
     use {
         "rest-nvim/rest.nvim",
-        tag = "v1.2.1",
+        requires = { "j-hui/fidget.nvim" }
     }
+
 
     -- surround
     use "tpope/vim-surround"
@@ -164,9 +165,9 @@ return packer.startup(function(use)
     use "towolf/vim-helm"
 
     -- rsync
-    use {'kenn7/vim-arsync',
+    use { 'kenn7/vim-arsync',
         requires = {
-            {'prabirshrestha/async.vim'}
+            { 'prabirshrestha/async.vim' }
         }
     }
 

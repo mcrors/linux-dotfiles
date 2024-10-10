@@ -99,7 +99,7 @@ keymap("n", "<leader>du", "<cmd>lua require('dapui').toggle()<CR>", opts)
 keymap("n", "gb", ":GitBlameToggle<CR>", opts)
 
 -- http client rest-nvim keymaps
-keymap("n", "<leader>r", "<cmd>lua require('rest-nvim').run()<CR>", opts)
+keymap("n", "<leader>r", "<cmd>Rest run<CR>", opts)
 
 -- set conceal level to 0
 keymap("n", "<leader>co", ":set conceallevel=0<CR>", opts)
