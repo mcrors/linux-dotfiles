@@ -766,5 +766,6 @@
   },
   "window.zoomLevel": 1,
   "editor.fontSize": 12,
-  "workbench.activityBar.location": "hidden"
+  "workbench.activityBar.location": "hidden",
+  "java.help.showReleaseNotes": false
 }
