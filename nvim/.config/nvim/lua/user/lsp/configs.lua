@@ -6,7 +6,7 @@ end
 local lspconfig = require("lspconfig")
 
 -- Removing jdtls because it causes neovim to crash on my dev vm
-local servers = { "jsonls", "pyright", "ts_ls", "gopls", "lua_ls" }
+local servers = { "jsonls", "pyright", "ts_ls", "gopls", "lua_ls", "jdtls" }
 
 lsp_installer.setup({
     ensure_installed = servers,
