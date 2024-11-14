@@ -22,6 +22,3 @@ require "user.rest"
 require "user.vennvim"
 
 require "user.comment"
-require "user.copilot"
-
--- require "user.conform"
