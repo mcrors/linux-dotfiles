@@ -125,9 +125,6 @@ return packer.startup(function(use)
     use "f-person/git-blame.nvim"
     use "airblade/vim-gitgutter"
 
-    -- github co-pilot
-    use "github/copilot.vim"
-
     -- View git diffs better
     use "sindrets/diffview.nvim"
 
@@ -170,9 +167,6 @@ return packer.startup(function(use)
             { 'prabirshrestha/async.vim' }
         }
     }
-
-    -- formatter
-    use "stevearc/conform.nvim"
 
     -- Automatically set up our configuration after cloning packer.nvim
     -- Put this at the end after all plugins
