@@ -1,5 +1,4 @@
 #!/bin/sh
-
 ## The top 30 lines are from /etc/zsh/newuser.zshrc.recommended
 # Use emacs keybindings even if our EDITOR is set to vi
 autoload -Uz promptinit
@@ -78,9 +77,11 @@ export VIRTUALENVWRAPPER_VIRTUALENV=$HOME/.local/bin/virtualenv
 source $HOME/.local/bin/virtualenvwrapper.sh
 
 
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" # This loads nvm
-PATH="$NVM_DIR:$PATH"
+nvm_comp () {
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh" # This loads nvm
+    PATH="$NVM_DIR:$PATH"
+}
 
 # kubectl completion
 source <(kubectl completion zsh)
@@ -97,19 +98,9 @@ bindkey '^[[3~' delete-char
 eval "$(dircolors)"
 
 # cache gpg passphrase
-eval $(keychain --eval --agents gpg 0D136B9C 2>/dev/null)
+# eval $(keychain --eval --agents gpg 0D136B9C 2>/dev/null)
 
 # refresh the cache (only if needed)
-if ! gpg --list-secret-keys > /dev/null 2>&1; then
-    gpg --use-agent --decrypt /dev/null
-fi
-
-
-# Predictable SSH authentication socket location.
-SOCK="/tmp/ssh-agent-$USER-screen"
-if test $SSH_AUTH_SOCK && [ $SSH_AUTH_SOCK != $SOCK ]
-then
-    rm -f /tmp/ssh-agent-$USER-screen
-    ln -sf $SSH_AUTH_SOCK $SOCK
-    export SSH_AUTH_SOCK=$SOCK
-fi
+# if ! gpg --list-secret-keys > /dev/null 2>&1; then
+    # gpg --use-agent --decrypt /dev/null
+# fi
