@@ -50,7 +50,7 @@
 	decorate = short
 
 [commit]
-	template = /u/rhoulihan/.git_commit_template
+	template = ~/.git_commit_template
 
 [alias]
     # my awesome git log replacement

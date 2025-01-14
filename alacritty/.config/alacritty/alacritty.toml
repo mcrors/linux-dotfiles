@@ -1,5 +1,5 @@
 [font]
-size = 8.0
+size = 10.0
 
 [font.bold]
 family = "JetBrainsMono Nerd Font"
@@ -20,7 +20,7 @@ style = "Regular"
 [window]
 decorations = "full"
 decorations_theme_variant = "light"
-opacity = 0.9
+# opacity = 0.9
 
 [window.dimensions]
 columns = 80

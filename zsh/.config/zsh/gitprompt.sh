@@ -14,7 +14,7 @@
 # | . <(curl gitprompt.sh)                     | Use gitprompt in Active shell |
 # | curl gitprompt.sh/install | sh             | Install gitprompt to $HOME    |
 # | https://github.com/danieldietrich/dotfiles | Gitpod dotfiles               |
-# 
+#
 # Customize gitprompt by placing ENV vars in your .bashrc or .zshrc file.
 #
 # |         ENV var       |    Default   |             Description             |
@@ -25,19 +25,18 @@
 # | GP_COLOR_GIT_UNPUSHED | "38;5;11"    | Unpushed state color                |
 # | GP_COLOR_PWD_DARK     | "1;38;5;24"  | Directory color dark                |
 # | GP_COLOR_PWD_LIGHT    | "1;38;5;39"  | Directory color light               |
-# 
+#
 # These variables only apply to the zsh version.
-# 
+#
 # |        ENV var        |    Default   |             Description             |
 # | --------------------- | ------------ | ----------------------------------- |
 # | GP_COLOR_CLOCK        | "38;5;99"    | Clock color                         |
 # | GP_COLORS             | true         | Enable colors                       |
 # | GP_UPDATE_PROMPT      | true         | Enables/disables PROMPT update      |
-#     
+#
 # ------------------------------------------------------------------------------
 
 # shellcheck disable=SC2154 disable=SC2155 disable=SC2296 disable=SC2301
-
 __gp_color() {
   if [ -n "$GP_COLORS" ]; then
     [ -n "$ZSH_VERSION" ] && echo -ne "%{\e[$1m%}" || echo -ne "\001\033[$1m\002"

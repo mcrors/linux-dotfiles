@@ -19,12 +19,6 @@ alias rm='rm -i'
 alias bat='batcat'
 alias l='ls -lah --group-directories-first --color=auto'
 
-alias dev-vm="ssh rhoulihan@dev-rhoulihan -t zsh"
-
-alias clangd="clangd-12"
-
-alias whatsmyip="host myip.opendns.com resolver1.opendns.com"
-
 # have xclip always copy to the system clipboard
 alias xclip="xclip -selection clipboard"
 
