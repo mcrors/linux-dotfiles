@@ -59,6 +59,8 @@
     lold = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ci)%Creset %C(green)%an <%ae>%Creset %s\"
     # use the author not the commiter
     lola  = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ar)%Creset %C(green)%an <%ae>%Creset %s\"
+    # same as above, but ISO date
+    lolad = log --graph --pretty=format:\"%C(auto)%h%d%Creset %C(cyan)(%ci)%Creset %C(green)%an <%ae>%Creset %s\"
     # using build-in standards
     lol2 = log --oneline --graph --decorate
     # shows branches and their last commits
