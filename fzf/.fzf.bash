@@ -12,3 +12,6 @@
 # Key bindings
 # ------------
 source "$HOME/.config/fzf/key-bindings.bash"
+
+bindkey "^[r" fzf-history-widget
+bindkey "^[t" fzf-file-widget
