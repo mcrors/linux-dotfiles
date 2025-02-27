@@ -147,4 +147,7 @@ eval "$(pyenv init -)"
     # export SSH_AUTH_SOCK=$SOCK
 # fi
 
-unset TMOUT
+# set PATH so it includes user's private bin if it exists
+if [ -d "$HOME/.local/nvim-nightly/bin" ] ; then
+    PATH="$HOME/.local/nvim-nightly/bin:$PATH"
+fi

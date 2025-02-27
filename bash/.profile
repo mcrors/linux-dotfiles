@@ -26,6 +26,7 @@ if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+
 # set VIMRUNTIME to the neovim runtime directory
 if [ -d "/usr/share/nvim/runtime" ] ; then
     VIMRUNTIME="/usr/share/nvim/runtime"
