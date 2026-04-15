@@ -28,3 +28,4 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 
 alias xclip="xclip -selection clipboard"
 alias vimdiff='nvim -d'
+alias cat="batcat"

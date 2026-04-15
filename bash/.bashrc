@@ -114,7 +114,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
+export JAVA_HOME="~/.sdkman/candidates/java/current"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
@@ -151,3 +151,88 @@ eval "$(pyenv init -)"
 if [ -d "$HOME/.local/nvim-nightly/bin" ] ; then
     PATH="$HOME/.local/nvim-nightly/bin:$PATH"
 fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export PATH=/workspaces/fusion/.tools/bin:$PATH
+unset GOPATH
+unset GOROOT
+
+# Assuming you've mounted a tlog directory in your VM, this function allows you to auto-navigate to
+# that folder, or the proper jenkins/job/run sub dir if you provide the job URL.
+# Usage:
+# - tlog http://repjenkins.dev.purestorage.com:8080/job/nearsync_cli-test3/77/
+# - tlog
+#
+# tlog mounting documentation https://wiki.purestorage.com/display/psw/Mounting+tlogs
+tlog()
+{
+        TLOG_DIR="/tlogs"
+        DEST_DIR=''
+        T_JENKINS=''
+        T_JOB=''
+        T_RUN=''
+        JEN=''
+        SLASHES=''
+        found_job=''
+
+
+        if [ -z "$1" ]
+        then
+                DEST_DIR="$TLOG_DIR"
+        else
+                IFS='/' read -ra SLASHES <<< "$1"
+
+                # Scan the url and grab the information we want
+                found_job="false"
+                for sub in "${SLASHES[@]}"; do
+                        if [[ $sub == *"jenkins"* ]]
+                        then
+                                T_JENKINS="$sub"
+                        fi
+                        if [[ -n $T_JOB ]]
+                        then
+                                T_RUN="$sub"
+                        fi
+
+                        if [[ $found_job == "true" ]]
+                        then
+                                T_JOB="$sub"
+                        fi
+
+                        if [[ $sub == "job" ]]
+                        then
+                                found_job="true"
+                        else
+                                found_job="false"
+                        fi
+
+                done
+                sub=''
+                # fix the jenkins line
+                IFS="." read -ra JEN <<< "$T_JENKINS"
+                T_JENKINS="${JEN[0]}"
+
+                if [ -z $T_JENKINS ] || [ -z $T_JOB ] || [ -z $T_RUN ]
+                then
+                        echo "ERROR: input URL is invalid"
+                        return 1
+                fi
+
+                DEST_DIR="$TLOG_DIR/$T_JENKINS/jobs/$T_JOB/$T_RUN"
+        fi
+        echo "cd $DEST_DIR"
+
+        cd $DEST_DIR
+
+        TLOG_DIR=''
+        DEST_DIR=''
+        T_JENKINS=''
+        T_JOB=''
+        T_RUN=''
+        JEN=''
+        SLASHES=''
+        found_job=''
+
+}
